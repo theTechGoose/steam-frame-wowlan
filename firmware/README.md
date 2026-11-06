@@ -13,17 +13,17 @@ level**:
 
 | PERST# state | What the firmware does | Firmware's own log string |
 |---|---|---|
-| HIGH (link kept up across suspend — the Frame's normal case) | Does **not** assert WAKE#; issues in-band **PME#** instead | `PERST GPIO line is HIGH. Not asserting WAKE#, D-state: %d` / `D3 Hot State, PERST HIGH. Issue PME#` |
+| HIGH (link kept up across suspend, the Frame's normal case) | Does **not** assert WAKE#; issues in-band **PME#** instead | `PERST GPIO line is HIGH. Not asserting WAKE#, D-state: %d` / `D3 Hot State, PERST HIGH. Issue PME#` |
 | LOW (host has asserted reset) | Asserts **WAKE#** | `Endpoint assert WAKE# since PERST is LOW` |
 
-So in exactly the state a Linux magic-packet suspend produces — link powered,
-PERST# high — the firmware withholds WAKE# (the only signal that can reach the
+So in exactly the state a Linux magic-packet suspend produces, link powered,
+PERST# high, the firmware withholds WAKE# (the only signal that can reach the
 SM8650 PDC wake controller) and sends PME# (which on this SoC reaches nothing;
 see `../TECHNICAL.md`). This is the whole bug.
 
 The in-band PME# is itself gated by the firmware global `g_pcie_pme_in_d3cold`
 (function `pcie_control_pme_in_d3cold`), which is the knob the host's
-`WMI_WOW_FLAG_SEND_PM_PME` (0x2) toggles — matching the measured behaviour that
+`WMI_WOW_FLAG_SEND_PM_PME` (0x2) toggles, matching the measured behaviour that
 the endpoint sets PME_Status only when that flag is set
 (`../logs/wake-handoff-v12-pme-s2idle-20261105-232758.log`).
 
@@ -54,14 +54,14 @@ ath12k must also set `WMI_WOW_FLAG_SEND_PM_PME` in `WMI_WOW_ENABLE_CMDID`
 - The exact branch **instruction** and a binary patch cannot be produced from
   `amss.bin` alone: the PCIe/MHI logic is demand-paged (dlpager) compressed
   ROM-patch code, the logging is QSHRINK/QDSS (format strings referenced by
-  numeric ID, not by pointer — confirmed by four independent search methods),
+  numeric ID, not by pointer, confirmed by four independent search methods),
   and the image is signed. Qualcomm can jump straight to the site using their
   QSHRINK database for the quoted strings.
 - Behaviour is read from the firmware's own developer log strings, which
   describe the branches in `pcie_i_assert_wake`; it is not a disassembled
   instruction trace.
 - `m3.bin` is radio PHY microcode (`_binary_phy_ucode_*`), not a power/AOP
-  image — it has no role in suspend or host wake.
+  image, it has no role in suspend or host wake.
 
 ## Recovered WCN7850 internal register map
 

@@ -4,7 +4,7 @@ Both scripts run on a Mac (or any host) that can reach the Frame over SSH as the
 alias `frame` (key-based login). Commands that need root on the Frame read the sudo
 password from `FRAME_SUDO_PW` (never stored in the scripts).
 
-## wake-test.sh — the reproduction / acceptance test
+## wake-test.sh, the reproduction / acceptance test
 
 ```
 FRAME_SUDO_PW=... sh tests/wake-test.sh [deep|s2idle] [label]
@@ -19,7 +19,7 @@ packets (UDP 9 and 7, broadcast + unicast) from the host for `WAIT` seconds (def
 - **PASS (exit 0)** = the Frame answered SSH within `WAIT` seconds, i.e. a magic packet
   woke it. This is the acceptance criterion for a working fix.
 - **FAIL (exit 1)** = it did not wake; the RTC alarm (`RTC_SAFETY`, default +240 s) then
-  brings it back. Every run in `../logs/` is a FAIL — the feature is blocked until Valve
+  brings it back. Every run in `../logs/` is a FAIL, the feature is blocked until Valve
   ships firmware/AOP support.
 
 It appends a timestamped journal of the suspend cycle to `build/kernel/wake-<label>-<mode>-<ts>.log`.
@@ -28,11 +28,11 @@ is unreachable ~7 minutes of wall-clock-awake after the sleep (REQ-019 amendment
 build came back with Wi-Fi dead; this guarantees the Frame returns to the network).
 
 `mode`: `deep` = PSCI system suspend (SoC powered down); `s2idle` = suspend-to-idle (GIC/ITS
-stay alive — the only mode where an in-band PME MSI could in principle end the sleep).
+stay alive, the only mode where an in-band PME MSI could in principle end the sleep).
 `NOMAGIC=1` suppresses the packets for a control run (prove a toggle is independent of
 traffic). `WAIT=`/`RTC_SAFETY=` override the timings.
 
-## verify-kernel.sh — build / deploy verification
+## verify-kernel.sh, build / deploy verification
 
 ```
 FRAME_SUDO_PW=... sh tests/verify-kernel.sh [--stage beta|kernel]

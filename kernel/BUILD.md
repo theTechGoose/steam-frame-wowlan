@@ -29,11 +29,11 @@ commit `9a8c8ea4695083b9847e301e9722225151a7302e` (evlaV/deckard-linux-no-oopsie
 
 `history/` holds v3→v12. Each version fixed one blocker: v4 moved WAKE# arming from
 `suspend_noirq` to `suspend_late` (so `suspend_device_irqs()` does not mask it); v6 tried
-muxing CLKREQ# to GPIO (killed the link — see the postmortem log); v8→v9 mapped the CLKREQ#
+muxing CLKREQ# to GPIO (killed the link, see the postmortem log); v8→v9 mapped the CLKREQ#
 IRQ at probe with the pad left on the controller and armed it `IRQF_NO_SUSPEND` in
 `suspend_noirq`; v10 added `wow_flags` + RTSTA/PMCSR logging; v11 added the `clkreq_probe`
 diagnostic knob; v12 added `IRQCHIP_SKIP_SET_WAKE`. See the per-version story in
-`requirements.md` (REQ-019 amendments 1–6) and `../logs/INDEX.md`.
+`requirements.md` (REQ-019 amendments 1-6) and `../logs/INDEX.md`.
 
 ## Build recipe (podman on macOS)
 
@@ -64,7 +64,7 @@ Wi-Fi never comes up. Always deploy the full tarball (Image + dtbs + modules tog
 `deploy-slot.sh <tarball> <new-release> <stock-release>` installs beside Valve's kernel in
 the **booted** slot and repoints the three symlinks U-Boot follows (`/boot/Image`,
 `/boot/dtbqcom`, `/boot/maindtb.dtb`). It refuses to run unless booted from slot A, the
-running kernel is the stock/experimental one, and slot B is the stock 0.4.5 image — slot B
+running kernel is the stock/experimental one, and slot B is the stock 0.4.5 image, slot B
 is never touched. It also installs `kernel-canary.service`.
 
 ```
@@ -75,7 +75,7 @@ touch /home/steamos/kernel-ok
 
 Boot canary (`kernel-canary.sh`, run by the installed service): if `/home/steamos/kernel-ok`
 is not touched within 10 minutes of boot while the experimental kernel is running, it
-repoints the symlinks back to Valve's kernel and reboots — so a bad kernel never requires
+repoints the symlinks back to Valve's kernel and reboots, so a bad kernel never requires
 touching the headset. Touch `kernel-ok` after every boot you confirm.
 
 ## Roll back

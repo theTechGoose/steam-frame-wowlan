@@ -6,7 +6,7 @@ Target: `amss.bin` (WCN7850 hw2.0, `WLAN.IOE_HMT.1.1-00018`, build 2025-08-20). 
 
 The firmware decides how to signal a wake **on the PERST# GPIO level**, and that gate is the whole bug. Its own log strings spell the policy out:
 
-- **PERST# HIGH** (link retained, host not resetting — a normal Linux suspend that keeps the device powered): it does **not** assert WAKE#, it issues an in-band **PME#**.
+- **PERST# HIGH** (link retained, host not resetting, a normal Linux suspend that keeps the device powered): it does **not** assert WAKE#, it issues an in-band **PME#**.
 - **PERST# LOW** (host has asserted reset): it asserts **WAKE#**.
 
 There is no code path that asserts WAKE# for a WoW event while PERST# is HIGH. So on this platform, where the host keeps the link up across suspend and the root-port PME MSI cannot wake the SoC, the firmware's only wake signal in that state (PME#) has nowhere to land, and the one signal that could reach the PDC (WAKE#) is deliberately withheld. This matches the host-side measurements exactly: the chip sets PME_Status when asked, and never toggles WAKE# except as a reaction to PERST# assertion.
@@ -25,7 +25,7 @@ Decision function **`pcie_i_assert_wake___RAM`** (name token @ `0x014fb256`). Br
 
 PME# sender **`pcie_core_generate_pme___RAM`** (@ `0x014fb928`): `Device State D0: Skipping PME` (@ `0x014fb90a`); `PM_STTS: ... pme_retry ... send_failure_cnt ... ack_failure_cnt` (@ `0x014fb945`).
 
-Firmware-side PME gate **`pcie_control_pme_in_d3cold`** (@ `0x014fbacf`), log `PME in D3cold feature: %x` (@ `0x014fbab5`), global **`g_pcie_pme_in_d3cold`** (@ `0x014fb468`, in `pcie_reset: %u, g_pcie_pme_in_d3cold: %x`). This is the firmware knob the host's `WMI_WOW_FLAG_SEND_PM_PME` (0x2) toggles — consistent with PME# appearing only when that flag is set.
+Firmware-side PME gate **`pcie_control_pme_in_d3cold`** (@ `0x014fbacf`), log `PME in D3cold feature: %x` (@ `0x014fbab5`), global **`g_pcie_pme_in_d3cold`** (@ `0x014fb468`, in `pcie_reset: %u, g_pcie_pme_in_d3cold: %x`). This is the firmware knob the host's `WMI_WOW_FLAG_SEND_PM_PME` (0x2) toggles, consistent with PME# appearing only when that flag is set.
 
 PERST# input: **`pcie_i_perst_isr___RAM`** (@ `0x014fbb43`), `GPIO PERST# is asserted/deasserted` (@ `0x014fbbdc` / `0x014fbc98`). WAKE# output GPIO is **`pci_e0_wake`** (@ `0x014f5141`; `pci_e1_wake` @ `0x014f55b4`), TLMM base behind `GPIOINT_PHYSICAL_ADDRESS` (@ `0x014f4f12`).
 
@@ -35,7 +35,7 @@ The MHI state machine already has a host-driven wake workaround that fakes a PER
 
 ## What could NOT be pinned, and why (honest limit)
 
-No instruction-level disassembly of these functions, because the image uses Qualcomm's **compressed-logging (QDSS/QSR) token scheme**. Verified three ways, all negative: no 4-byte literal-pool pointer to any of these strings/tokens/GPIO names (`/v4` + raw-byte search); no Thumb-2 `MOVW`/`MOVT` pair building any of those addresses (full scan of all executable segments); radare2 `/r` returns nothing. The code refers to each log site by an opaque ID; the ID->site map normally lives in a companion QDSS string ELF we don't have, which is also why `aaa` recovered only 566 functions. Pinning the exact branch instruction needs that metadata file from Valve/Qualcomm or dynamic tracing on the chip. The policy-level evidence does not depend on it — the log strings are developer descriptions of the actual branches in `pcie_i_assert_wake___RAM`.
+No instruction-level disassembly of these functions, because the image uses Qualcomm's **compressed-logging (QDSS/QSR) token scheme**. Verified three ways, all negative: no 4-byte literal-pool pointer to any of these strings/tokens/GPIO names (`/v4` + raw-byte search); no Thumb-2 `MOVW`/`MOVT` pair building any of those addresses (full scan of all executable segments); radare2 `/r` returns nothing. The code refers to each log site by an opaque ID; the ID->site map normally lives in a companion QDSS string ELF we don't have, which is also why `aaa` recovered only 566 functions. Pinning the exact branch instruction needs that metadata file from Valve/Qualcomm or dynamic tracing on the chip. The policy-level evidence does not depend on it, the log strings are developer descriptions of the actual branches in `pcie_i_assert_wake___RAM`.
 
 ## Proposed change (for Qualcomm / Valve)
 
