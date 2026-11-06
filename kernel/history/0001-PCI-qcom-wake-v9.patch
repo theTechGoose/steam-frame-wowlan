@@ -1,0 +1,441 @@
+From: Raphael Castro <rafac@monsterrg.com>
+Subject: [PATCH] PCI: qcom: wake from L1ss on CLKREQ# (and register WAKE#) for wakeup-enabled endpoints
+
+Steam Frame (sm8650-mp), WCN7850 on pcie0. The firmware detects WoW events but
+signals them in-band only; the root port's PME IRQ is an ITS MSI that cannot wake
+the SoC, and WAKE# is only pulled as a reaction to PERST#. Keep the link in L1ss
+across suspend and use CLKREQ# (tlmm 95, PDC-mapped) as the wake interrupt.
+The pad stays on the controller's clkreq function (the RC drives CLKREQ# to leave
+L1.2 itself; muxing it away kills the link): the TLMM/PDC IRQ is mapped once at
+probe before link training, the pad restored via the pinctrl states, and the IRQ
+only enabled as a wake source for the duration of a sleep.
+
+---
+--- a/drivers/pci/controller/dwc/pcie-qcom.c
++++ b/drivers/pci/controller/dwc/pcie-qcom.c
+@@ -27,6 +27,9 @@
+ #include <linux/pci-pwrctrl.h>
+ #include <linux/pm_opp.h>
+ #include <linux/pm_runtime.h>
++#include <linux/pm_wakeup.h>
++#include <linux/of_irq.h>
++#include <linux/pinctrl/consumer.h>
+ #include <linux/platform_device.h>
+ #include <linux/phy/pcie.h>
+ #include <linux/phy/phy.h>
+@@ -292,9 +295,24 @@
+ 	struct list_head ports;
+ 	struct gpio_desc *reset;
+ 	bool use_pm_opp;
++	struct gpio_desc *wake;
++	int wake_irq;
++	bool wake_armed;
++	int clkreq_irq;
++	bool clkreq_armed;
+ };
+ 
+ #define to_qcom_pcie(x)		dev_get_drvdata((x)->dev)
++
++static bool qcom_pcie_keep_link = true;
++module_param_named(keep_link, qcom_pcie_keep_link, bool, 0644);
++MODULE_PARM_DESC(keep_link,
++		 "Keep the link in L1ss across system suspend for wakeup-enabled endpoints instead of L2 + PERST# (default: false; WAKE# is armed either way)");
++
++static bool qcom_pcie_skip_perst = true;
++module_param_named(skip_perst, qcom_pcie_skip_perst, bool, 0644);
++MODULE_PARM_DESC(skip_perst,
++		 "Leave PERST# deasserted when entering L2 for a wakeup-enabled endpoint (default: true); the WCN7850 pulls WAKE# low as soon as PERST# is asserted");
+ 
+ static void __qcom_pcie_perst_assert(struct qcom_pcie *pcie, bool assert)
+ {
+@@ -1449,7 +1467,10 @@
+ 	struct dw_pcie *pci = to_dw_pcie_from_pp(pp);
+ 	struct qcom_pcie *pcie = to_qcom_pcie(pci);
+ 
+-	qcom_pcie_perst_assert(pcie);
++	if (pcie->wake_armed && qcom_pcie_skip_perst)
++		dev_info(pci->dev, "leaving PERST# deasserted for WAKE#\n");
++	else
++		qcom_pcie_perst_assert(pcie);
+ 
+ 	if (!pci->pp.skip_pwrctrl_off) {
+ 		/*
+@@ -1996,10 +2017,93 @@
+ 	INIT_LIST_HEAD(&port->perst);
+ 	INIT_LIST_HEAD(&perst->list);
+ 	list_add_tail(&perst->list, &port->perst);
++
++	return 0;
++}
++
++/*
++ * WAKE# sideband: the endpoint (WCN7850 on the Steam Frame, tlmm 96) pulls the
++ * line low to wake the SoC while the link sits in L1ss with the device in D3hot.
++ * Nothing registered this line before, so Wake-on-WLAN could never wake the
++ * system. Register it as a wakeup IRQ and, when a downstream device is
++ * wakeup-enabled, keep the link powered across system suspend instead of
++ * asserting PERST# and powering the PHY off (which resets the radio).
++ */
++static irqreturn_t qcom_pcie_wake_irq_handler(int irq, void *data)
++{
++	struct qcom_pcie *pcie = data;
++	struct device *dev = pcie->pci->dev;
++
++	dev_info(dev, "WAKE# toggled (level now %d)\n",
++		 gpiod_get_raw_value_cansleep(pcie->wake));
++	pm_wakeup_event(dev, 0);
++
++	return IRQ_HANDLED;
++}
++
++static void qcom_pcie_init_wake(struct qcom_pcie *pcie)
++{
++	struct device *dev = pcie->pci->dev;
++	int irq, ret;
++
++	pcie->wake = devm_gpiod_get_optional(dev, "wake", GPIOD_IN);
++	if (IS_ERR(pcie->wake)) {
++		dev_warn(dev, "failed to get WAKE# GPIO: %ld\n",
++			 PTR_ERR(pcie->wake));
++		pcie->wake = NULL;
++		return;
++	}
++	if (!pcie->wake)
++		return;
++
++	irq = gpiod_to_irq(pcie->wake);
++	if (irq < 0) {
++		dev_warn(dev, "no IRQ for WAKE# GPIO: %d\n", irq);
++		return;
++	}
++
++	ret = devm_request_threaded_irq(dev, irq, NULL,
++					qcom_pcie_wake_irq_handler,
++					IRQF_TRIGGER_FALLING | IRQF_ONESHOT,
++					"pcie_wake", pcie);
++	if (ret) {
++		dev_warn(dev, "failed to request WAKE# IRQ %d: %d\n", irq, ret);
++		return;
++	}
+ 
++	pcie->wake_irq = irq;
++	device_init_wakeup(dev, true);
++	dev_info(dev, "WAKE# GPIO registered as wakeup IRQ %d\n", irq);
++}
++
++static int qcom_pcie_wakeup_wanted_cb(struct pci_dev *pdev, void *data)
++{
++	bool *wanted = data;
++
++	if (!pci_is_bridge(pdev) && device_may_wakeup(&pdev->dev))
++		*wanted = true;
++
+ 	return 0;
+ }
+ 
++/* True when WAKE# is wired up and a downstream device asked to wake the system. */
++static bool qcom_pcie_keep_link_for_wake(struct qcom_pcie *pcie)
++{
++	struct dw_pcie_rp *pp = &pcie->pci->pp;
++	bool wanted = false;
++
++	if (pcie->wake_irq <= 0 || !device_may_wakeup(pcie->pci->dev))
++		return false;
++	if (!pp->bridge || !pp->bridge->bus)
++		return false;
++
++	pci_walk_bus(pp->bridge->bus, qcom_pcie_wakeup_wanted_cb, &wanted);
++
++	return wanted;
++}
++
++static void qcom_pcie_init_clkreq_wake(struct qcom_pcie *pcie);
++
+ static int qcom_pcie_probe(struct platform_device *pdev)
+ {
+ 	struct qcom_pcie_perst *perst, *tmp_perst;
+@@ -2149,6 +2253,8 @@
+ 
+ 	platform_set_drvdata(pdev, pcie);
+ 
++	qcom_pcie_init_clkreq_wake(pcie);
++
+ 	ret = dw_pcie_host_init(pp);
+ 	if (ret) {
+ 		dev_err_probe(dev, ret, "cannot initialize host\n");
+@@ -2157,6 +2263,8 @@
+ 
+ 	qcom_pcie_icc_opp_update(pcie);
+ 
++	qcom_pcie_init_wake(pcie);
++
+ 	if (pcie->mhi)
+ 		qcom_pcie_init_debugfs(pcie);
+ 
+@@ -2182,6 +2290,157 @@
+ 	return ret;
+ }
+ 
++static irqreturn_t qcom_pcie_clkreq_irq_handler(int irq, void *data)
++{
++	struct qcom_pcie *pcie = data;
++	struct device *dev = pcie->pci->dev;
++
++	/*
++	 * No pm_wakeup_event(): CLKREQ# also falls whenever the *host* pulls
++	 * the link out of L1.2, and the IRQ is live (IRQF_NO_SUSPEND) from
++	 * the bridge's suspend_noirq onwards. An edge during real sleep wakes
++	 * the SoC through the PDC by itself; this just records it.
++	 */
++	dev_info(dev, "CLKREQ# asserted by endpoint (wake IRQ %d)\n", irq);
++
++	return IRQ_HANDLED;
++}
++
++/*
++ * With the link kept in L1ss the endpoint signals a wake in-band: it first
++ * asserts CLKREQ# to leave L1.2, then sends PME. The root port's PME
++ * interrupt is an ITS MSI and cannot wake the SoC, but CLKREQ# (tlmm 95,
++ * PDC-mapped) can.
++ *
++ * The pin must stay on the controller's clkreq function: the root complex
++ * drives CLKREQ# itself to leave L1.2, so muxing it to GPIO kills the link
++ * (v6: "device inaccessible" within the same suspend). So the TLMM/PDC
++ * interrupt is mapped once at probe, before the link trains — requesting it
++ * remuxes the pad to GPIO, which we undo by re-applying the default pinctrl
++ * state (via the sleep state, because re-selecting the current state is a
++ * no-op) — and only enabled as a wake source for the duration of a sleep.
++ */
++static void qcom_pcie_init_clkreq_wake(struct qcom_pcie *pcie)
++{
++	struct device *dev = pcie->pci->dev;
++	struct of_phandle_args args;
++	int irq, ret;
++
++	ret = of_parse_phandle_with_args(dev->of_node, "clkreq-gpios",
++					 "#gpio-cells", 0, &args);
++	if (ret) {
++		dev_info(dev, "no clkreq-gpios, CLKREQ# wake disabled\n");
++		return;
++	}
++
++	args.args_count = 2;
++	args.args[1] = IRQ_TYPE_EDGE_FALLING;
++	irq = irq_create_of_mapping(&args);
++	of_node_put(args.np);
++	if (irq <= 0) {
++		dev_warn(dev, "no IRQ for CLKREQ# (tlmm %u)\n", args.args[0]);
++		return;
++	}
++
++	/*
++	 * Device-managed: pcie0 probes several times (deferred on pwrctrl)
++	 * and a plain request would leak across the -EPROBE_DEFER returns
++	 * (v7: "Flags mismatch irq 242 ... -16" on every retry).
++	 */
++	ret = devm_request_threaded_irq(dev, irq, NULL,
++					qcom_pcie_clkreq_irq_handler,
++					IRQF_TRIGGER_FALLING | IRQF_ONESHOT |
++					IRQF_NO_AUTOEN | IRQF_NO_SUSPEND,
++					"pcie_clkreq_wake", pcie);
++	if (ret) {
++		dev_warn(dev, "failed to request CLKREQ# IRQ %d: %d\n", irq, ret);
++		return;
++	}
++
++	/* Give the pad back to the controller (the IRQ request muxed it to GPIO). */
++	ret = pinctrl_pm_select_sleep_state(dev);
++	if (!ret)
++		ret = pinctrl_pm_select_default_state(dev);
++	if (ret) {
++		dev_warn(dev, "failed to restore CLKREQ# pinctrl: %d\n", ret);
++		devm_free_irq(dev, irq, pcie);
++		return;
++	}
++
++	pcie->clkreq_irq = irq;
++	dev_info(dev, "CLKREQ# (tlmm %u) mapped as wake IRQ %d, pad restored\n",
++		 args.args[0], irq);
++}
++
++static void qcom_pcie_arm_clkreq(struct qcom_pcie *pcie)
++{
++	struct device *dev = pcie->pci->dev;
++	int ret;
++
++	if (!pcie->clkreq_irq)
++		return;
++
++	/*
++	 * Armed from the bridge's suspend_noirq, i.e. after the last config
++	 * access of the suspend sequence (the endpoints' D3hot writes make
++	 * the RC assert CLKREQ# itself: v8 aborted every suspend with
++	 * pm_wakeup_irq = this IRQ). IRQF_NO_SUSPEND keeps the core from
++	 * masking it, and an enabled PDC interrupt is a wake source.
++	 */
++	enable_irq(pcie->clkreq_irq);
++	pcie->clkreq_armed = true;
++	dev_info(dev, "CLKREQ# armed as wake IRQ %d\n", pcie->clkreq_irq);
++}
++
++static void qcom_pcie_disarm_clkreq(struct qcom_pcie *pcie)
++{
++	struct device *dev = pcie->pci->dev;
++
++	if (!pcie->clkreq_armed)
++		return;
++
++	disable_irq(pcie->clkreq_irq);
++	pcie->clkreq_armed = false;
++	dev_info(dev, "CLKREQ# disarmed\n");
++}
++
++static int qcom_pcie_suspend_late(struct device *dev)
++{
++	struct qcom_pcie *pcie = dev_get_drvdata(dev);
++	int ret;
++
++	if (!pcie || !qcom_pcie_keep_link_for_wake(pcie))
++		return 0;
++
++	/* Must happen before suspend_device_irqs(), hence suspend_late. */
++	ret = enable_irq_wake(pcie->wake_irq);
++	if (ret) {
++		dev_warn(dev, "failed to arm WAKE# IRQ: %d\n", ret);
++		return 0;
++	}
++
++	pcie->wake_armed = true;
++	dev_info(dev, "wakeup-enabled endpoint: WAKE# armed (level %d)\n",
++		 gpiod_get_raw_value_cansleep(pcie->wake));
++
++	return 0;
++}
++
++static int qcom_pcie_resume_early(struct device *dev)
++{
++	struct qcom_pcie *pcie = dev_get_drvdata(dev);
++
++	if (pcie && pcie->wake_armed) {
++		qcom_pcie_disarm_clkreq(pcie);
++		disable_irq_wake(pcie->wake_irq);
++		pcie->wake_armed = false;
++		dev_info(dev, "WAKE# disarmed (level %d)\n",
++			 gpiod_get_raw_value_cansleep(pcie->wake));
++	}
++
++	return 0;
++}
++
+ static int qcom_pcie_suspend_noirq(struct device *dev)
+ {
+ 	struct qcom_pcie *pcie;
+@@ -2191,10 +2450,25 @@
+ 	if (!pcie)
+ 		return 0;
+ 
+-	ret = dw_pcie_suspend_noirq(pcie->pci);
+-	if (ret)
+-		return ret;
++	/*
++	 * WAKE# was armed in suspend_late (it must be a wake source before
++	 * suspend_device_irqs() runs, i.e. before this noirq phase). By
++	 * default the DWC core takes the link to L2 and asserts PERST#
++	 * (power is kept because the device is PME-capable from D3cold);
++	 * in that state the WCN7850 keeps its WoW context and signals wake
++	 * on WAKE#. With keep_link the link stays in L1ss and wake is
++	 * in-band (PME) instead.
++	 */
++	if (pcie->wake_armed)
++		dev_info(dev, "suspend with WAKE# armed, link %s\n",
++			 qcom_pcie_keep_link ? "kept in L1ss" : "to L2 + PERST#");
+ 
++	if (!(pcie->wake_armed && qcom_pcie_keep_link)) {
++		ret = dw_pcie_suspend_noirq(pcie->pci);
++		if (ret)
++			return ret;
++	}
++
+ 	if (pcie->pci->suspended) {
+ 		ret = icc_disable(pcie->icc_mem);
+ 		if (ret)
+@@ -2237,6 +2511,10 @@
+ 				dev_pm_opp_set_opp(pcie->pci->dev, NULL);
+ 		}
+ 	}
++
++	if (!ret && pcie->wake_armed && qcom_pcie_keep_link)
++		qcom_pcie_arm_clkreq(pcie);
++
+ 	return ret;
+ }
+ 
+@@ -2249,6 +2527,12 @@
+ 	if (!pcie)
+ 		return 0;
+ 
++	qcom_pcie_disarm_clkreq(pcie);
++
++	if (pcie->wake_armed)
++		dev_info(dev, "resume, WAKE# level %d\n",
++			 gpiod_get_raw_value_cansleep(pcie->wake));
++
+ 	if (pcie->pci->suspended) {
+ 		if (pcie->use_pm_opp) {
+ 			ret = qcom_pcie_set_max_opp(dev);
+@@ -2351,6 +2635,7 @@
+ DECLARE_PCI_FIXUP_EARLY(PCI_VENDOR_ID_QCOM, 0x1001, qcom_fixup_class);
+ 
+ static const struct dev_pm_ops qcom_pcie_pm_ops = {
++	LATE_SYSTEM_SLEEP_PM_OPS(qcom_pcie_suspend_late, qcom_pcie_resume_early)
+ 	NOIRQ_SYSTEM_SLEEP_PM_OPS(qcom_pcie_suspend_noirq, qcom_pcie_resume_noirq)
+ };
+ 
+--- a/arch/arm64/boot/dts/qcom/sm8650-mp.dts
++++ b/arch/arm64/boot/dts/qcom/sm8650-mp.dts
+@@ -1415,9 +1415,12 @@
+ &pcie0 {
+ 	wake-gpios = <&tlmm 96 GPIO_ACTIVE_HIGH>;
+ 	perst-gpios = <&tlmm 94 GPIO_ACTIVE_LOW>;
++	/* CLKREQ# as a PDC wake source while the link sleeps in L1ss (see pcie-qcom) */
++	clkreq-gpios = <&tlmm 95 GPIO_ACTIVE_LOW>;
+ 
+ 	pinctrl-0 = <&pcie0_default_state>;
+-	pinctrl-names = "default";
++	pinctrl-1 = <&pcie0_sleep_state>;
++	pinctrl-names = "default", "sleep";
+ 
+ 	status = "okay";
+ };
+@@ -2609,6 +2612,31 @@
+ 			output-enable;
+ 			bias-disable;
+ 			power-source = <0>;
++		};
++	};
++};
++
++&tlmm {
++	pcie0_sleep_state: pcie0-sleep-state {
++		perst-pins {
++			pins = "gpio94";
++			function = "gpio";
++			drive-strength = <2>;
++			bias-pull-down;
+ 		};
++
++		clkreq-pins {
++			pins = "gpio95";
++			function = "gpio";
++			drive-strength = <2>;
++			bias-pull-up;
++		};
++
++		wake-pins {
++			pins = "gpio96";
++			function = "gpio";
++			drive-strength = <2>;
++			bias-pull-up;
++		};
+ 	};
+ };

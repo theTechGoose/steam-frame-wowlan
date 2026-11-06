@@ -1,0 +1,70 @@
+22:47:51 label=patched-v12-pme mode=s2idle kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 7d7f5a42-d441-4ed2-84db-ae016ee004cf
+22:47:51 suspend requested; waiting 25 s for it to go down
+22:48:19 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+22:49:50 did not wake in 90s; waiting for RTC safety alarm
+22:51:54 --- journal (this suspend cycle)
+[   57.204052] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[57] = 6395, chan_info->info    20000
+[   57.204175] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI no.of chan = 36 len = 1028 pdev_id = 0 num_sends = 1
+[   57.204271] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[0] = 6415, chan_info->info    20000
+[   57.204377] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[1] = 6435, chan_info->info    20000
+[   57.204465] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[2] = 6455, chan_info->info    60000
+[   57.204551] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[3] = 6475, chan_info->info    20000
+[   57.204635] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[4] = 6495, chan_info->info    20000
+[   57.204718] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[5] = 6515, chan_info->info    20000
+[   57.204805] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[6] = 6535, chan_info->info    60000
+[   57.204891] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[7] = 6555, chan_info->info    20000
+[   57.204978] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[8] = 6575, chan_info->info    20000
+[   57.205103] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[9] = 6595, chan_info->info    20000
+[   57.205215] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[10] = 6615, chan_info->info    60000
+[   57.205305] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[11] = 6635, chan_info->info    20000
+[   57.205391] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[12] = 6655, chan_info->info    20000
+[   57.205475] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[13] = 6675, chan_info->info    20000
+[   57.205560] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[14] = 6695, chan_info->info    60000
+[   57.205648] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[15] = 6715, chan_info->info    20000
+[   57.205733] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[16] = 6735, chan_info->info    20000
+[   57.205819] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[17] = 6755, chan_info->info    20000
+[   57.205903] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[18] = 6775, chan_info->info    60000
+[   57.205987] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[19] = 6795, chan_info->info    20000
+[   57.206113] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[20] = 6815, chan_info->info    20000
+[   57.206222] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[21] = 6835, chan_info->info    20000
+[   57.206308] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[22] = 6855, chan_info->info    60000
+[   57.206392] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[23] = 6875, chan_info->info    20000
+[   57.206475] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[24] = 6895, chan_info->info    20000
+[   57.206559] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[25] = 6915, chan_info->info    20000
+[   57.206648] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[26] = 6935, chan_info->info    60000
+[   57.206734] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[27] = 6955, chan_info->info    20000
+[   57.206822] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[28] = 6975, chan_info->info    20000
+[   57.206906] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[29] = 6995, chan_info->info    20000
+[   57.206992] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[30] = 7015, chan_info->info    60000
+[   57.207128] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[31] = 7035, chan_info->info    20000
+[   57.207236] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[32] = 7055, chan_info->info    20000
+[   57.207324] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[33] = 7075, chan_info->info    20000
+[   57.207408] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[34] = 7095, chan_info->info    60000
+[   57.207492] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[35] = 7115, chan_info->info    20000
+[   57.207578] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+[   57.207662] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+[   57.207749] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -58
+[   57.207837] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.207925] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.208030] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+[   57.208153] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+[   57.208250] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000208db1fe
+[   57.208335] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.295055] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
+[   57.377770] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
+[   57.380026] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
+[   57.479041] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+[   57.479368] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+[   57.479533] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -58
+[   57.479698] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.479848] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.480052] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+[   57.480336] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+[   57.480556] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000208db1fe
+[   57.480967] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+[   57.696827] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1
+22:51:54 log: build/kernel/wake-patched-v12-pme-s2idle-20261105-224750.log

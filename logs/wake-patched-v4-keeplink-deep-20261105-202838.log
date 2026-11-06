@@ -1,0 +1,26 @@
+20:28:39 label=patched-v4-keeplink mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 605ef2b0-b71e-4be5-b174-616cf2127886
+20:28:40 suspend requested; waiting 25 s for it to go down
+20:29:08 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+20:30:39 did not wake in 90s; waiting for RTC safety alarm
+20:32:43 --- journal (this suspend cycle)
+[  492.577864] frame sudo[7676]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh -c 'echo 1 > /sys/module/pcie_qcom/parameters/keep_link; cat /sys/module/pcie_qcom/parameters/keep_link'
+[  493.788159] frame sudo[7727]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh /home/steamos/wake-arm.sh deep 240
+[  497.568036] frame kernel: PM: suspend entry (deep)
+[  500.532887] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[  500.535151] frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed (level 1)
+[  500.535350] frame kernel: qcom-pcie 1c00000.pcie: suspend with WAKE# armed, link kept in L1ss
+[  500.535435] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[  500.535523] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[  500.536617] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[  500.537208] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[  500.537321] frame kernel: qcom-pcie 1c00000.pcie: resume, WAKE# level 1
+[  500.537412] frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 1)
+[  500.539642] frame kernel: PM: suspend exit
+[  500.539245] frame bluetoothd[1034]: Controller resume with wake event 0x0
+[  500.539823] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[  500.540095] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+20:32:44 log: build/kernel/wake-patched-v4-keeplink-deep-20261105-202838.log

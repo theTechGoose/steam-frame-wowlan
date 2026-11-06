@@ -1,0 +1,8 @@
+19:00:08 label=baseline-stock72 mode=deep kernel=7.2.0-g9a8c8ea46950 mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+sh: line 5: /sys/devices/platform/soc@0/1c00000.pcie/power/wakeup: Permission denied
+WoWLAN is enabled:
+ * wake up on magic packet
+s2idle [deep]
+boot-id 61781572-a5b5-459e-9a35-025f1ad8d67b
+19:00:09 suspend requested; waiting 25 s for it to go down
+19:00:34 FAIL: frame never suspended

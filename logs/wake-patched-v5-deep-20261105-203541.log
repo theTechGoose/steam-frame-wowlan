@@ -1,0 +1,70 @@
+20:35:42 label=patched-v5 mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 517b62e8-3eb4-46aa-adba-a394e26f3796
+20:35:42 suspend requested; waiting 25 s for it to go down
+20:36:10 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+20:37:41 did not wake in 90s; waiting for RTC safety alarm
+20:39:54 --- journal (this suspend cycle)
+[    5.325010] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+[    5.346040] frame kernel: ath12k_wifi7_pci 0000:01:00.0: chip_id 0x2 chip_family 0x4 board_id 0xff soc_id 0x40170200
+[    5.346221] frame kernel: ath12k_wifi7_pci 0000:01:00.0: fw_version 0x110a0012 fw_build_timestamp 2025-08-20 07:43 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.IOE_HMT.1.1-00018-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1
+[    5.353011] frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+[    5.353138] frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 fallback boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+[    5.353236] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
+[    5.353334] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
+[    5.426020] frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
+[    5.521011] frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+[    6.436552] frame systemd[1]: Create List of Static Device Nodes was skipped because of an unmet condition check (ConditionFileNotEmpty=/lib/modules/7.2.0-wake+/modules.devname).
+[    7.176855] frame modprobe[1166]: modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/7.2.0-wake+
+[    7.362072] frame set_kernel_thread_priorities.sh[1164]: [crtc 314] : set priority -99
+[    7.380669] frame set_kernel_thread_priorities.sh[1164]: [crtc 315] : set priority -99
+[    7.385915] frame set_kernel_thread_priorities.sh[1164]: [card0-crtc 316] : set priority -99
+[    7.388870] frame set_kernel_thread_priorities.sh[1164]: [card0-crtc 317] : set priority -99
+[    7.408697] frame dsp_service[1044]: 2026-11-05 20:35:01.635725 - [aDSP][INFO][AUDFLT] Entering Wait mode while in IDLE/SUSPENDED state
+[    7.873653] frame NetworkManager[1608]: <info>  [1793928902.1009] rfkill1: found Wi-Fi radio killswitch (at /sys/devices/platform/soc@0/1c00000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/ieee80211/phy0/rfkill1) (driver ath12k_wifi7_pci)
+[    9.022157] frame bash[1812]:     no_wake_sync: false,
+[   14.150371] frame rtkit-daemon[1921]: Handling system-suspend using logind.
+[   15.655859] frame XRService[2008]: [DeckardCaptureSource] Created tracking camera wakeup eventfd=27
+[   15.655863] frame XRService[2008]: [DeckardCaptureSource] Created passthrough camera wakeup eventfd=28
+[   17.135093] frame webhelper[2008]: Startup - webhelper launched pid: 3019 commandline: /home/steamos/.local/share/Steam/steamrtarm64/steamwebhelper -nocrashdialog -lang=en_US -cachedir=/home/steamos/.local/share/Steam/config/htmlcache -steampid=2630 -buildid=1792099137 -steamid=0 -logdir=/home/steamos/.local/share/Steam/logs -uimode=4 -startcount=0 -prefer-gamescope-composer-vr -steamframe -steamos3 -steamuniverse=Public -realm=Global -clientui=/home/steamos/.local/share/Steam/clientui -steampath=/home/steamos/.local/share/Steam/steamrtarm64/steam -launcher=0 --valve-enable-accessibility --valve-enable-site-isolation --remote-allow-origins=* --remote-debugging-address=127.0.0.1 --remote-debugging-port=8080 --enable-smooth-scrolling --proxy-auto-detect --ignore-gpu-blocklist --use-fake-ui-for-media-stream --no-sandbox --password-store=basic --log-file=/home/steamos/.local/share/Steam/logs/cef_log.txt --disable-quick-menu --disable-component-update --gaia-url=http://disabled.invalid --enable-features=PlatformHEVCDecoderSupport,V4L2VideoDecode -
+[   17.648444] frame systemmanager[2008]: Night mode active on resume 0
+[   17.680173] frame transport_steamui[2008]: WebUITransportController: Initialized
+[   18.154587] frame steamui_steamos[2008]: Set CEC wake on resume: 1
+[   18.154594] frame steamui_steamos[2008]: Set CEC suspend TV: 1
+[   18.154596] frame steamui_steamos[2008]: Set CEC suspend device: 1
+[   18.154657] frame steamui_steamos[2008]: Set CEC wake TV: 1
+[   18.154662] frame steamui_steamos[2008]: Set CEC wake device not supported
+[   18.155960] frame steamui_system[2008]: Initialized CSystemReportController
+[   21.400682] frame webhelper_gpu[2008]: [ operating_system ]: Linux 7.2.0-wake+
+[   21.402968] frame webhelper_gpu[2008]: [ ANGLEFeatures[117] ]: unfoldShortCircuits: disabled
+[   22.321166] frame webhelper_js[2008]: SteamUI: INFO: SuspendResumeStore - 0.4ms
+[   22.364392] frame vrserver[2008]: - New Connect message from /home/steamos/.local/share/Steam/steamrtarm64/steamwebhelper (VRApplication_Background) (Args: -nocrashdialog -lang=en_US -cachedir=/home/steamos/.local/share/Steam/config/htmlcache -steampid=2630 -buildid=1792099137 -steamid=0 -logdir=/home/steamos/.local/share/Steam/logs -uimode=4 -startcount=0 -prefer-gamescope-composer-vr -steamframe -steamos3 -steamuniverse=Public -realm=Global -clientui=/home/steamos/.local/share/Steam/clientui -steampath=/home/steamos/.local/share/Steam/steamrtarm64/steam -launcher=0 --valve-enable-accessibility --valve-enable-site-isolation --remote-allow-origins=* --remote-debugging-address=127.0.0.1 --remote-debugging-port=8080 --enable-smooth-scrolling --proxy-auto-detect --ignore-gpu-blocklist --use-fake-ui-for-media-stream --no-sandbox --password-store=basic --log-file=/home/steamos/.local/share/Steam/logs/cef_log.txt --disable-quick-menu --disable-component-update --gaia-url=http://disabled.invalid --enable-features=PlatformHEVCDecoderSupport,V4L2VideoDecode --disable-features=WinRetrieveSuggestionsOnlyOnDemand,SpareRendererForSitePerProcess,BlockPromptsIfIgnoredOften,WebUsbDeviceDetection,ValveFFmpegAllowLowDelayHEVC) 3019
+[   24.207463] frame steamsysinfo[2008]: path_shortcut: "/home/steamos/.local/share/applications/Brotato.desktop"
+[   24.207490] frame steamsysinfo[2008]: path_shortcut: "/home/steamos/.local/share/applications/valve-steamvr.desktop"
+[   24.207512] frame steamsysinfo[2008]: path_shortcut: "/usr/share/applications/nvtop.desktop"
+[   24.207777] frame steamsysinfo[2008]: path_shortcut: "/usr/share/applications/steam.desktop"
+[   24.207799] frame steamsysinfo[2008]: path_shortcut: "/usr/share/applications/cmake-gui.desktop"
+[   24.207818] frame steamsysinfo[2008]: path_shortcut: "/usr/sha
+[   49.419286] frame sudo[3843]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh /home/steamos/wake-arm.sh deep 240
+[   51.465036] frame kernel: PM: suspend entry (deep)
+[   54.741230] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[   54.741764] frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed (level 1)
+[   54.741941] frame kernel: qcom-pcie 1c00000.pcie: suspend with WAKE# armed, link to L2 + PERST#
+[   54.743745] frame kernel: qcom-pcie 1c00000.pcie: leaving PERST# deasserted for WAKE#
+[   54.743873] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[   54.743970] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[   54.744567] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[   54.744657] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[   54.744742] frame kernel: qcom-pcie 1c00000.pcie: resume, WAKE# level 1
+[   54.744822] frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x2 link up
+[   54.744899] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 0)
+[   54.744978] frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 0)
+[   54.749897] frame kernel: PM: suspend exit
+[   54.749623] frame bluetoothd[1012]: Controller resume with wake event 0x0
+[   54.751161] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[   54.751941] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+[   57.672372] frame XRService[2008]: [DeckardCaptureSource] Created tracking camera wakeup eventfd=33
+[   57.672402] frame XRService[2008]: [DeckardCaptureSource] Created passthrough camera wakeup eventfd=34
+20:39:55 log: build/kernel/wake-patched-v5-deep-20261105-203541.log

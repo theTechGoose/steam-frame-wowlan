@@ -1,0 +1,13 @@
+commit 0b9a701c15bcbaaec29b2b286c6c7a3b07cdd26d
+Author: build <build@local>
+Date:   Fri Nov 6 03:45:23 2026 +0000
+
+    PCI: qcom CLKREQ#/WAKE# wake, ath12k wow_flags, PCI-MSI wake-capable (v12)
+
+ arch/arm64/boot/dts/qcom/sm8650-mp.dts |  30 ++-
+ drivers/net/wireless/ath/ath12k/core.c |   6 +
+ drivers/net/wireless/ath/ath12k/core.h |   2 +
+ drivers/net/wireless/ath/ath12k/wmi.c  |   4 +-
+ drivers/pci/controller/dwc/pcie-qcom.c | 400 ++++++++++++++++++++++++++++++++-
+ drivers/pci/msi/irqdomain.c            |   4 +-
+ 6 files changed, 438 insertions(+), 8 deletions(-)

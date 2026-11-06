@@ -1,0 +1,224 @@
+== reachable 21:49:42
+7.2.0-wake+
+ 21:49:43 up 0 min,  2 users,  load average: 0.59, 0.13, 0.04
+5eb8d200-baa9-445f-ac48-ecfcc7a29e05
+19.28 120.57
+-rw-r--r-- 1 steamos steamos 0 Nov  5 21:27 /home/steamos/kernel-ok
+Image-7.2.0-wake+
+dtbs/7.2.0-wake+/qcom
+dtbs/7.2.0-wake+/qcom/sm8650-mp.dtb
+wlan0            UP             192.168.40.35/24 
+== journal current boot (PM/PCIe/ath12k lines)
+Nov 05 21:49:28.331437 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: registered as rtc0
+Nov 05 21:49:28.331508 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: setting system clock to 2026-11-06T02:49:24 UTC (1793933364)
+Nov 05 21:49:28.331641 frame kernel: qcom_wdt 17411000.watchdog: QCOM WDT probe OK
+Nov 05 21:49:28.334810 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 21:49:28.334876 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 21:49:28.334939 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 21:49:28.335004 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 21:49:28.335068 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 21:49:28.335134 frame kernel: qcom-pcie 1c08000.pcie: host bridge /soc@0/pcie@1c08000 ranges:
+Nov 05 21:49:28.335197 frame kernel: qcom-pcie 1c08000.pcie:       IO 0x0040200000..0x00402fffff -> 0x0000000000
+Nov 05 21:49:28.335259 frame kernel: qcom-pcie 1c08000.pcie:      MEM 0x0040300000..0x005fffffff -> 0x0040300000
+Nov 05 21:49:28.335837 frame kernel: qcom-pcie 1c08000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+Nov 05 21:49:28.336966 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 21:49:28.337033 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 21:49:28.337099 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 21:49:28.337232 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 21:49:28.337293 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 21:49:28.340309 frame kernel: qcom-pcie 1c08000.pcie: Device not found
+Nov 05 21:49:28.340372 frame kernel: qcom-pcie 1c08000.pcie: PCI host bridge to bus 0001:00
+Nov 05 21:49:28.342328 frame kernel: qcom-pcie 1c08000.pcie: WAKE# GPIO registered as wakeup IRQ 267
+Nov 05 21:49:28.343202 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 21:49:28.343265 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 21:49:28.343328 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 21:49:28.343391 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 21:49:28.343454 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 21:49:28.343472 frame kernel: PM: genpd: Disabling unused power domains
+Nov 05 21:49:28.343545 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 21:49:28.343607 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 21:49:28.343670 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 21:49:28.343733 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 21:49:28.343827 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 21:49:28.611797 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 21:49:28.612298 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 21:49:28.614601 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 21:49:28.614695 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 21:49:28.614774 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 21:49:28.777796 frame kernel: qcom-pcie 1c00000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+Nov 05 21:49:28.976850 frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.2 x2 link up
+Nov 05 21:49:28.977330 frame kernel: qcom-pcie 1c00000.pcie: PCI host bridge to bus 0000:00
+Nov 05 21:49:28.982792 frame kernel: pci 0000:01:00.0: ASPM: default states L0s L1
+Nov 05 21:49:28.987893 frame kernel: qcom-pcie 1c00000.pcie: WAKE# GPIO registered as wakeup IRQ 273
+Nov 05 21:49:29.000793 frame kernel: ath12k_wifi7_pci 0000:01:00.0: BAR 0 [mem 0x60400000-0x605fffff 64bit]: assigned
+Nov 05 21:49:29.001154 frame kernel: ath12k_wifi7_pci 0000:01:00.0: enabling device (0000 -> 0002)
+Nov 05 21:49:29.001499 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Wi-Fi 7 Hardware name: wcn7850 hw2.0
+Nov 05 21:49:29.001859 frame kernel: ath12k_wifi7_pci 0000:01:00.0: MSI vectors: 16
+Nov 05 21:49:29.058792 frame kernel: mhi mhi0: Requested to power ON
+Nov 05 21:49:29.058953 frame kernel: mhi mhi0: Power on setup success
+Nov 05 21:49:29.150787 frame kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
+Nov 05 21:49:29.533839 frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+Nov 05 21:49:29.554811 frame kernel: ath12k_wifi7_pci 0000:01:00.0: chip_id 0x2 chip_family 0x4 board_id 0xff soc_id 0x40170200
+Nov 05 21:49:29.555283 frame kernel: ath12k_wifi7_pci 0000:01:00.0: fw_version 0x110a0012 fw_build_timestamp 2025-08-20 07:43 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.IOE_HMT.1.1-00018-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1
+Nov 05 21:49:29.561793 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+Nov 05 21:49:29.562106 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 fallback boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+Nov 05 21:49:29.562517 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
+Nov 05 21:49:29.562834 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
+Nov 05 21:49:29.633797 frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
+Nov 05 21:49:29.728788 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+== journal previous boot tail
+Nov 05 21:31:24.417787 frame kernel: Tainted: [S]=CPU_OUT_OF_SPEC, [W]=WARN
+Nov 05 21:31:24.417795 frame kernel: Hardware name: SM8650 MP rev1 4slam 2et (DT)
+Nov 05 21:31:24.417801 frame kernel: Workqueue: async async_run_entry_fn
+Nov 05 21:31:24.417811 frame kernel: Sched_ext: lavd_1.1.2_aarch64_unknown_linux_gnu (enabled+all), task: runnable_at=-1ms
+Nov 05 21:31:24.417821 frame kernel: pstate: 61400009 (nZCv daif +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+Nov 05 21:31:24.417829 frame kernel: pc : ieee80211_del_chanctx+0x260/0x280
+Nov 05 21:31:24.417837 frame kernel: lr : ieee80211_free_chanctx+0x58/0x90
+Nov 05 21:31:24.417845 frame kernel: sp : ffff8001a94bb6f0
+Nov 05 21:31:24.417855 frame kernel: x29: ffff8001a94bb6f0 x28: 000000000000145a x27: ffff000800e28ac0
+Nov 05 21:31:24.417863 frame kernel: x26: ffff000800e29ec0 x25: ffff000800e29f1a x24: 0000000000000000
+Nov 05 21:31:24.417872 frame kernel: x23: ffff000871610c00 x22: 0000000000000000 x21: ffff0008221809c0
+Nov 05 21:31:24.417879 frame kernel: x20: ffff0008221809c0 x19: ffff000871610c00 x18: 000000000000000a
+Nov 05 21:31:24.417887 frame kernel: x17: 6572617764726168 x16: 206d6f7266202939 x15: 333a35633a62623a
+Nov 05 21:31:24.417896 frame kernel: x14: 0000000000000000 x13: 00000000000000ff x12: ffffffffffffffff
+Nov 05 21:31:24.417906 frame kernel: x11: 0000000000000004 x10: 0000000000000000 x9 : ffff8000820691d0
+Nov 05 21:31:24.417916 frame kernel: x8 : 0000000000000002 x7 : 0000000000000000 x6 : ffff000822181bd8
+Nov 05 21:31:24.417924 frame kernel: x5 : 0000000000001218 x4 : ffff000822181bd8 x3 : 0000000000000000
+Nov 05 21:31:24.417933 frame kernel: x2 : 0000000000000000 x1 : ffff000871610c00 x0 : 0000000000000000
+Nov 05 21:31:24.417940 frame kernel: Call trace:
+Nov 05 21:31:24.417947 frame kernel:  ieee80211_del_chanctx+0x260/0x280 (P)
+Nov 05 21:31:24.417957 frame kernel:  ieee80211_free_chanctx+0x58/0x90
+Nov 05 21:31:24.417966 frame kernel:  __ieee80211_link_release_channel+0x9c/0x1b0
+Nov 05 21:31:24.417975 frame kernel:  ieee80211_link_release_channel+0x38/0x58
+Nov 05 21:31:24.417983 frame kernel:  ieee80211_set_disassoc+0x348/0x678
+Nov 05 21:31:24.417991 frame kernel:  ieee80211_mgd_deauth+0x164/0x320
+Nov 05 21:31:24.417999 frame kernel:  ieee80211_deauth+0x20/0x40
+Nov 05 21:31:24.418006 frame kernel:  cfg80211_mlme_deauth+0xb4/0x348
+Nov 05 21:31:24.418013 frame kernel:  cfg80211_mlme_down+0x8c/0xa0
+Nov 05 21:31:24.418022 frame kernel:  cfg80211_disconnect+0x1f4/0x300
+Nov 05 21:31:24.418029 frame kernel:  cfg80211_leave_locked+0x1ec/0x220
+Nov 05 21:31:24.418037 frame kernel:  cfg80211_leave+0x54/0xb0
+Nov 05 21:31:24.418043 frame kernel:  cfg80211_netdev_notifier_call+0x138/0x9d8
+Nov 05 21:31:24.418049 frame kernel:  notifier_call_chain+0x7c/0x1c0
+Nov 05 21:31:24.418055 frame kernel:  raw_notifier_call_chain+0x20/0x38
+Nov 05 21:31:24.418061 frame kernel:  call_netdevice_notifiers_info+0x60/0xc0
+Nov 05 21:31:24.418068 frame kernel:  __dev_close_many+0x68/0x200
+Nov 05 21:31:24.418078 frame kernel:  netif_close_many+0x98/0x160
+Nov 05 21:31:24.418087 frame kernel:  netif_close+0x78/0xa0
+Nov 05 21:31:24.418093 frame kernel:  dev_close+0x3c/0x70
+Nov 05 21:31:24.418100 frame kernel:  cfg80211_shutdown_all_interfaces+0x4c/0x140
+Nov 05 21:31:24.418106 frame kernel:  wiphy_resume+0xb8/0x2e8
+Nov 05 21:31:24.418114 frame kernel:  dpm_run_callback+0x60/0x300
+Nov 05 21:31:24.418120 frame kernel:  device_resume+0x104/0x350
+Nov 05 21:31:24.418128 frame kernel:  async_resume+0x28/0x50
+Nov 05 21:31:24.418134 frame kernel:  async_run_entry_fn+0x3c/0x178
+Nov 05 21:31:24.418141 frame kernel:  process_one_work+0x168/0x4c8
+Nov 05 21:31:24.418148 frame kernel:  worker_thread+0x194/0x318
+Nov 05 21:31:24.418154 frame kernel:  kthread+0x134/0x148
+Nov 05 21:31:24.418161 frame kernel:  ret_from_fork+0x10/0x20
+Nov 05 21:31:24.418169 frame kernel: ---[ end trace 0000000000000000 ]---
+Nov 05 21:31:24.418177 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi command 28680 timeout
+Nov 05 21:31:24.418315 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to submit WMI_MGMT_TX_SEND_CMDID cmd
+Nov 05 21:31:24.418416 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to send mgmt frame: -11
+Nov 05 21:31:24.418610 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to tx mgmt frame, vdev_id 0 :-11
+Nov 05 21:31:24.418721 frame kernel: wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-5)
+Nov 05 21:31:24.418732 frame kernel: ------------[ cut here ]------------
+Nov 05 21:31:24.418741 frame kernel: WARNING: net/mac80211/driver-ops.c:41 at drv_stop+0x280/0x2a8, CPU#5: kworker/u48:14/3853
+Nov 05 21:31:24.418748 frame kernel: Modules linked in: ath12k_wifi7 iris ath12k max1720x_battery videobuf2_dma_contig pci_pwrctrl_pwrseq
+Nov 05 21:31:24.418754 frame kernel: CPU: 5 UID: 0 PID: 3853 Comm: kworker/u48:14 Tainted: G S      W           7.2.0-wake+ #7 PREEMPT  c7ba53aea54ce0b1a728cb20ce8277a09e43d838
+Nov 05 21:31:24.418763 frame kernel: Tainted: [S]=CPU_OUT_OF_SPEC, [W]=WARN
+Nov 05 21:31:24.418770 frame kernel: Hardware name: SM8650 MP rev1 4slam 2et (DT)
+Nov 05 21:31:24.418778 frame kernel: Workqueue: async async_run_entry_fn
+Nov 05 21:31:24.419004 frame kernel: Sched_ext: lavd_1.1.2_aarch64_unknown_linux_gnu (enabled+all), task: runnable_at=-1ms
+Nov 05 21:31:24.419020 frame kernel: pstate: 61400009 (nZCv daif +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+Nov 05 21:31:24.419028 frame kernel: pc : drv_stop+0x280/0x2a8
+Nov 05 21:31:24.419037 frame kernel: lr : ieee80211_stop_device+0x70/0x88
+Nov 05 21:31:24.419045 frame kernel: sp : ffff8001a94bbad0
+Nov 05 21:31:24.419053 frame kernel: x29: ffff8001a94bbad0 x28: 0000000000000000 x27: 0000000000000000
+Nov 05 21:31:24.419062 frame kernel: x26: ffff000800049c28 x25: 0000000000000001 x24: 0000000000000001
+Nov 05 21:31:24.419073 frame kernel: x23: ffff8001a94bbb40 x22: 0000000000000000 x21: 0000000000000000
+Nov 05 21:31:24.419083 frame kernel: x20: 0000000000000000 x19: ffff0008221809c0 x18: ffff800afa004000
+Nov 05 21:31:24.419091 frame kernel: x17: 000000040044ffff x16: 000000b2b5503510 x15: ffff800083ff6318
+Nov 05 21:31:24.419099 frame kernel: x14: ffff800083ec30c0 x13: 0000000000000180 x12: ffff000b7dec70c0
+Nov 05 21:31:24.419105 frame kernel: x11: 00000000000000c0 x10: d0a6ab0bc8d045df x9 : ffff80008205e698
+Nov 05 21:31:24.419113 frame kernel: x8 : ffff00080d7764a0 x7 : 0000000000000000 x6 : 000000000000003f
+Nov 05 21:31:24.419129 frame kernel: x5 : 0000000000000040 x4 : ffffffffffffffe0 x3 : 0000000000000000
+Nov 05 21:31:24.419137 frame kernel: x2 : 0000000000000001 x1 : 0000000000000000 x0 : 0000000000000000
+Nov 05 21:31:24.419146 frame kernel: Call trace:
+Nov 05 21:31:24.419154 frame kernel:  drv_stop+0x280/0x2a8 (P)
+Nov 05 21:31:24.419163 frame kernel:  ieee80211_stop_device+0x70/0x88
+Nov 05 21:31:24.419169 frame kernel:  ieee80211_do_stop+0x5ac/0x910
+Nov 05 21:31:24.419178 frame kernel:  ieee80211_sdata_stop+0x24/0x40
+Nov 05 21:31:24.419185 frame kernel:  ieee80211_stop_p2p_device+0x1c/0x30
+Nov 05 21:31:24.419193 frame kernel:  cfg80211_stop_p2p_device+0x60/0x2e0
+Nov 05 21:31:24.419201 frame kernel:  cfg80211_shutdown_all_interfaces+0x8c/0x140
+Nov 05 21:31:24.419210 frame kernel:  wiphy_resume+0xb8/0x2e8
+Nov 05 21:31:24.419216 frame kernel:  dpm_run_callback+0x60/0x300
+Nov 05 21:31:24.419223 frame kernel:  device_resume+0x104/0x350
+Nov 05 21:31:24.419230 frame kernel:  async_resume+0x28/0x50
+Nov 05 21:31:24.419239 frame kernel:  async_run_entry_fn+0x3c/0x178
+Nov 05 21:31:24.419246 frame kernel:  process_one_work+0x168/0x4c8
+Nov 05 21:31:24.419255 frame kernel:  worker_thread+0x194/0x318
+Nov 05 21:31:24.419264 frame kernel:  kthread+0x134/0x148
+Nov 05 21:31:24.419271 frame kernel:  ret_from_fork+0x10/0x20
+Nov 05 21:31:24.419280 frame kernel: ---[ end trace 0000000000000000 ]---
+Nov 05 21:31:24.419287 frame kernel: ieee80211 phy0: PM: dpm_run_callback(): wiphy_resume returns -11
+Nov 05 21:31:24.419409 frame kernel: ieee80211 phy0: PM: failed to resume async: error -11
+Nov 05 21:31:24.419542 frame kernel: deckard-panel ae94000.dsi.0: [drm:lpm026m648c_prepare] Displays match ( B == B ), using B
+Nov 05 21:31:24.419662 frame kernel: OOM killer enabled.
+Nov 05 21:31:24.419672 frame kernel: Restarting tasks: Starting
+Nov 05 21:31:24.419682 frame kernel: Restarting tasks: Done
+Nov 05 21:31:24.419690 frame kernel: random: crng reseeded on system resumption
+Nov 05 21:31:24.419703 frame kernel: PM: suspend exit
+Nov 05 21:31:24.419709 frame kernel: slg4ax46073v: wdt fired, resetting in work handler
+Nov 05 21:31:39.852480 frame kernel: ptrace attach of "XRService --documentsRoot /home/steamos/.config/openvr/config/cv/xrservice --wasStartedByDriverCV --connectToSteamVR"[2423] was attempted by "gdb -batch -nx -p 2423 -ex set print thread-events off -ex thread apply all bt -ex detach -ex quit"[4036]
+Nov 05 21:31:42.488449 frame kernel: cvp ab00000.cvp: CVP failed to enter idle state during shutdown. (CPU_STATUS=0x0 SCIACMDARG0=0x0)
+Nov 05 21:31:42.488678 frame kernel: cvp ab00000.cvp: cvp_power_off_hardware: EVA core powered off
+Nov 05 21:31:42.489443 frame kernel: cvp ab00000.cvp: cvp_shutdown: cvp (eva) powered off
+Nov 05 21:32:13.180770 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi command 16387 timeout
+Nov 05 21:32:13.181200 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to send WMI_PDEV_SET_PARAM cmd
+Nov 05 21:32:13.182073 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to enable PMF QOS: -11
+Nov 05 21:32:13.182286 frame kernel: ath12k_wifi7_pci 0000:01:00.0: fail to start mac operations in pdev idx 0 ret -11
+Nov 05 21:39:08.283809 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi command 16387 timeout
+Nov 05 21:39:08.284368 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to send WMI_PDEV_SET_PARAM cmd
+Nov 05 21:39:08.284703 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to enable PMF QOS: -11
+Nov 05 21:39:08.284990 frame kernel: ath12k_wifi7_pci 0000:01:00.0: fail to start mac operations in pdev idx 0 ret -11
+Nov 05 21:46:04.155853 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi command 16387 timeout
+Nov 05 21:46:04.156537 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to send WMI_PDEV_SET_PARAM cmd
+Nov 05 21:46:04.156865 frame kernel: ath12k_wifi7_pci 0000:01:00.0: failed to enable PMF QOS: -11
+Nov 05 21:46:04.157125 frame kernel: ath12k_wifi7_pci 0000:01:00.0: fail to start mac operations in pdev idx 0 ret -11
+== pmc / wakeup sources
+tcpm-source-psy-c400000.spmi:pmic@7:typec@2b00	20		25		0		0		0		1		0		5418		0
+pm8550b-charger	10		10		0		0		0		1		0		6478		0
+name		active_count	event_count	wakeup_count	expire_count	active_since	total_time	max_time	last_change	prevent_suspend_time
+mmc0        	1		1		0		1		0		5034		5034		5599		0
+mhi0        	0		0		0		0		0		0		0		0		0
+max1720x_bat_7-36	1		1		0		0		0		20		20		4473		0
+deleted     	0		0		0		0		0		0		0		0		0
+c400000.spmi:pmic@0:rtc@6100	0		0		0		0		0		0		0		0		0
+c400000.spmi:pmic@0:pon@1300:pwrkey	0		0		0		0		0		0		0		0		0
+c22a000.thermal-sensor	0		0		0		0		0		0		0		0		0
+c229000.thermal-sensor	0		0		0		0		0		0		0		0		0
+c228000.thermal-sensor	0		0		0		0		0		0		0		0		0
+alarmtimer.0.auto	0		0		0		0		0		0		0		0		0
+1c08000.pcie	0		0		0		0		0		0		0		0		0
+1c00000.pcie	1		1		0		0		0		0		0		5308		0
+0	0	0	0	0	0	0	0	0	
+0		0							
+fail
+failed_freeze
+failed_prepare
+failed_resume
+failed_resume_early
+failed_resume_noirq
+failed_suspend
+failed_suspend_late
+failed_suspend_noirq
+last_failed_dev
+last_failed_errno
+last_failed_step
+success
+== pstore
+total 0
+drwxr-x---  2 root root 0 Nov  5 21:49 .
+drwxr-xr-x 21 root root 0 Nov  5 21:49 ..

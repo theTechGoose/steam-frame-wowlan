@@ -1,0 +1,70 @@
+20:40:21 label=patched-v5-dbg mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 517b62e8-3eb4-46aa-adba-a394e26f3796
+20:40:21 suspend requested; waiting 25 s for it to go down
+20:40:49 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+20:42:20 did not wake in 90s; waiting for RTC safety alarm
+20:44:40 --- journal (this suspend cycle)
+[  112.936493] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.940017] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.942551] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.946590] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.950677] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.952788] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.956914] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.961269] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.976335] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.981852] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.990047] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.992294] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  112.995655] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  112.998225] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.002015] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.005751] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.008553] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.010551] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.013365] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.016018] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.017519] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.017805] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.020454] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.021938] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.024253] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:288
+[  113.028054] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.033018] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.035295] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.036313] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.040863] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.043017] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.045374] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.046412] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.049614] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.053039] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.054023] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.057894] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.062316] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.065154] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.108318] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.112502] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.116053] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.120108] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.124264] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.127599] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.132056] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.135401] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.140221] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.154982] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.159469] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.161087] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.170022] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.171304] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:283
+[  113.172713] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.175963] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.188363] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.192213] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+[  113.194457] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:287
+[  113.227233] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:286
+[  113.239577] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:285
+20:44:41 log: build/kernel/wake-patched-v5-dbg-deep-20261105-204020.log

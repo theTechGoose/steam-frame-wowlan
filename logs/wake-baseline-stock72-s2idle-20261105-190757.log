@@ -1,0 +1,34 @@
+19:07:58 label=baseline-stock72 mode=s2idle kernel=7.2.0-g9a8c8ea46950 mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=n/a
+boot-id 61781572-a5b5-459e-9a35-025f1ad8d67b
+19:07:58 suspend requested; waiting 25 s for it to go down
+19:08:26 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+19:09:57 did not wake in 90s; waiting for RTC safety alarm
+19:12:07 --- journal (this suspend cycle)
+[  281.575159] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[  281.577694] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[  281.577833] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[  281.578514] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[  281.578610] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[  281.578693] frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x2 link up
+[  281.583645] frame kernel: PM: suspend exit
+[  281.583648] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[  281.583889] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+[  281.584117] frame bluetoothd[993]: Controller resume with wake event 0x0
+[  289.939628] frame sudo[4679]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh -c 'echo 0 > /sys/class/rtc/rtc0/wakealarm; echo deep > /sys/power/mem_sleep'
+[  322.722335] frame sudo[4703]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/awk 'NR==1 || /rtc|mhi0|pwrkey|alarmtimer/ {print $1, $3, $4, $6, $7}' /sys/kernel/debug/wakeup_sources
+[  324.077432] frame sudo[4761]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh /home/steamos/wake-arm.sh s2idle 240
+[  326.710020] frame kernel: PM: suspend entry (s2idle)
+[  329.325359] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[  329.325570] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[  329.325667] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[  329.325758] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[  329.325838] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[  329.327106] frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x2 link up
+[  329.345981] frame bluetoothd[993]: Controller resume with wake event 0x0
+[  329.346164] frame kernel: PM: suspend exit
+[  329.347270] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[  329.347542] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+19:12:08 log: build/kernel/wake-baseline-stock72-s2idle-20261105-190757.log

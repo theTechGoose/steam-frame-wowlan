@@ -1,0 +1,46 @@
+19:38:33 label=patched-v2 mode=s2idle kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 8e1625b1-23fc-4225-8cd1-326f492eb446
+19:38:34 suspend requested; waiting 25 s for it to go down
+19:39:02 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+19:40:33 did not wake in 90s; waiting for RTC safety alarm
+19:42:53 --- journal (this suspend cycle)
+[   63.522925] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[   63.529575] frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed, link to L2 + PERST#
+[   63.529667] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[   63.529756] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[   63.536953] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[   63.537124] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[   63.537239] frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 0)
+[   63.537334] frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x2 link up
+[   63.537420] frame kernel: qcom-pcie 1c08000.pcie: WAKE# toggled (level now 1)
+[   63.537511] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 0)
+[   63.537593] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+[   63.537831] frame kernel: PM: suspend exit
+[   63.535595] frame bluetoothd[971]: Controller resume with wake event 0x0
+[   63.536472] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[   63.536717] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+[   65.484961] frame sudo[4033]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh -c 'echo 0 > /sys/class/rtc/rtc0/wakealarm; echo deep > /sys/power/mem_sleep'
+[   81.979018] frame XRService[2030]: [DeckardCaptureSource] Created tracking camera wakeup eventfd=34
+[   81.979033] frame XRService[2030]: [DeckardCaptureSource] Created passthrough camera wakeup eventfd=35
+[  139.223447] frame sudo[4512]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/awk 'NR==1 || /pcie|rtc|mhi0/ {print $1, $2, $3, $4, $5, $7}' /sys/kernel/debug/wakeup_sources
+[  140.412706] frame sudo[4560]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh /home/steamos/wake-arm.sh s2idle 240
+[  144.384023] frame kernel: PM: suspend entry (s2idle)
+[  147.562371] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[  147.571898] frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed, link to L2 + PERST#
+[  147.572107] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[  147.572221] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[  147.572334] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[  147.572420] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[  147.572504] frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 0)
+[  147.572605] frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x2 link up
+[  147.572690] frame kernel: qcom-pcie 1c08000.pcie: WAKE# toggled (level now 1)
+[  147.572784] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 0)
+[  147.572864] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+[  147.578096] frame kernel: PM: suspend exit
+[  147.578065] frame bluetoothd[971]: Controller resume with wake event 0x0
+[  147.579019] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[  147.579301] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+19:42:53 log: build/kernel/wake-patched-v2-s2idle-20261105-193832.log

@@ -1,0 +1,228 @@
+From: Raphael Castro <rafac@monsterrg.com>
+Subject: [PATCH] PCI: qcom: register WAKE# and keep the link up for wakeup-enabled endpoints
+
+On the Steam Frame (sm8650-mp) pcie0 has wake-gpios = <&tlmm 96> but no driver
+registers it, and dw_pcie_suspend_noirq() always asserts PERST# and powers the
+PHY off, so a WoWLAN-armed WCN7850 is reset on resume ("Resuming from non M3
+state (RESET)") and can never wake the system. Register WAKE# as a wakeup IRQ
+and, when a downstream device is wakeup-enabled, skip the L2/power-off sequence
+so the endpoint stays in D3hot with the link in L1ss.
+
+---
+--- a/drivers/pci/controller/dwc/pcie-qcom.c
++++ b/drivers/pci/controller/dwc/pcie-qcom.c
+@@ -27,6 +27,7 @@
+ #include <linux/pci-pwrctrl.h>
+ #include <linux/pm_opp.h>
+ #include <linux/pm_runtime.h>
++#include <linux/pm_wakeup.h>
+ #include <linux/platform_device.h>
+ #include <linux/phy/pcie.h>
+ #include <linux/phy/phy.h>
+@@ -292,10 +293,18 @@
+ 	struct list_head ports;
+ 	struct gpio_desc *reset;
+ 	bool use_pm_opp;
++	struct gpio_desc *wake;
++	int wake_irq;
++	bool wake_armed;
+ };
+ 
+ #define to_qcom_pcie(x)		dev_get_drvdata((x)->dev)
+ 
++static bool qcom_pcie_keep_link;
++module_param_named(keep_link, qcom_pcie_keep_link, bool, 0644);
++MODULE_PARM_DESC(keep_link,
++		 "Keep the link in L1ss across system suspend for wakeup-enabled endpoints instead of L2 + PERST# (default: false; WAKE# is armed either way)");
++
+ static void __qcom_pcie_perst_assert(struct qcom_pcie *pcie, bool assert)
+ {
+ 	struct qcom_pcie_perst *perst;
+@@ -1998,6 +2007,87 @@
+ 	list_add_tail(&perst->list, &port->perst);
+ 
+ 	return 0;
++}
++
++/*
++ * WAKE# sideband: the endpoint (WCN7850 on the Steam Frame, tlmm 96) pulls the
++ * line low to wake the SoC while the link sits in L1ss with the device in D3hot.
++ * Nothing registered this line before, so Wake-on-WLAN could never wake the
++ * system. Register it as a wakeup IRQ and, when a downstream device is
++ * wakeup-enabled, keep the link powered across system suspend instead of
++ * asserting PERST# and powering the PHY off (which resets the radio).
++ */
++static irqreturn_t qcom_pcie_wake_irq_handler(int irq, void *data)
++{
++	struct qcom_pcie *pcie = data;
++	struct device *dev = pcie->pci->dev;
++
++	dev_info(dev, "WAKE# toggled (level now %d)\n",
++		 gpiod_get_raw_value_cansleep(pcie->wake));
++	pm_wakeup_event(dev, 0);
++
++	return IRQ_HANDLED;
++}
++
++static void qcom_pcie_init_wake(struct qcom_pcie *pcie)
++{
++	struct device *dev = pcie->pci->dev;
++	int irq, ret;
++
++	pcie->wake = devm_gpiod_get_optional(dev, "wake", GPIOD_IN);
++	if (IS_ERR(pcie->wake)) {
++		dev_warn(dev, "failed to get WAKE# GPIO: %ld\n",
++			 PTR_ERR(pcie->wake));
++		pcie->wake = NULL;
++		return;
++	}
++	if (!pcie->wake)
++		return;
++
++	irq = gpiod_to_irq(pcie->wake);
++	if (irq < 0) {
++		dev_warn(dev, "no IRQ for WAKE# GPIO: %d\n", irq);
++		return;
++	}
++
++	ret = devm_request_threaded_irq(dev, irq, NULL,
++					qcom_pcie_wake_irq_handler,
++					IRQF_TRIGGER_FALLING | IRQF_ONESHOT,
++					"pcie_wake", pcie);
++	if (ret) {
++		dev_warn(dev, "failed to request WAKE# IRQ %d: %d\n", irq, ret);
++		return;
++	}
++
++	pcie->wake_irq = irq;
++	device_init_wakeup(dev, true);
++	dev_info(dev, "WAKE# GPIO registered as wakeup IRQ %d\n", irq);
++}
++
++static int qcom_pcie_wakeup_wanted_cb(struct pci_dev *pdev, void *data)
++{
++	bool *wanted = data;
++
++	if (!pci_is_bridge(pdev) && device_may_wakeup(&pdev->dev))
++		*wanted = true;
++
++	return 0;
++}
++
++/* True when WAKE# is wired up and a downstream device asked to wake the system. */
++static bool qcom_pcie_keep_link_for_wake(struct qcom_pcie *pcie)
++{
++	struct dw_pcie_rp *pp = &pcie->pci->pp;
++	bool wanted = false;
++
++	if (pcie->wake_irq <= 0 || !device_may_wakeup(pcie->pci->dev))
++		return false;
++	if (!pp->bridge || !pp->bridge->bus)
++		return false;
++
++	pci_walk_bus(pp->bridge->bus, qcom_pcie_wakeup_wanted_cb, &wanted);
++
++	return wanted;
+ }
+ 
+ static int qcom_pcie_probe(struct platform_device *pdev)
+@@ -2157,6 +2247,8 @@
+ 
+ 	qcom_pcie_icc_opp_update(pcie);
+ 
++	qcom_pcie_init_wake(pcie);
++
+ 	if (pcie->mhi)
+ 		qcom_pcie_init_debugfs(pcie);
+ 
+@@ -2180,6 +2272,42 @@
+ 	pm_runtime_disable(dev);
+ 
+ 	return ret;
++}
++
++static int qcom_pcie_suspend_late(struct device *dev)
++{
++	struct qcom_pcie *pcie = dev_get_drvdata(dev);
++	int ret;
++
++	if (!pcie || !qcom_pcie_keep_link_for_wake(pcie))
++		return 0;
++
++	/* Must happen before suspend_device_irqs(), hence suspend_late. */
++	ret = enable_irq_wake(pcie->wake_irq);
++	if (ret) {
++		dev_warn(dev, "failed to arm WAKE# IRQ: %d\n", ret);
++		return 0;
++	}
++
++	pcie->wake_armed = true;
++	dev_info(dev, "wakeup-enabled endpoint: WAKE# armed (level %d)\n",
++		 gpiod_get_raw_value_cansleep(pcie->wake));
++
++	return 0;
++}
++
++static int qcom_pcie_resume_early(struct device *dev)
++{
++	struct qcom_pcie *pcie = dev_get_drvdata(dev);
++
++	if (pcie && pcie->wake_armed) {
++		disable_irq_wake(pcie->wake_irq);
++		pcie->wake_armed = false;
++		dev_info(dev, "WAKE# disarmed (level %d)\n",
++			 gpiod_get_raw_value_cansleep(pcie->wake));
++	}
++
++	return 0;
+ }
+ 
+ static int qcom_pcie_suspend_noirq(struct device *dev)
+@@ -2191,10 +2319,25 @@
+ 	if (!pcie)
+ 		return 0;
+ 
+-	ret = dw_pcie_suspend_noirq(pcie->pci);
+-	if (ret)
+-		return ret;
++	/*
++	 * WAKE# was armed in suspend_late (it must be a wake source before
++	 * suspend_device_irqs() runs, i.e. before this noirq phase). By
++	 * default the DWC core takes the link to L2 and asserts PERST#
++	 * (power is kept because the device is PME-capable from D3cold);
++	 * in that state the WCN7850 keeps its WoW context and signals wake
++	 * on WAKE#. With keep_link the link stays in L1ss and wake is
++	 * in-band (PME) instead.
++	 */
++	if (pcie->wake_armed)
++		dev_info(dev, "suspend with WAKE# armed, link %s\n",
++			 qcom_pcie_keep_link ? "kept in L1ss" : "to L2 + PERST#");
+ 
++	if (!(pcie->wake_armed && qcom_pcie_keep_link)) {
++		ret = dw_pcie_suspend_noirq(pcie->pci);
++		if (ret)
++			return ret;
++	}
++
+ 	if (pcie->pci->suspended) {
+ 		ret = icc_disable(pcie->icc_mem);
+ 		if (ret)
+@@ -2249,6 +2392,10 @@
+ 	if (!pcie)
+ 		return 0;
+ 
++	if (pcie->wake_armed)
++		dev_info(dev, "resume, WAKE# level %d\n",
++			 gpiod_get_raw_value_cansleep(pcie->wake));
++
+ 	if (pcie->pci->suspended) {
+ 		if (pcie->use_pm_opp) {
+ 			ret = qcom_pcie_set_max_opp(dev);
+@@ -2351,6 +2498,7 @@
+ DECLARE_PCI_FIXUP_EARLY(PCI_VENDOR_ID_QCOM, 0x1001, qcom_fixup_class);
+ 
+ static const struct dev_pm_ops qcom_pcie_pm_ops = {
++	LATE_SYSTEM_SLEEP_PM_OPS(qcom_pcie_suspend_late, qcom_pcie_resume_early)
+ 	NOIRQ_SYSTEM_SLEEP_PM_OPS(qcom_pcie_suspend_noirq, qcom_pcie_resume_noirq)
+ };
+ 

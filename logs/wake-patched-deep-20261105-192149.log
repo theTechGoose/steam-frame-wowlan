@@ -1,0 +1,27 @@
+19:21:50 label=patched mode=deep kernel=7.2.0-wake-ga48d72f178d1 mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id ca5c5b65-ce13-4768-b042-1705aff539a2
+19:21:51 suspend requested; waiting 25 s for it to go down
+19:22:19 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+19:23:53 did not wake in 90s; waiting for RTC safety alarm
+19:25:54 --- journal (this suspend cycle)
+[  196.399655] frame sudo[4063]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/awk 'NR==1 || /0000:0[01]:00.0|pcie|phy0|wlan/ {print $1, $2, $3, $4, $5}' /sys/kernel/debug/wakeup_sources
+[  197.749593] frame sudo[4122]:  steamos : PWD=/home/steamos ; USER=root ; COMMAND=/usr/bin/sh /home/steamos/wake-arm.sh deep 240
+[  200.143929] frame kernel: PM: suspend entry (deep)
+[  203.043316] frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+[  203.047508] frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: keeping link up, WAKE# armed
+[  203.047618] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+[  203.047723] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+[  203.048505] frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+[  203.048612] frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+[  203.048700] frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed, link was kept up (level 1)
+[  203.048787] frame kernel: qcom-pcie 1c08000.pcie: WAKE# toggled (level now 1)
+[  203.048876] frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+[  203.055842] frame bluetoothd[1026]: Controller resume with wake event 0x0
+[  203.056191] frame kernel: PM: suspend exit
+[  203.056825] frame systemd[1]: wake-test-suspend.service: Deactivated successfully.
+[  203.057092] frame systemd[1]: wake-test-suspend.timer: Deactivated successfully.
+[  203.584549] frame XRService[2020]: [DeckardCaptureSource] Tracking cameras streaming resumed
+19:25:55 log: build/kernel/wake-patched-deep-20261105-192149.log
