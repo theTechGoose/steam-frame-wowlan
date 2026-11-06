@@ -1,10 +1,10 @@
-22:39:14 label=patched-v11-l2-pme mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+22:39:14 label=patched-v11-l2-pme mode=deep kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id ebaf50ee-2d33-41b4-a6aa-55585c567141
 22:39:15 suspend requested; waiting 25 s for it to go down
-22:39:43 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+22:39:43 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 22:41:14 did not wake in 90s; waiting for RTC safety alarm
 22:43:19 --- journal (this suspend cycle)
 [  122.722856] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI no.of chan = 36 len = 1028 pdev_id = 0 num_sends = 1
@@ -51,7 +51,7 @@ boot-id ebaf50ee-2d33-41b4-a6aa-55585c567141
 [  122.726691] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  122.726845] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 [  122.726951] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-[  122.727060] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000db404236
+[  122.727060] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000db404236
 [  122.727154] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  123.005525] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 [  123.005819] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
@@ -60,11 +60,11 @@ boot-id ebaf50ee-2d33-41b4-a6aa-55585c567141
 [  123.006280] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  123.006406] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 [  123.006530] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-[  123.006708] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000db404236
+[  123.006708] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000db404236
 [  123.006905] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
-[  123.620018] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
-[  123.698064] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
-[  123.703019] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1
-[  123.725017] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
-[  124.186021] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
+[  123.620018] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 7
+[  123.698064] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 0
+[  123.703019] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 1
+[  123.725017] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 3
+[  124.186021] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 3
 22:43:20 log: build/kernel/wake-patched-v11-l2-pme-deep-20261105-223913.log

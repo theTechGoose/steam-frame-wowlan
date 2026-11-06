@@ -1,4 +1,4 @@
-20:24:10 label=patched-v4 mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+20:24:10 label=patched-v4 mode=deep kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled

@@ -1,11 +1,11 @@
-21:27:11 label=patched-v6 mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+21:27:11 label=patched-v6 mode=deep kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id eced6b9c-233c-4aa2-95c8-71e15532b156
 21:27:12 suspend requested; waiting 25 s for it to go down
-21:27:40 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+21:27:40 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 21:29:11 did not wake in 90s; waiting for RTC safety alarm
 21:35:27 --- journal (this suspend cycle)
-ssh: connect to host 192.168.40.35 port 22: Host is down
+ssh: connect to host 192.0.2.35 port 22: Host is down
 21:35:27 log: build/kernel/wake-patched-v6-deep-20261105-212710.log

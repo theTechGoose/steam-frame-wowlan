@@ -1163,7 +1163,7 @@ Nov 05 23:27:02.508897 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 fallbac
 Nov 05 23:27:02.509004 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
 Nov 05 23:27:02.509107 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
 Nov 05 23:27:02.580763 frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
-Nov 05 23:27:02.676998 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+Nov 05 23:27:02.676998 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address de:ad:be:ef:00:01
 Nov 05 23:27:02.749757 frame kernel: Bluetooth: hci0: QCA Downloading qca/hmtnv20.bin
 Nov 05 23:27:02.766757 frame kernel: file system registered
 Nov 05 23:27:02.846763 frame kernel: NOTICE: Automounting of tracing to debugfs is deprecated and will be removed in 2030
@@ -1173,18 +1173,18 @@ Nov 05 23:27:02.984764 frame unknown: SteamOS System Info: SteamOS 20261103.6153
 Nov 05 23:27:02.995762 frame unknown: SteamOS System Info: Partition:
 Nov 05 23:27:02.995792 frame unknown: A
 Nov 05 23:27:02.995803 frame unknown: SteamOS System Info: Serial Numbers:
-Nov 05 23:27:03.005763 frame unknown: SteamOS System Info:        mpcba_sn: MPDBE61701182
-Nov 05 23:27:03.013761 frame unknown: SteamOS System Info:        unit_sn: FPRAH62400FD8
-Nov 05 23:27:03.022769 frame unknown: SteamOS System Info:        core_cm_sn: FPRAH62400FD8
-Nov 05 23:27:03.031778 frame unknown: SteamOS System Info:        core_assembly_cm_sn: FPRAH62400FD8
-Nov 05 23:27:03.040846 frame unknown: SteamOS System Info:        heat_pipe_sn: PNDFBQ38039010618505112DRC3
-Nov 05 23:27:03.052767 frame unknown: SteamOS System Info:        fan_sn: HYMDQ5D544K017624427232A
+Nov 05 23:27:03.005763 frame unknown: SteamOS System Info:        mpcba_sn: REDACTED
+Nov 05 23:27:03.013761 frame unknown: SteamOS System Info:        unit_sn: REDACTED
+Nov 05 23:27:03.022769 frame unknown: SteamOS System Info:        core_cm_sn: REDACTED
+Nov 05 23:27:03.031778 frame unknown: SteamOS System Info:        core_assembly_cm_sn: REDACTED
+Nov 05 23:27:03.040846 frame unknown: SteamOS System Info:        heat_pipe_sn: REDACTED
+Nov 05 23:27:03.052767 frame unknown: SteamOS System Info:        fan_sn: REDACTED
 Nov 05 23:27:03.061028 frame kernel: max98390 6-003d: MAX98390 firmware set to dsm_param_OW_2018b.bin
 Nov 05 23:27:03.061238 frame kernel: max98390 6-003d: Found Firmware dsm_param_OW_2018b.bin
-Nov 05 23:27:03.064766 frame unknown: SteamOS System Info:        midwall_heat_pipe_sn: DTAFBQ38027010609300B22BRC0
-Nov 05 23:27:03.088103 frame unknown: SteamOS System Info:        strap_sn: FPHAK624015AC
-Nov 05 23:27:03.107939 frame unknown: SteamOS System Info:        left_audio_sn: Q38OWEA623405DE
-Nov 05 23:27:03.128765 frame unknown: SteamOS System Info:        right_audio_sn: Q38OWEA623405DE
+Nov 05 23:27:03.064766 frame unknown: SteamOS System Info:        midwall_heat_pipe_sn: REDACTED
+Nov 05 23:27:03.088103 frame unknown: SteamOS System Info:        strap_sn: REDACTED
+Nov 05 23:27:03.107939 frame unknown: SteamOS System Info:        left_audio_sn: REDACTED
+Nov 05 23:27:03.128765 frame unknown: SteamOS System Info:        right_audio_sn: REDACTED
 Nov 05 23:27:03.128807 frame unknown: SteamOS System Info: Battery:
 Nov 05 23:27:03.134503 frame unknown: SteamOS System Info:        AC status: Disconnected
 Nov 05 23:27:03.134546 frame unknown: SteamOS System Info:        Battery status: Discharging
@@ -1255,13 +1255,13 @@ Nov 05 23:27:12.988004 frame kernel: cvp ab00000.cvp: cvp_power_on: cvp (eva) po
 Nov 05 23:27:13.000809 frame kernel: cvp ab00000.cvp: cvp_power_on_init: status 7c01
 Nov 05 23:27:13.576781 frame kernel: gcc-sm8650 100000.clock-controller: Timed out. Forcing sync_state()
 Nov 05 23:27:13.577007 frame kernel: sm8650-gpucc 3d90000.clock-controller: Timed out. Forcing sync_state()
-Nov 05 23:27:14.575186 frame kernel: wlan0: authenticate with c8:9e:43:bb:c5:39 (local address=90:82:c3:73:37:64)
-Nov 05 23:27:14.575281 frame kernel: wlan0: send auth to c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:27:14.575186 frame kernel: wlan0: authenticate with de:ad:be:ef:00:02 (local address=de:ad:be:ef:00:01)
+Nov 05 23:27:14.575281 frame kernel: wlan0: send auth to de:ad:be:ef:00:02 (try 1/3)
 Nov 05 23:27:14.580823 frame kernel: wlan0: authenticated
-Nov 05 23:27:14.580875 frame kernel: wlan0: associate with c8:9e:43:bb:c5:39 (try 1/3)
-Nov 05 23:27:14.583761 frame kernel: wlan0: RX AssocResp from c8:9e:43:bb:c5:39 (capab=0x1011 status=0 aid=21)
+Nov 05 23:27:14.580875 frame kernel: wlan0: associate with de:ad:be:ef:00:02 (try 1/3)
+Nov 05 23:27:14.583761 frame kernel: wlan0: RX AssocResp from de:ad:be:ef:00:02 (capab=0x1011 status=0 aid=21)
 Nov 05 23:27:14.601176 frame kernel: wlan0: associated
-Nov 05 23:27:14.621779 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by c8:9e:43:bb:c5:39
+Nov 05 23:27:14.621779 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by de:ad:be:ef:00:02
 Nov 05 23:27:19.650307 frame kernel: perf: interrupt took too long (2535 > 2500), lowering kernel.perf_event_max_sample_rate to 78000
 Nov 05 23:27:19.977813 frame kernel: perf: interrupt took too long (3169 > 3168), lowering kernel.perf_event_max_sample_rate to 63000
 Nov 05 23:27:21.607802 frame kernel: perf: interrupt took too long (3962 > 3961), lowering kernel.perf_event_max_sample_rate to 50000
@@ -1272,7 +1272,7 @@ Nov 05 23:27:50.226738 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:27:50.226992 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:27:50.227200 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:27:50.227371 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:27:50.227520 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:27:50.227520 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:27:50.227668 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:27:54.603784 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
 Nov 05 23:27:54.604527 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
@@ -1287,7 +1287,7 @@ Nov 05 23:27:56.231906 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:27:56.232275 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:27:56.232475 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:27:56.232651 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:27:56.232889 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:27:56.232889 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:27:56.233118 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:28:02.225779 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 Nov 05 23:28:02.226173 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
@@ -1296,7 +1296,7 @@ Nov 05 23:28:02.226549 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:28:02.226704 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:28:02.227019 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:28:02.227252 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:28:02.227411 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:28:02.227411 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:28:02.227565 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:28:02.602769 frame kernel: PM: suspend entry (s2idle)
 Nov 05 23:28:02.619820 frame kernel: Filesystems sync: 0.017 seconds
@@ -1358,10 +1358,10 @@ Nov 05 23:32:02.543803 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow 
 Nov 05 23:32:02.543892 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_MAGIC_PKT_RECVD_EVENT enable 1 vdev_id 0
 Nov 05 23:32:02.543980 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare ns offload
 Nov 05 23:32:02.546469 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare arp offload
-Nov 05 23:32:02.546612 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr 90:82:c3:73:37:64, offload_addr 192.168.40.35
+Nov 05 23:32:02.546612 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr de:ad:be:ef:00:01, offload_addr 192.0.2.35
 Nov 05 23:32:02.546716 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi index 0 ns_solicited 0000:0000:0000:0000:0000:0000:0000:0000 target 0000:0000:0000:0000:0000:0000:0000:0000
 Nov 05 23:32:02.546906 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi index 1 ns_solicited 0000:0000:0000:0000:0000:0000:0000:0000 target 0000:0000:0000:0000:0000:0000:0000:0000
-Nov 05 23:32:02.547080 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi arp offload address 192.168.40.35
+Nov 05 23:32:02.547080 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi arp offload address 192.0.2.35
 Nov 05 23:32:02.547231 frame kernel: ath12k_wifi7_pci 0000:01:00.0: offload gtk rekey vdev: 0 1
 Nov 05 23:32:02.547332 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 1 filter_bitmap 0x2
 Nov 05 23:32:02.547424 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi sta keepalive vdev 0 enabled 1 method 1 interval 30
@@ -1393,7 +1393,7 @@ Nov 05 23:32:02.549820 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow_reason_p
 Nov 05 23:32:02.549911 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 0 filter_bitmap 0x0
 Nov 05 23:32:02.550002 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare ns offload
 Nov 05 23:32:02.550139 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare arp offload
-Nov 05 23:32:02.550241 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr 90:82:c3:73:37:64, offload_addr 192.168.40.35
+Nov 05 23:32:02.550241 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr de:ad:be:ef:00:01, offload_addr 192.0.2.35
 Nov 05 23:32:02.550333 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get gtk rekey vdev_id: 0
 Nov 05 23:32:02.550423 frame kernel: ath12k_wifi7_pci 0000:01:00.0: offload gtk rekey vdev: 0 0
 Nov 05 23:32:02.550512 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi sta keepalive vdev 0 enabled 1 method 1 interval 0
@@ -1410,13 +1410,13 @@ Nov 05 23:32:02.551302 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:02.551406 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.551503 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.551598 frame kernel: PM: suspend exit
-Nov 05 23:32:02.551611 frame kernel: wlan0: deauthenticated from c8:9e:43:bb:c5:39 (Reason: 7=CLASS3_FRAME_FROM_NONASSOC_STA)
+Nov 05 23:32:02.551611 frame kernel: wlan0: deauthenticated from de:ad:be:ef:00:02 (Reason: 7=CLASS3_FRAME_FROM_NONASSOC_STA)
 Nov 05 23:32:02.558049 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 0 len 0
-Nov 05 23:32:02.558365 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.558365 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr de:ad:be:ef:00:02 status 0
 Nov 05 23:32:02.558474 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 1 cipher 0 len 0
-Nov 05 23:32:02.559052 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.559052 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000000 macaddr de:ad:be:ef:00:02 status 0
 Nov 05 23:32:02.565566 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 0 len 0
-Nov 05 23:32:02.565711 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.565711 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr de:ad:be:ef:00:02 status 0
 Nov 05 23:32:02.565818 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 Nov 05 23:32:02.565914 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
 Nov 05 23:32:02.566008 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -57
@@ -1424,13 +1424,13 @@ Nov 05 23:32:02.566164 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:02.566262 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.566354 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:32:02.566441 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:32:02.566528 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.566528 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:32:02.566618 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.566703 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev down id 0x0
 Nov 05 23:32:02.566794 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev stop id 0x0
 Nov 05 23:32:02.572013 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev stopped for vdev id 0
-Nov 05 23:32:02.578043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer delete vdev_id 0 peer_addr c8:9e:43:bb:c5:39
-Nov 05 23:32:02.587377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer delete resp for vdev id 0 addr c8:9e:43:bb:c5:39
+Nov 05 23:32:02.578043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer delete vdev_id 0 peer_addr de:ad:be:ef:00:02
+Nov 05 23:32:02.587377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer delete resp for vdev id 0 addr de:ad:be:ef:00:02
 Nov 05 23:32:02.594037 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev down id 0x0
 Nov 05 23:32:02.594220 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 26 value 0
 Nov 05 23:32:02.594333 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 7 value 1
@@ -1470,36 +1470,36 @@ Nov 05 23:32:02.623494 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 
 Nov 05 23:32:02.623803 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 25 value 268435459
 Nov 05 23:32:02.624403 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 94 value 268435459
 Nov 05 23:32:02.624722 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 set FILS discovery interval to 0 TU
-Nov 05 23:32:02.625044 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer create vdev_id 0 peer_addr c8:9e:43:bb:c5:39 ml_flags 0x0
-Nov 05 23:32:02.631059 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 19 value 3
-Nov 05 23:32:02.631258 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
+Nov 05 23:32:02.625044 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer create vdev_id 0 peer_addr de:ad:be:ef:00:02 ml_flags 0x0
+Nov 05 23:32:02.631059 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xde:ad:be:ef:00:02 set param 19 value 3
+Nov 05 23:32:02.631258 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 0
 Nov 05 23:32:02.631369 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Unknown eventid: 0x601a
-Nov 05 23:32:02.631487 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1
-Nov 05 23:32:02.631837 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 2
-Nov 05 23:32:02.632779 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
-Nov 05 23:32:02.632917 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 4
-Nov 05 23:32:02.633016 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 5
-Nov 05 23:32:02.633157 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 6
-Nov 05 23:32:02.634036 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
-Nov 05 23:32:02.634216 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 8
-Nov 05 23:32:02.634321 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 9
-Nov 05 23:32:02.634416 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 10
-Nov 05 23:32:02.634502 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 11
-Nov 05 23:32:02.634595 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 12
-Nov 05 23:32:02.635054 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 13
-Nov 05 23:32:02.635235 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 14
-Nov 05 23:32:02.635347 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 15
-Nov 05 23:32:02.635445 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 16
+Nov 05 23:32:02.631487 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 1
+Nov 05 23:32:02.631837 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 2
+Nov 05 23:32:02.632779 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 3
+Nov 05 23:32:02.632917 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 4
+Nov 05 23:32:02.633016 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 5
+Nov 05 23:32:02.633157 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 6
+Nov 05 23:32:02.634036 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 7
+Nov 05 23:32:02.634216 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 8
+Nov 05 23:32:02.634321 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 9
+Nov 05 23:32:02.634416 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 10
+Nov 05 23:32:02.634502 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 11
+Nov 05 23:32:02.634595 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 12
+Nov 05 23:32:02.635054 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 13
+Nov 05 23:32:02.635235 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 14
+Nov 05 23:32:02.635347 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 15
+Nov 05 23:32:02.635445 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 16
 Nov 05 23:32:02.636041 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev start id 0x0 freq 0x1671 mode 0x1a
 Nov 05 23:32:02.660527 frame kernel: ath12k_wifi7_pci 0000:01:00.0: max allowed tx power 18 reported for vdev 0
 Nov 05 23:32:02.660958 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev start resp for vdev id 0
 Nov 05 23:32:02.661378 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 56 value 18
 Nov 05 23:32:02.661695 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 45 value 115
-Nov 05 23:32:02.661999 frame kernel: wlan0: authenticate with c8:9e:43:bb:c5:39 (local address=90:82:c3:73:37:64)
-Nov 05 23:32:02.662079 frame kernel: wlan0: send auth to c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:32:02.661999 frame kernel: wlan0: authenticate with de:ad:be:ef:00:02 (local address=de:ad:be:ef:00:01)
+Nov 05 23:32:02.662079 frame kernel: wlan0: send auth to de:ad:be:ef:00:02 (try 1/3)
 Nov 05 23:32:02.679056 frame kernel: wlan0: authenticated
-Nov 05 23:32:02.679088 frame kernel: wlan0: associate with c8:9e:43:bb:c5:39 (try 1/3)
-Nov 05 23:32:02.682037 frame kernel: wlan0: RX AssocResp from c8:9e:43:bb:c5:39 (capab=0x1011 status=0 aid=22)
+Nov 05 23:32:02.679088 frame kernel: wlan0: associate with de:ad:be:ef:00:02 (try 1/3)
+Nov 05 23:32:02.682037 frame kernel: wlan0: RX AssocResp from de:ad:be:ef:00:02 (capab=0x1011 status=0 aid=22)
 Nov 05 23:32:02.682091 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
 Nov 05 23:32:02.682275 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
 Nov 05 23:32:02.682388 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
@@ -1526,10 +1526,10 @@ Nov 05 23:32:02.684447 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta 
 Nov 05 23:32:02.684541 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
 Nov 05 23:32:02.684635 frame kernel: ath12k_wifi7_pci 0000:01:00.0: ath12k_peer_assoc_h_crypto: rsn ie found
 Nov 05 23:32:02.684729 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 32770 value 49
-Nov 05 23:32:02.684822 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi peer assoc vdev id 0 assoc id 22 peer mac c8:9e:43:bb:c5:39 peer_flags 6a1b406 rate_caps 6f peer_caps 1011 listen_intval 5 ht_caps 1ef max_mpdu 4194303 nss 2 phymode 18 peer_mpdu_density 4 vht_caps f8a09b1 he cap_info 12180005 he ops 10004 he cap_info_ext 1000 he phy c0022044 1881420d c000 peer_bw_rxnss_override 0 peer_flags_ext 0 eht mac_cap 0 0 eht phy_cap 0 0 0 peer_eht_ops 0
-Nov 05 23:32:02.689042 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer assoc conf ev vdev id 0 macaddr c8:9e:43:bb:c5:39
-Nov 05 23:32:02.689248 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 1 value 0
-Nov 05 23:32:02.689363 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI mgmt vdev up id 0x0 assoc id 22 bssid c8:9e:43:bb:c5:39
+Nov 05 23:32:02.684822 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi peer assoc vdev id 0 assoc id 22 peer mac de:ad:be:ef:00:02 peer_flags 6a1b406 rate_caps 6f peer_caps 1011 listen_intval 5 ht_caps 1ef max_mpdu 4194303 nss 2 phymode 18 peer_mpdu_density 4 vht_caps f8a09b1 he cap_info 12180005 he ops 10004 he cap_info_ext 1000 he phy c0022044 1881420d c000 peer_bw_rxnss_override 0 peer_flags_ext 0 eht mac_cap 0 0 eht phy_cap 0 0 0 peer_eht_ops 0
+Nov 05 23:32:02.689042 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer assoc conf ev vdev id 0 macaddr de:ad:be:ef:00:02
+Nov 05 23:32:02.689248 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xde:ad:be:ef:00:02 set param 1 value 0
+Nov 05 23:32:02.689363 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI mgmt vdev up id 0x0 assoc id 22 bssid de:ad:be:ef:00:02
 Nov 05 23:32:02.690037 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 71 value 3
 Nov 05 23:32:02.698038 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 13 value 1
 Nov 05 23:32:02.700041 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 7 value 2
@@ -1538,10 +1538,10 @@ Nov 05 23:32:02.700374 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi_send_obs
 Nov 05 23:32:02.700944 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 set FILS discovery interval to 0 TU
 Nov 05 23:32:02.701164 frame kernel: wlan0: associated
 Nov 05 23:32:02.709612 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 4 len 16
-Nov 05 23:32:02.711570 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
-Nov 05 23:32:02.711825 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by c8:9e:43:bb:c5:39
+Nov 05 23:32:02.711570 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr de:ad:be:ef:00:02 status 0
+Nov 05 23:32:02.711825 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by de:ad:be:ef:00:02
 Nov 05 23:32:02.711844 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 1 cipher 4 len 16
-Nov 05 23:32:02.713519 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000001 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.713519 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000001 macaddr de:ad:be:ef:00:02 status 0
 Nov 05 23:32:02.713766 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 Nov 05 23:32:02.713898 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
 Nov 05 23:32:02.714468 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -55
@@ -1549,7 +1549,7 @@ Nov 05 23:32:02.714648 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:02.714781 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.715046 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:32:02.715218 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:32:02.715342 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.715342 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:32:02.715464 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.715578 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
 Nov 05 23:32:02.715690 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
@@ -1557,7 +1557,7 @@ Nov 05 23:32:02.715802 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:02.715912 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.716050 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.716207 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
-Nov 05 23:32:02.716326 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 3 value 1
+Nov 05 23:32:02.716326 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xde:ad:be:ef:00:02 set param 3 value 1
 Nov 05 23:32:02.716463 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [0/94] freq 2412 maxpower 60 regpower 60 antenna 12 mode 1
 Nov 05 23:32:02.716582 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [1/94] freq 2417 maxpower 60 regpower 60 antenna 12 mode 1
 Nov 05 23:32:02.716699 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [2/94] freq 2422 maxpower 60 regpower 60 antenna 12 mode 1
@@ -1755,11 +1755,11 @@ Nov 05 23:32:02.741521 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:02.741605 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:02.741687 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:32:02.741795 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:32:02.741887 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.741887 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:32:02.741980 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
-Nov 05 23:32:02.828189 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
-Nov 05 23:32:02.912045 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
-Nov 05 23:32:02.918049 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
+Nov 05 23:32:02.828189 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 7
+Nov 05 23:32:02.912045 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 0
+Nov 05 23:32:02.918049 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 3
 Nov 05 23:32:03.015066 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 Nov 05 23:32:03.015377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
 Nov 05 23:32:03.015554 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -56
@@ -1767,6 +1767,6 @@ Nov 05 23:32:03.015726 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update
 Nov 05 23:32:03.015881 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 Nov 05 23:32:03.016360 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 Nov 05 23:32:03.016601 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-Nov 05 23:32:03.016808 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:03.016808 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 00000000d7431de9
 Nov 05 23:32:03.017004 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
-Nov 05 23:32:03.844043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1
+Nov 05 23:32:03.844043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr de:ad:be:ef:00:02 vdev_id 0 tid 1

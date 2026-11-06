@@ -1,10 +1,10 @@
-22:13:33 label=patched-v9 mode=s2idle kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+22:13:33 label=patched-v9 mode=s2idle kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id 4ef4ba14-6bc3-44f5-b2ea-01c00e2385c7
 22:13:34 suspend requested; waiting 25 s for it to go down
-22:14:02 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+22:14:02 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 22:15:36 did not wake in 90s; waiting for RTC safety alarm
 22:17:38 --- journal (this suspend cycle)
 [  147.549640] frame kernel: ath12k_wifi7_pci 0000:01:00.0: ext irq:284

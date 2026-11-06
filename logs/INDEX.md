@@ -2,7 +2,12 @@
 
 Each log is one run of `tests/wake-test.sh <mode> <label>`. The header line records the
 kernel, mode (`deep` = PSCI system suspend; `s2idle`), the Wi-Fi MAC/IP, and the broadcast
-address the magic packets were sent to. "did not wake in 90s; waiting for RTC safety alarm"
+address the magic packets were sent to. 
+
+> Sanitized for publication: device hardware serial numbers removed (shown as `REDACTED`); the
+> Wi-Fi MAC `de:ad:be:ef:00:0x` and the `192.0.2.0/24` (TEST-NET-1) addresses are placeholders
+> for the real unit MAC and the private LAN they were captured on.
+"did not wake in 90s; waiting for RTC safety alarm"
 means the magic-packet flood failed and only the RTC alarm brought it back = FAIL. "FAIL:
 frame never suspended" means the suspend itself was aborted (a wakeup event fired before it
 went down). Kernels: `7.2.0-g9a8c8ea46950` = stock Valve 7.2; `7.2.0-wake-ga48d72f178d1` =

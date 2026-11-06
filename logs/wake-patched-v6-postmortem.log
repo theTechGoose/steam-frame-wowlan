@@ -7,7 +7,7 @@
 Image-7.2.0-wake+
 dtbs/7.2.0-wake+/qcom
 dtbs/7.2.0-wake+/qcom/sm8650-mp.dtb
-wlan0            UP             192.168.40.35/24 
+wlan0            UP             192.0.2.35/24 
 == journal current boot (PM/PCIe/ath12k lines)
 Nov 05 21:49:28.331437 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: registered as rtc0
 Nov 05 21:49:28.331508 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: setting system clock to 2026-11-06T02:49:24 UTC (1793933364)
@@ -65,7 +65,7 @@ Nov 05 21:49:29.562106 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 fallbac
 Nov 05 21:49:29.562517 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
 Nov 05 21:49:29.562834 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
 Nov 05 21:49:29.633797 frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
-Nov 05 21:49:29.728788 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+Nov 05 21:49:29.728788 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address de:ad:be:ef:00:01
 == journal previous boot tail
 Nov 05 21:31:24.417787 frame kernel: Tainted: [S]=CPU_OUT_OF_SPEC, [W]=WARN
 Nov 05 21:31:24.417795 frame kernel: Hardware name: SM8650 MP rev1 4slam 2et (DT)

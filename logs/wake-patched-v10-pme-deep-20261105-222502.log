@@ -1,10 +1,10 @@
-22:25:03 label=patched-v10-pme mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+22:25:03 label=patched-v10-pme mode=deep kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id 5be7a635-a58c-40ca-aff4-5dd45e1a9d6f
 22:25:04 suspend requested; waiting 25 s for it to go down
-22:25:32 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+22:25:32 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 22:27:03 did not wake in 90s; waiting for RTC safety alarm
 22:29:24 --- journal (this suspend cycle)
 [  101.854301] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 1 filter_bitmap 0x2
@@ -31,7 +31,7 @@ boot-id 5be7a635-a58c-40ca-aff4-5dd45e1a9d6f
 [  101.858765] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 0 filter_bitmap 0x0
 [  101.859200] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare ns offload
 [  101.859555] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare arp offload
-[  101.859918] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr 90:82:c3:73:37:64, offload_addr 192.168.40.35
+[  101.859918] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr de:ad:be:ef:00:01, offload_addr 192.0.2.35
 [  101.860213] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get gtk rekey vdev_id: 0
 [  101.860327] frame kernel: ath12k_wifi7_pci 0000:01:00.0: offload gtk rekey vdev: 0 0
 [  101.860421] frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi sta keepalive vdev 0 enabled 1 method 1 interval 0
@@ -43,7 +43,7 @@ boot-id 5be7a635-a58c-40ca-aff4-5dd45e1a9d6f
 [  101.861160] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 [  101.861257] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
 [  101.861347] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
-[  101.861436] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 0000000030751274
+[  101.861436] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 0000000030751274
 [  101.861521] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  101.861630] frame kernel: PM: suspend exit
 [  101.854028] frame bluetoothd[995]: Controller resume with wake event 0x0
@@ -56,7 +56,7 @@ boot-id 5be7a635-a58c-40ca-aff4-5dd45e1a9d6f
 [  108.002912] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  108.003267] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 [  108.003613] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-[  108.003956] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 0000000030751274
+[  108.003956] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 0000000030751274
 [  108.004343] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  114.002100] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
 [  114.002823] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
@@ -65,6 +65,6 @@ boot-id 5be7a635-a58c-40ca-aff4-5dd45e1a9d6f
 [  114.004153] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 [  114.004552] frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
 [  114.004959] frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
-[  114.005382] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 0000000030751274
+[  114.005382] frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid de:ad:be:ef:00:02 vif 0000000030751274
 [  114.005813] frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
 22:29:24 log: build/kernel/wake-patched-v10-pme-deep-20261105-222502.log

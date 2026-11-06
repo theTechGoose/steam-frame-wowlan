@@ -1,10 +1,10 @@
-19:15:45 label=patched mode=s2idle kernel=7.2.0-wake-ga48d72f178d1 mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+19:15:45 label=patched mode=s2idle kernel=7.2.0-wake-ga48d72f178d1 mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id ca5c5b65-ce13-4768-b042-1705aff539a2
 19:15:46 suspend requested; waiting 25 s for it to go down
-19:16:14 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+19:16:14 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 19:17:44 did not wake in 90s; waiting for RTC safety alarm
 19:19:49 --- journal (this suspend cycle)
 [    4.844048] frame kernel: mhi mhi0: Requested to power ON
@@ -19,7 +19,7 @@ boot-id ca5c5b65-ce13-4768-b042-1705aff539a2
 [    5.348220] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
 [    5.348307] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
 [    5.425117] frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
-[    5.522158] frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+[    5.522158] frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address de:ad:be:ef:00:01
 [    6.493627] frame systemd[1]: Create List of Static Device Nodes was skipped because of an unmet condition check (ConditionFileNotEmpty=/lib/modules/7.2.0-wake-ga48d72f178d1/modules.devname).
 [    7.240625] frame modprobe[1183]: modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/7.2.0-wake-ga48d72f178d1
 [    7.425196] frame set_kernel_thread_priorities.sh[1176]: [crtc 323] : set priority -99

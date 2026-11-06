@@ -1,10 +1,10 @@
-19:33:14 label=patched-v2 mode=deep kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+19:33:14 label=patched-v2 mode=deep kernel=7.2.0-wake+ mac=de:ad:be:ef:00:01 ip=192.0.2.35 bcast=192.0.2.255
 WoWLAN is enabled:
  * wake up on magic packet
 mem_sleep: s2idle [deep]  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
 boot-id 8e1625b1-23fc-4225-8cd1-326f492eb446
 19:33:14 suspend requested; waiting 25 s for it to go down
-19:33:42 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+19:33:42 frame is down; sending magic packets to de:ad:be:ef:00:01 via 192.0.2.255 and 192.0.2.35 for 90 s
 19:35:13 did not wake in 90s; waiting for RTC safety alarm
 19:37:18 --- journal (this suspend cycle)
 [    4.810012] frame kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
@@ -17,7 +17,7 @@ boot-id 8e1625b1-23fc-4225-8cd1-326f492eb446
 [    5.220232] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
 [    5.220327] frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
 [    5.292013] frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
-[    5.388447] frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+[    5.388447] frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address de:ad:be:ef:00:01
 [    5.797283] frame modprobe[1126]: modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/7.2.0-wake+
 [    6.003308] frame set_kernel_thread_priorities.sh[1121]: [crtc 317] : set priority -99
 [    6.009410] frame set_kernel_thread_priorities.sh[1121]: [crtc 318] : set priority -99
