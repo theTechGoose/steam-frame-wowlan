@@ -1,0 +1,37 @@
+23:27:59 label=handoff-v12-pme mode=s2idle kernel=7.2.0-wake+ mac=90:82:c3:73:37:64 ip=192.168.40.35 bcast=192.168.40.255
+WoWLAN is enabled:
+ * wake up on magic packet
+mem_sleep: [s2idle] deep  wakeup 01:00.0=enabled 00:00.0=enabled pcie=enabled
+boot-id 6d3ffbff-cf02-43c2-a0ee-90dd732ec9a5
+23:28:00 suspend requested; waiting 25 s for it to go down
+23:28:28 frame is down; sending magic packets to 90:82:c3:73:37:64 via 192.168.40.255 and 192.168.40.35 for 90 s
+23:29:59 did not wake in 90s; waiting for RTC safety alarm
+23:32:03 --- journal (this suspend cycle)
+Nov 05 23:27:01.299430 frame kernel: qcom-pcie 1c08000.pcie: no clkreq-gpios, CLKREQ# wake disabled
+Nov 05 23:27:01.299826 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.301880 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.307580 frame kernel: qcom-pcie 1c08000.pcie: WAKE# GPIO registered as wakeup IRQ 268
+Nov 05 23:27:01.308596 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.309024 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.556763 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.920797 frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.2 x2 link up
+Nov 05 23:27:01.935108 frame kernel: qcom-pcie 1c00000.pcie: WAKE# GPIO registered as wakeup IRQ 274
+Nov 05 23:27:02.481759 frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+Nov 05 23:28:02.602769 frame kernel: PM: suspend entry (s2idle)
+Nov 05 23:32:02.547704 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow enable flags 0x2
+Nov 05 23:32:02.547936 frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed (level 1)
+Nov 05 23:32:02.548062 frame kernel: qcom-pcie 1c00000.pcie: suspend with WAKE# armed, link kept in L1ss
+Nov 05 23:32:02.548183 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# armed as wake IRQ 227 (pad level 1)
+Nov 05 23:32:02.548632 frame kernel: qcom-pcie 1c00000.pcie: resume, CLKREQ# pad level 1
+Nov 05 23:32:02.548710 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# disarmed
+Nov 05 23:32:02.548787 frame kernel: qcom-pcie 1c00000.pcie: resume, WAKE# level 1
+Nov 05 23:32:02.548860 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: RTSTA 0x00030100 (PME SET, requester 0100)
+Nov 05 23:32:02.548936 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: PMCSR 0x010b (D3, PME_En 1, PME_Status clear)
+Nov 05 23:32:02.549013 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: LNKSTA 0xb012
+Nov 05 23:32:02.549259 frame kernel: qcom-pcie 1c00000.pcie: 0000:01:00.0: PMCSR 0x810b (D3, PME_En 1, PME_Status SET)
+Nov 05 23:32:02.549359 frame kernel: qcom-pcie 1c00000.pcie: 0000:01:00.0: LNKSTA 0x1012
+Nov 05 23:32:02.549445 frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 1)
+Nov 05 23:32:02.549631 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow wakeup host reason 58 WOW_REASON_PAGE_FAULT
+Nov 05 23:32:02.551598 frame kernel: PM: suspend exit
+23:32:04 full journal: build/kernel/wake-handoff-v12-pme-s2idle-20261105-232758.full.log
+23:32:04 log: build/kernel/wake-handoff-v12-pme-s2idle-20261105-232758.log

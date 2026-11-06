@@ -1,0 +1,1772 @@
+Nov 05 23:27:01.283013 frame kernel: Booting Linux on physical CPU 0x0000000000 [0x410fd801]
+Nov 05 23:27:01.283069 frame kernel: Linux version 7.2.0-wake+ (root@5a587c3474dc) (gcc (GCC) 15.2.1 20260123 (Red Hat 15.2.1-7), GNU ld version 2.44-12.fc42) #13 SMP PREEMPT Fri Nov  6 03:45:31 UTC 2026
+Nov 05 23:27:01.283093 frame kernel: Machine model: SM8650 MP rev1 4slam 2et
+Nov 05 23:27:01.283114 frame kernel: earlycon: qcom_geni0 at MMIO 0x000000000089c000 (options '115200n8')
+Nov 05 23:27:01.283132 frame kernel: printk: legacy bootconsole [qcom_geni0] enabled
+Nov 05 23:27:01.283149 frame kernel: OF: reserved mem: 0x0000000081c60000..0x0000000081c7ffff (128 KiB) nomap non-reusable aop-cmd-db@81c60000
+Nov 05 23:27:01.283170 frame kernel: OF: reserved mem: 0x0000000081d00000..0x0000000081efffff (2048 KiB) nomap non-reusable smem@81d00000
+Nov 05 23:27:01.283187 frame kernel: OF: reserved mem: 0x0000000082700000..0x00000000827fffff (1024 KiB) nomap non-reusable tz-stat@82700000
+Nov 05 23:27:01.283204 frame kernel: OF: reserved mem: 0x000000009bb00000..0x000000009c2fffff (8192 KiB) nomap non-reusable video@9bb00000
+Nov 05 23:27:01.283220 frame kernel: OF: reserved mem: 0x0000000081c00000..0x0000000081c5ffff (384 KiB) nomap non-reusable aop@81c00000
+Nov 05 23:27:01.283237 frame kernel: OF: reserved mem: 0x0000000084a00000..0x0000000084c3ffff (2304 KiB) map non-reusable ramoops@84a00000
+Nov 05 23:27:01.283254 frame kernel: OF: reserved mem: 0x0000000081c80000..0x0000000081cf4fff (468 KiB) nomap non-reusable aop-config-merged-region@81c80000
+Nov 05 23:27:01.283271 frame kernel: OF: reserved mem: 0x00000000d8040000..0x00000000d81f1fff (1736 KiB) nomap non-reusable cpucp-fw@d8040000
+Nov 05 23:27:01.283288 frame kernel: Reserved memory: created DMA memory pool at 0x0000000006000000, size 2 MiB
+Nov 05 23:27:01.283311 frame kernel: OF: reserved mem: initialized node lpm@6000000, compatible id shared-dma-pool
+Nov 05 23:27:01.283328 frame kernel: OF: reserved mem: 0x0000000006000000..0x00000000061fffff (2048 KiB) nomap non-reusable lpm@6000000
+Nov 05 23:27:01.283345 frame kernel: Reserved memory: created DMA memory pool at 0x0000000006c80000, size 0 MiB
+Nov 05 23:27:01.283361 frame kernel: OF: reserved mem: initialized node lpm@6c80000, compatible id shared-dma-pool
+Nov 05 23:27:01.283378 frame kernel: OF: reserved mem: 0x0000000006c80000..0x0000000006c8ffff (64 KiB) nomap non-reusable lpm@6c80000
+Nov 05 23:27:01.283395 frame kernel: Reserved memory: created DMA memory pool at 0x0000000006d40000, size 0 MiB
+Nov 05 23:27:01.283411 frame kernel: OF: reserved mem: initialized node lpm@6d40000, compatible id shared-dma-pool
+Nov 05 23:27:01.283428 frame kernel: OF: reserved mem: 0x0000000006d40000..0x0000000006d42fff (12 KiB) nomap non-reusable lpm@6d40000
+Nov 05 23:27:01.283445 frame kernel: Reserved memory: created DMA memory pool at 0x0000000007c10000, size 0 MiB
+Nov 05 23:27:01.283461 frame kernel: OF: reserved mem: initialized node lpm@7c10000, compatible id shared-dma-pool
+Nov 05 23:27:01.283478 frame kernel: OF: reserved mem: 0x0000000007c10000..0x0000000007c17fff (32 KiB) nomap non-reusable lpm@7c10000
+Nov 05 23:27:01.283497 frame kernel: OF: reserved mem: 0x00000000af400000..0x00000000b23fffff (49152 KiB) nomap non-reusable memory@af400000
+Nov 05 23:27:01.283513 frame kernel: psci: probing for conduit method from DT.
+Nov 05 23:27:01.283530 frame kernel: psci: PSCIv1.1 detected in firmware.
+Nov 05 23:27:01.283546 frame kernel: psci: Using standard PSCI v0.2 function IDs
+Nov 05 23:27:01.283563 frame kernel: psci: MIGRATE_INFO_TYPE not supported.
+Nov 05 23:27:01.283579 frame kernel: psci: SMC Calling Convention v1.1
+Nov 05 23:27:01.283595 frame kernel: psci: OSI mode supported.
+Nov 05 23:27:01.283612 frame kernel: psci: [Firmware Bug]: failed to set PC mode: -3
+Nov 05 23:27:01.283628 frame kernel: Zone ranges:
+Nov 05 23:27:01.283644 frame kernel:   DMA      [mem 0x0000000080000000-0x00000000ffffffff]
+Nov 05 23:27:01.283660 frame kernel:   DMA32    empty
+Nov 05 23:27:01.283676 frame kernel:   Normal   [mem 0x0000000100000000-0x0000000bffffffff]
+Nov 05 23:27:01.283704 frame kernel: Movable zone start for each node
+Nov 05 23:27:01.283720 frame kernel: Early memory node ranges
+Nov 05 23:27:01.283737 frame kernel:   node   0: [mem 0x0000000080000000-0x0000000081bfffff]
+Nov 05 23:27:01.283770 frame kernel:   node   0: [mem 0x0000000081c00000-0x0000000081cf4fff]
+Nov 05 23:27:01.283789 frame kernel:   node   0: [mem 0x0000000081cf5000-0x0000000081cfffff]
+Nov 05 23:27:01.283807 frame kernel:   node   0: [mem 0x0000000081d00000-0x0000000081efffff]
+Nov 05 23:27:01.283825 frame kernel:   node   0: [mem 0x0000000081f00000-0x00000000826fffff]
+Nov 05 23:27:01.283844 frame kernel:   node   0: [mem 0x0000000082700000-0x00000000827fffff]
+Nov 05 23:27:01.283861 frame kernel:   node   0: [mem 0x0000000082800000-0x000000009bafffff]
+Nov 05 23:27:01.283877 frame kernel:   node   0: [mem 0x000000009bb00000-0x000000009c2fffff]
+Nov 05 23:27:01.283894 frame kernel:   node   0: [mem 0x000000009c300000-0x00000000af3fffff]
+Nov 05 23:27:01.283911 frame kernel:   node   0: [mem 0x00000000af400000-0x00000000b23fffff]
+Nov 05 23:27:01.283928 frame kernel:   node   0: [mem 0x00000000b2400000-0x00000000d803ffff]
+Nov 05 23:27:01.283944 frame kernel:   node   0: [mem 0x00000000e1200000-0x00000000ffffffff]
+Nov 05 23:27:01.283962 frame kernel:   node   0: [mem 0x0000000880000000-0x0000000bffffffff]
+Nov 05 23:27:01.283979 frame kernel: Initmem setup node 0 [mem 0x0000000080000000-0x0000000bffffffff]
+Nov 05 23:27:01.283996 frame kernel: On node 0, zone DMA: 37312 pages in unavailable ranges
+Nov 05 23:27:01.284013 frame kernel: percpu: Embedded 36 pages/cpu s109584 r8192 d29680 u147456
+Nov 05 23:27:01.284029 frame kernel: pcpu-alloc: s109584 r8192 d29680 u147456 alloc=36*4096
+Nov 05 23:27:01.284047 frame kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+Nov 05 23:27:01.284065 frame kernel: Detected PIPT I-cache on CPU0
+Nov 05 23:27:01.284081 frame kernel: CPU features: SYS_ID_AA64MMFR0_EL1[63:60]: forced to 1
+Nov 05 23:27:01.284101 frame kernel: CPU features: detected: Address authentication (architected QARMA3 algorithm)
+Nov 05 23:27:01.284117 frame kernel: CPU features: detected: GICv3 CPU interface
+Nov 05 23:27:01.284134 frame kernel: CPU features: detected: HCRX_EL2 register
+Nov 05 23:27:01.284152 frame kernel: CPU features: detected: Virtualization Host Extensions
+Nov 05 23:27:01.284170 frame kernel: CPU features: detected: Spectre-v4
+Nov 05 23:27:01.284187 frame kernel: CPU features: kernel page table isolation disabled by kernel configuration
+Nov 05 23:27:01.284204 frame kernel: CPU features: detected: ARM errata 2966298, 3117295
+Nov 05 23:27:01.284222 frame kernel: alternatives: applying boot alternatives
+Nov 05 23:27:01.284240 frame kernel: Kernel command line: steamos.efi=PARTUUID=62db741c-a069-40a5-ae10-00c0d2665134 loglevel=3 rd.log=console rd.log=file id_aa64mmfr0.ecv=1   init=/sbin/init rauc.slot=A noresume rootwait earlycon 
+Nov 05 23:27:01.284257 frame kernel: Unknown kernel command line parameters "noresume", will be passed to user space.
+Nov 05 23:27:01.284274 frame kernel: printk: log buffer data + meta data: 16777216 + 58720256 = 75497472 bytes
+Nov 05 23:27:01.284290 frame kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+Nov 05 23:27:01.284308 frame kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+Nov 05 23:27:01.284325 frame kernel: software IO TLB: area num 8.
+Nov 05 23:27:01.284342 frame kernel: software IO TLB: mapped [mem 0x00000000fbfff000-0x00000000fffff000] (64MB)
+Nov 05 23:27:01.284360 frame kernel: Built 1 zonelists, mobility grouping on.  Total pages: 4156992
+Nov 05 23:27:01.284379 frame kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Nov 05 23:27:01.284397 frame kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+Nov 05 23:27:01.284414 frame kernel: ftrace: allocating 99238 entries in 388 pages
+Nov 05 23:27:01.284432 frame kernel: ftrace: allocated 388 pages with 3 groups
+Nov 05 23:27:01.284448 frame kernel: rcu: Preemptible hierarchical RCU implementation.
+Nov 05 23:27:01.284468 frame kernel:         Trampoline variant of Tasks RCU enabled.
+Nov 05 23:27:01.284484 frame kernel:         Rude variant of Tasks RCU enabled.
+Nov 05 23:27:01.284503 frame kernel:         Tracing variant of Tasks RCU enabled.
+Nov 05 23:27:01.284520 frame kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Nov 05 23:27:01.284538 frame kernel: RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+Nov 05 23:27:01.284560 frame kernel: RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+Nov 05 23:27:01.284577 frame kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Nov 05 23:27:01.284594 frame kernel: GICv3: GIC: Using split EOI/Deactivate mode
+Nov 05 23:27:01.284611 frame kernel: GIC: enabling workaround for GICv3: ARM64 erratum 2941627
+Nov 05 23:27:01.284628 frame kernel: GICv3: 928 SPIs implemented
+Nov 05 23:27:01.284646 frame kernel: GICv3: 0 Extended SPIs implemented
+Nov 05 23:27:01.284665 frame kernel: Root IRQ handler: gic_handle_irq
+Nov 05 23:27:01.284683 frame kernel: GICv3: GICv3 features: 48 PPIs, DirectLPI
+Nov 05 23:27:01.284700 frame kernel: GICv3: GICv4 features: DirectLPI RVPEID Valid+Dirty 
+Nov 05 23:27:01.284718 frame kernel: GICv3: GICD_CTLR.DS=0, SCR_EL3.FIQ=1
+Nov 05 23:27:01.284734 frame kernel: GICv3: CPU0: found redistributor 0 region 0:0x0000000017180000
+Nov 05 23:27:01.284757 frame kernel: ITS [mem 0x17140000-0x1717ffff]
+Nov 05 23:27:01.284786 frame kernel: ITS@0x0000000017140000: Single VMOVP capable
+Nov 05 23:27:01.284803 frame kernel: ITS@0x0000000017140000: Using GICv4.1 mode 00000000 00000001
+Nov 05 23:27:01.284821 frame kernel: ITS@0x0000000017140000: allocated 8192 Devices @8803b0000 (indirect, esz 8, psz 64K, shr 1)
+Nov 05 23:27:01.284838 frame kernel: ITS@0x0000000017140000: allocated 32768 Interrupt Collections @8803c0000 (flat, esz 2, psz 64K, shr 1)
+Nov 05 23:27:01.284856 frame kernel: ITS@0x0000000017140000: allocated 8192 Virtual CPUs @8803d0000 (flat, esz 8, psz 64K, shr 1)
+Nov 05 23:27:01.284873 frame kernel: GICv3: using LPI property table @0x00000008803e0000
+Nov 05 23:27:01.284891 frame kernel: ITS: Using DirectLPI for VPE invalidation
+Nov 05 23:27:01.284909 frame kernel: ITS: Enabling GICv4 support
+Nov 05 23:27:01.284926 frame kernel: GICv3: CPU0: using allocated LPI pending table @0x00000008803f0000
+Nov 05 23:27:01.284943 frame kernel: GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] }
+Nov 05 23:27:01.284960 frame kernel: GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@200[2] /cpus/cpu@300[3] /cpus/cpu@400[4] /cpus/cpu@500[5] /cpus/cpu@600[6] }
+Nov 05 23:27:01.284981 frame kernel: GICv3: GIC: PPI partition interrupt-partition-2[2] { /cpus/cpu@700[7] }
+Nov 05 23:27:01.284999 frame kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Nov 05 23:27:01.285017 frame kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Nov 05 23:27:01.285035 frame kernel: arch_timer: [Firmware Bug]: VHE-capable CPU without EL2 virtual timer interrupt
+Nov 05 23:27:01.285053 frame kernel: arch_timer: cp15 timer running at 19.20MHz (hyp-phys).
+Nov 05 23:27:01.285070 frame kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+Nov 05 23:27:01.285088 frame kernel: sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+Nov 05 23:27:01.285105 frame kernel: Console: colour dummy device 80x25
+Nov 05 23:27:01.285124 frame kernel: printk: legacy console [tty0] enabled
+Nov 05 23:27:01.285143 frame kernel: printk: legacy bootconsole [qcom_geni0] disabled
+Nov 05 23:27:01.285170 frame kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=19200)
+Nov 05 23:27:01.285189 frame kernel: pid_max: default: 32768 minimum: 301
+Nov 05 23:27:01.285209 frame kernel: Yama: becoming mindful.
+Nov 05 23:27:01.285230 frame kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Nov 05 23:27:01.285250 frame kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Nov 05 23:27:01.285269 frame kernel: VFS: Finished mounting rootfs on nullfs
+Nov 05 23:27:01.285287 frame kernel: rcu: Hierarchical SRCU implementation.
+Nov 05 23:27:01.285306 frame kernel: rcu:         Max phase no-delay instances is 400.
+Nov 05 23:27:01.285324 frame kernel: Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+Nov 05 23:27:01.285342 frame kernel: smp: Bringing up secondary CPUs ...
+Nov 05 23:27:01.285362 frame kernel: Detected PIPT I-cache on CPU1
+Nov 05 23:27:01.285380 frame kernel: GICv3: CPU1: found redistributor 100 region 0:0x00000000171c0000
+Nov 05 23:27:01.285398 frame kernel: GICv3: CPU1: using allocated LPI pending table @0x0000000880800000
+Nov 05 23:27:01.285416 frame kernel: CPU1: Booted secondary processor 0x0000000100 [0x410fd801]
+Nov 05 23:27:01.285434 frame kernel: CPU features: detected: Spectre-BHB
+Nov 05 23:27:01.285453 frame kernel: CPU features: detected: SSBS not fully self-synchronizing
+Nov 05 23:27:01.285475 frame kernel: Detected PIPT I-cache on CPU2
+Nov 05 23:27:01.285493 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU2: 0x1001111010312122
+Nov 05 23:27:01.285513 frame kernel: CPU features: Unsupported CPU feature variation detected.
+Nov 05 23:27:01.285532 frame kernel: GICv3: CPU2: found redistributor 200 region 0:0x0000000017200000
+Nov 05 23:27:01.285549 frame kernel: GICv3: CPU2: using allocated LPI pending table @0x0000000880810000
+Nov 05 23:27:01.285568 frame kernel: CPU2: Booted secondary processor 0x0000000200 [0x410fd811]
+Nov 05 23:27:01.285585 frame kernel: Detected PIPT I-cache on CPU3
+Nov 05 23:27:01.285604 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU3: 0x1001111010312122
+Nov 05 23:27:01.285622 frame kernel: GICv3: CPU3: found redistributor 300 region 0:0x0000000017240000
+Nov 05 23:27:01.285640 frame kernel: GICv3: CPU3: using allocated LPI pending table @0x0000000880820000
+Nov 05 23:27:01.285658 frame kernel: CPU3: Booted secondary processor 0x0000000300 [0x410fd811]
+Nov 05 23:27:01.285678 frame kernel: Detected PIPT I-cache on CPU4
+Nov 05 23:27:01.285697 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU4: 0x1001111010312122
+Nov 05 23:27:01.285716 frame kernel: GICv3: CPU4: found redistributor 400 region 0:0x0000000017280000
+Nov 05 23:27:01.285734 frame kernel: GICv3: CPU4: using allocated LPI pending table @0x0000000880830000
+Nov 05 23:27:01.285769 frame kernel: CPU4: Booted secondary processor 0x0000000400 [0x410fd811]
+Nov 05 23:27:01.285787 frame kernel: Detected PIPT I-cache on CPU5
+Nov 05 23:27:01.285806 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU5: 0x1001111010312122
+Nov 05 23:27:01.285825 frame kernel: GICv3: CPU5: found redistributor 500 region 0:0x00000000172c0000
+Nov 05 23:27:01.285843 frame kernel: GICv3: CPU5: using allocated LPI pending table @0x0000000880840000
+Nov 05 23:27:01.285864 frame kernel: CPU5: Booted secondary processor 0x0000000500 [0x410fd811]
+Nov 05 23:27:01.285882 frame kernel: Detected PIPT I-cache on CPU6
+Nov 05 23:27:01.285900 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU6: 0x1001111010312122
+Nov 05 23:27:01.285918 frame kernel: GICv3: CPU6: found redistributor 600 region 0:0x0000000017300000
+Nov 05 23:27:01.285937 frame kernel: GICv3: CPU6: using allocated LPI pending table @0x0000000880850000
+Nov 05 23:27:01.285955 frame kernel: CPU6: Booted secondary processor 0x0000000600 [0x410fd811]
+Nov 05 23:27:01.285973 frame kernel: CPU features: detected: Broken broadcast TLBI completion
+Nov 05 23:27:01.285991 frame kernel: Detected PIPT I-cache on CPU7
+Nov 05 23:27:01.286011 frame kernel: CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU7: 0x1001111010312122
+Nov 05 23:27:01.286030 frame kernel: GICv3: CPU7: found redistributor 700 region 0:0x0000000017340000
+Nov 05 23:27:01.286048 frame kernel: GICv3: CPU7: using allocated LPI pending table @0x0000000880860000
+Nov 05 23:27:01.286066 frame kernel: CPU7: Booted secondary processor 0x0000000700 [0x410fd821]
+Nov 05 23:27:01.286084 frame kernel: smp: Brought up 1 node, 8 CPUs
+Nov 05 23:27:01.286102 frame kernel: SMP: Total of 8 processors activated.
+Nov 05 23:27:01.286119 frame kernel: CPU: All CPU(s) started at EL2
+Nov 05 23:27:01.286137 frame kernel: CPU features: detected: Branch Target Identification
+Nov 05 23:27:01.286155 frame kernel: CPU features: detected: ARMv8.4 Translation Table Level
+Nov 05 23:27:01.286176 frame kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+Nov 05 23:27:01.286194 frame kernel: CPU features: detected: Common not Private translations
+Nov 05 23:27:01.286212 frame kernel: CPU features: detected: CRC32 instructions
+Nov 05 23:27:01.286230 frame kernel: CPU features: detected: Data independent timing control (DIT)
+Nov 05 23:27:01.286248 frame kernel: CPU features: detected: E0PD
+Nov 05 23:27:01.286267 frame kernel: CPU features: detected: Enhanced Counter Virtualization
+Nov 05 23:27:01.286295 frame kernel: CPU features: detected: Enhanced Privileged Access Never
+Nov 05 23:27:01.286313 frame kernel: CPU features: detected: Enhanced Virtualization Traps
+Nov 05 23:27:01.286331 frame kernel: CPU features: detected: Fine Grained Traps
+Nov 05 23:27:01.286351 frame kernel: CPU features: detected: Generic authentication (architected QARMA3 algorithm)
+Nov 05 23:27:01.286370 frame kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+Nov 05 23:27:01.286387 frame kernel: CPU features: detected: LSE atomic instructions
+Nov 05 23:27:01.286405 frame kernel: CPU features: detected: Privileged Access Never
+Nov 05 23:27:01.286424 frame kernel: CPU features: detected: PMUv3
+Nov 05 23:27:01.286442 frame kernel: CPU features: detected: RAS Extension Support
+Nov 05 23:27:01.286459 frame kernel: CPU features: detected: RASv1p1 Extension Support
+Nov 05 23:27:01.286477 frame kernel: CPU features: detected: Speculation barrier (SB)
+Nov 05 23:27:01.286495 frame kernel: CPU features: detected: Stage-2 Force Write-Back
+Nov 05 23:27:01.286516 frame kernel: CPU features: detected: TLB range maintenance instructions
+Nov 05 23:27:01.286534 frame kernel: CPU features: detected: WFx with timeout
+Nov 05 23:27:01.286552 frame kernel: CPU features: detected: XNX
+Nov 05 23:27:01.286570 frame kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+Nov 05 23:27:01.286588 frame kernel: CPU features: detected: Scalable Vector Extension
+Nov 05 23:27:01.286606 frame kernel: alternatives: applying system-wide alternatives
+Nov 05 23:27:01.286623 frame kernel: CPU features: detected: ICV_DIR_EL1 trapping
+Nov 05 23:27:01.286641 frame kernel: CPU features: detected: Hardware dirty bit management on CPU0-7
+Nov 05 23:27:01.286660 frame kernel: SVE: maximum available vector length 16 bytes per vector
+Nov 05 23:27:01.286680 frame kernel: SVE: default vector length 16 bytes per vector
+Nov 05 23:27:01.286699 frame kernel: Memory: 16003120K/16627968K available (35264K kernel code, 62482K rwdata, 26428K rodata, 3520K init, 18376K bss, 614896K reserved, 0K cma-reserved)
+Nov 05 23:27:01.286717 frame kernel: devtmpfs: initialized
+Nov 05 23:27:01.286735 frame kernel: posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+Nov 05 23:27:01.286760 frame kernel: futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+Nov 05 23:27:01.286779 frame kernel: 0 pages in range for non-PLT usage
+Nov 05 23:27:01.286797 frame kernel: 487712 pages in range for PLT usage
+Nov 05 23:27:01.286817 frame kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Nov 05 23:27:01.286838 frame kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+Nov 05 23:27:01.286856 frame kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Nov 05 23:27:01.286874 frame kernel: audit: initializing netlink subsys (disabled)
+Nov 05 23:27:01.286892 frame kernel: audit: type=2000 audit(0.021:1): state=initialized audit_enabled=0 res=1
+Nov 05 23:27:01.286910 frame kernel: thermal_sys: Registered thermal governor 'step_wise'
+Nov 05 23:27:01.286927 frame kernel: cpuidle: using governor menu
+Nov 05 23:27:01.286945 frame kernel: NET: Registered PF_QIPCRTR protocol family
+Nov 05 23:27:01.286963 frame kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Nov 05 23:27:01.286982 frame kernel: ASID allocator initialised with 65536 entries
+Nov 05 23:27:01.287002 frame kernel: Serial: AMBA PL011 UART driver
+Nov 05 23:27:01.287020 frame kernel: ramoops: error in header, 5
+Nov 05 23:27:01.287038 frame kernel: pstore: Using crash dump compression: deflate
+Nov 05 23:27:01.287056 frame kernel: printk: legacy console [ramoops-1] enabled
+Nov 05 23:27:01.287074 frame kernel: pstore: Registered ramoops as persistent store backend
+Nov 05 23:27:01.287092 frame kernel: ramoops: using 0x240000@0x84a00000, ecc: 32
+Nov 05 23:27:01.287110 frame kernel: /ete-7: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287128 frame kernel: /ete-6: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287145 frame kernel: /ete-5: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287165 frame kernel: /ete-4: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287183 frame kernel: /ete-3: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287201 frame kernel: /ete-2: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287219 frame kernel: /ete-1: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287238 frame kernel: /ete-0: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.287256 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-7
+Nov 05 23:27:01.287274 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-6
+Nov 05 23:27:01.287292 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-5
+Nov 05 23:27:01.287309 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-4
+Nov 05 23:27:01.287330 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-3
+Nov 05 23:27:01.287349 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-2
+Nov 05 23:27:01.287367 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-1
+Nov 05 23:27:01.287384 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /ete-0
+Nov 05 23:27:01.287410 frame kernel: CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+Nov 05 23:27:01.287429 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Nov 05 23:27:01.287447 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+Nov 05 23:27:01.287466 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+Nov 05 23:27:01.287486 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+Nov 05 23:27:01.287505 frame kernel: /soc@0/interconnect@16e0000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287523 frame kernel: /soc@0/phy@1c06000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287541 frame kernel: /soc@0/phy@1c0e000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287560 frame kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+Nov 05 23:27:01.287578 frame kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287596 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+Nov 05 23:27:01.287614 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+Nov 05 23:27:01.287632 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287652 frame kernel: /soc@0/phy@88e3000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287671 frame kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.287689 frame kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287707 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/spmi@c400000/pmic@7/typec@2b00/connector
+Nov 05 23:27:01.287725 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+Nov 05 23:27:01.287743 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Nov 05 23:27:01.287772 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e3000
+Nov 05 23:27:01.287793 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.287815 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam3@1a: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287833 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam4@10: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287852 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287871 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@36: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287889 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287907 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@3e: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.287925 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam4@10
+Nov 05 23:27:01.287944 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam3@1a
+Nov 05 23:27:01.287964 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@3e
+Nov 05 23:27:01.287983 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@36
+Nov 05 23:27:01.288001 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@60
+Nov 05 23:27:01.288019 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@60
+Nov 05 23:27:01.288038 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.288056 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.288075 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.288094 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.288115 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.288134 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.288152 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.288171 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.288191 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.288209 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.288228 frame kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+Nov 05 23:27:01.288247 frame kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+Nov 05 23:27:01.288268 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.288287 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+Nov 05 23:27:01.288305 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@13810000
+Nov 05 23:27:01.288324 frame kernel: /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+Nov 05 23:27:01.288342 frame kernel: /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+Nov 05 23:27:01.288360 frame kernel: /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+Nov 05 23:27:01.288379 frame kernel: /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+Nov 05 23:27:01.288396 frame kernel: /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+Nov 05 23:27:01.288417 frame kernel: /soc@0/funnel@13810000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+Nov 05 23:27:01.288435 frame kernel: /soc@0/funnel@13810000: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.288454 frame kernel: /soc@0/interrupt-controller@17100000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17100000
+Nov 05 23:27:01.288472 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Nov 05 23:27:01.288490 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+Nov 05 23:27:01.288508 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+Nov 05 23:27:01.288526 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+Nov 05 23:27:01.288554 frame kernel: /soc@0/interconnect@16e0000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288573 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c06000
+Nov 05 23:27:01.288590 frame kernel: /soc@0/phy@1c06000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288611 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+Nov 05 23:27:01.288629 frame kernel: /soc@0/phy@1c0e000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288647 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+Nov 05 23:27:01.288664 frame kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+Nov 05 23:27:01.288683 frame kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288701 frame kernel: /soc@0/phy@1d80000: Fixed dependency cycle(s) with /soc@0/ufshc@1d84000
+Nov 05 23:27:01.288719 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d80000
+Nov 05 23:27:01.288737 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+Nov 05 23:27:01.288760 frame kernel: /soc@0/ufshc@1d84000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288779 frame kernel: /soc@0/phy@88e3000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288797 frame kernel: /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Nov 05 23:27:01.288815 frame kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.288836 frame kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288854 frame kernel: /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.288872 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/spmi@c400000/pmic@7/typec@2b00/connector
+Nov 05 23:27:01.288890 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/interconnect@16e0000
+Nov 05 23:27:01.288908 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+Nov 05 23:27:01.288925 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e3000
+Nov 05 23:27:01.288943 frame kernel: /soc@0/usb@a600000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+Nov 05 23:27:01.288962 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam3@1a: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.288980 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam4@10: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.288998 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289016 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@36: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289036 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289055 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@3e: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289073 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@3e: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289090 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289108 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@36: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289126 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289143 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam4@10: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289161 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam3@1a: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.289179 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam4@10
+Nov 05 23:27:01.289197 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam3@1a
+Nov 05 23:27:01.289215 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@3e
+Nov 05 23:27:01.289233 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@36
+Nov 05 23:27:01.289254 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@60
+Nov 05 23:27:01.289272 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@60
+Nov 05 23:27:01.289290 frame kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289309 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.289328 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.289347 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.289365 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.289384 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.289402 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.289421 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289439 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.289460 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.289479 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289497 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae97000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289515 frame kernel: /soc@0/display-subsystem@ae00000/phy@ae95000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289533 frame kernel: /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+Nov 05 23:27:01.289554 frame kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae97000
+Nov 05 23:27:01.289584 frame kernel: /soc@0/clock-controller@af00000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/phy@ae95000
+Nov 05 23:27:01.289603 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.289621 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+Nov 05 23:27:01.289639 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@13810000
+Nov 05 23:27:01.289657 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+Nov 05 23:27:01.289685 frame kernel: /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+Nov 05 23:27:01.289703 frame kernel: /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+Nov 05 23:27:01.289721 frame kernel: /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+Nov 05 23:27:01.289739 frame kernel: /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+Nov 05 23:27:01.289764 frame kernel: /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+Nov 05 23:27:01.289785 frame kernel: /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+Nov 05 23:27:01.289803 frame kernel: /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+Nov 05 23:27:01.289822 frame kernel: /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@13810000
+Nov 05 23:27:01.289840 frame kernel: /funnel-ete: Fixed dependency cycle(s) with /soc@0/funnel@13810000
+Nov 05 23:27:01.289859 frame kernel: /soc@0/funnel@13810000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+Nov 05 23:27:01.289879 frame kernel: /soc@0/funnel@13810000: Fixed dependency cycle(s) with /funnel-ete
+Nov 05 23:27:01.289898 frame kernel: /soc@0/rsc@17a00000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-0/bob2
+Nov 05 23:27:01.289916 frame kernel: /soc@0/rsc@17a00000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-0/bob1
+Nov 05 23:27:01.289935 frame kernel: /soc@0/rsc@17a00000/regulators-1: Fixed dependency cycle(s) with /soc@0/rsc@17a00000/regulators-1/smps1
+Nov 05 23:27:01.289953 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /sbu-mux
+Nov 05 23:27:01.289971 frame kernel: /sbu-mux: Fixed dependency cycle(s) with /soc@0/spmi@c400000/pmic@7/typec@2b00/connector
+Nov 05 23:27:01.289990 frame kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+Nov 05 23:27:01.290008 frame kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+Nov 05 23:27:01.290029 frame kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+Nov 05 23:27:01.290047 frame kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+Nov 05 23:27:01.290065 frame kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Nov 05 23:27:01.290083 frame kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+Nov 05 23:27:01.290101 frame kernel: HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+Nov 05 23:27:01.290120 frame kernel: HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+Nov 05 23:27:01.290137 frame kernel: raid6: using neon recovery algorithm
+Nov 05 23:27:01.290155 frame kernel: raid6: int64x1  gen()  6624 MB/s
+Nov 05 23:27:01.290173 frame kernel: raid6: int64x2  gen() 11421 MB/s
+Nov 05 23:27:01.290193 frame kernel: raid6: int64x4  gen() 13705 MB/s
+Nov 05 23:27:01.290210 frame kernel: raid6: int64x8  gen() 14107 MB/s
+Nov 05 23:27:01.290228 frame kernel: raid6: neonx1   gen() 22482 MB/s
+Nov 05 23:27:01.290246 frame kernel: raid6: neonx2   gen() 23816 MB/s
+Nov 05 23:27:01.290264 frame kernel: raid6: neonx4   gen() 27725 MB/s
+Nov 05 23:27:01.290282 frame kernel: raid6: neonx8   gen() 30729 MB/s
+Nov 05 23:27:01.290300 frame kernel: raid6: using algorithm neonx8 gen() 30729 MB/s
+Nov 05 23:27:01.290318 frame kernel: raid6: .... xor() 25787 MB/s, rmw enabled
+Nov 05 23:27:01.290336 frame kernel: gcc_sm8650_probe start
+Nov 05 23:27:01.290356 frame kernel: gcc_sm8650_probe done
+Nov 05 23:27:01.290375 frame kernel: iommu: Default domain type: Translated
+Nov 05 23:27:01.290393 frame kernel: iommu: DMA domain TLB invalidation policy: strict mode
+Nov 05 23:27:01.290411 frame kernel: SCSI subsystem initialized
+Nov 05 23:27:01.290429 frame kernel: libata version 3.00 loaded.
+Nov 05 23:27:01.290447 frame kernel: usbcore: registered new interface driver usbfs
+Nov 05 23:27:01.290465 frame kernel: usbcore: registered new interface driver hub
+Nov 05 23:27:01.290483 frame kernel: usbcore: registered new device driver usb
+Nov 05 23:27:01.290502 frame kernel: mc: Linux media interface: v0.10
+Nov 05 23:27:01.290522 frame kernel: videodev: Linux video capture interface: v2.00
+Nov 05 23:27:01.290540 frame kernel: FPGA manager framework
+Nov 05 23:27:01.290558 frame kernel: Advanced Linux Sound Architecture Driver Initialized.
+Nov 05 23:27:01.290576 frame kernel: Bluetooth: Core ver 2.22
+Nov 05 23:27:01.290594 frame kernel: NET: Registered PF_BLUETOOTH protocol family
+Nov 05 23:27:01.290612 frame kernel: Bluetooth: HCI device and connection manager initialized
+Nov 05 23:27:01.290631 frame kernel: Bluetooth: HCI socket layer initialized
+Nov 05 23:27:01.290649 frame kernel: Bluetooth: L2CAP socket layer initialized
+Nov 05 23:27:01.290667 frame kernel: Bluetooth: SCO socket layer initialized
+Nov 05 23:27:01.290687 frame kernel: NET: Registered PF_ATMPVC protocol family
+Nov 05 23:27:01.290705 frame kernel: NetLabel: Initializing
+Nov 05 23:27:01.290723 frame kernel: NetLabel:  domain hash size = 128
+Nov 05 23:27:01.290742 frame kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Nov 05 23:27:01.290765 frame kernel: NetLabel:  unlabeled traffic allowed by default
+Nov 05 23:27:01.290784 frame kernel: mctp: management component transport protocol core
+Nov 05 23:27:01.290812 frame kernel: NET: Registered PF_MCTP protocol family
+Nov 05 23:27:01.290831 frame kernel: clocksource: Switched to clocksource arch_sys_counter
+Nov 05 23:27:01.290849 frame kernel: VFS: Disk quotas dquot_6.6.0
+Nov 05 23:27:01.290870 frame kernel: VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+Nov 05 23:27:01.290889 frame kernel: netfs: FS-Cache loaded
+Nov 05 23:27:01.290907 frame kernel: CacheFiles: Loaded
+Nov 05 23:27:01.290925 frame kernel: NET: Registered PF_INET protocol family
+Nov 05 23:27:01.290943 frame kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Nov 05 23:27:01.290962 frame kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+Nov 05 23:27:01.290980 frame kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Nov 05 23:27:01.290998 frame kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Nov 05 23:27:01.291019 frame kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+Nov 05 23:27:01.291037 frame kernel: TCP: Hash tables configured (established 131072 bind 65536)
+Nov 05 23:27:01.291056 frame kernel: MPTCP token hash table entries: 16384 (order: 7, 393216 bytes, linear)
+Nov 05 23:27:01.291074 frame kernel: UDP hash table entries: 8192 (order: 7, 524288 bytes, linear)
+Nov 05 23:27:01.291092 frame kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Nov 05 23:27:01.291111 frame kernel: RPC: Registered named UNIX socket transport module.
+Nov 05 23:27:01.291129 frame kernel: RPC: Registered udp transport module.
+Nov 05 23:27:01.291147 frame kernel: RPC: Registered tcp transport module.
+Nov 05 23:27:01.291166 frame kernel: RPC: Registered tcp-with-tls transport module.
+Nov 05 23:27:01.291186 frame kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Nov 05 23:27:01.291205 frame kernel: NET: Registered PF_XDP protocol family
+Nov 05 23:27:01.291223 frame kernel: Unpacking initramfs...
+Nov 05 23:27:01.291241 frame kernel: kvm [1]: nv: 570 coarse grained trap handlers
+Nov 05 23:27:01.291259 frame kernel: kvm [1]: nv: 710 fine grained trap handlers
+Nov 05 23:27:01.291278 frame kernel: kvm [1]: IPA Size Limit: 40 bits
+Nov 05 23:27:01.291296 frame kernel: kvm [1]: GICv4 support disabled
+Nov 05 23:27:01.291315 frame kernel: kvm [1]: GICv3: no GICV resource entry
+Nov 05 23:27:01.291333 frame kernel: kvm [1]: disabling GICv2 emulation
+Nov 05 23:27:01.291353 frame kernel: kvm [1]: GIC system register CPU interface enabled
+Nov 05 23:27:01.291371 frame kernel: kvm [1]: vgic interrupt IRQ9
+Nov 05 23:27:01.291390 frame kernel: kvm [1]: VHE mode initialized successfully
+Nov 05 23:27:01.291408 frame kernel: Initialise system trusted keyrings
+Nov 05 23:27:01.291427 frame kernel: workingset: timestamp_bits=46 (anon: 41) max_order=22 bucket_order=0 (anon: 0)
+Nov 05 23:27:01.291444 frame kernel: DLM installed
+Nov 05 23:27:01.291462 frame kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Nov 05 23:27:01.291480 frame kernel: NFS: Registering the id_resolver key type
+Nov 05 23:27:01.291498 frame kernel: Key type id_resolver registered
+Nov 05 23:27:01.291518 frame kernel: Key type id_legacy registered
+Nov 05 23:27:01.291537 frame kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+Nov 05 23:27:01.291555 frame kernel: nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+Nov 05 23:27:01.291573 frame kernel: Key type cifs.spnego registered
+Nov 05 23:27:01.291591 frame kernel: Key type cifs.idmap registered
+Nov 05 23:27:01.291609 frame kernel: ntfs3: Enabled Linux POSIX ACLs support
+Nov 05 23:27:01.291627 frame kernel: ntfs3: Read-only LZX/Xpress compression included
+Nov 05 23:27:01.291645 frame kernel: romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+Nov 05 23:27:01.291663 frame kernel: fuse: init (API version 7.45)
+Nov 05 23:27:01.291683 frame kernel: orangefs_debugfs_init: called with debug mask: :none: :0:
+Nov 05 23:27:01.291701 frame kernel: orangefs_init: module version upstream loaded
+Nov 05 23:27:01.291719 frame kernel: JFS: nTxBlock = 8192, nTxLock = 65536
+Nov 05 23:27:01.291738 frame kernel: SGI XFS with ACLs, security attributes, realtime, scrub, repair, quota, no debug enabled
+Nov 05 23:27:01.291760 frame kernel: NILFS version 2 loaded
+Nov 05 23:27:01.291779 frame kernel: befs: version: 0.9.3
+Nov 05 23:27:01.291797 frame kernel: ocfs2: Registered cluster interface o2cb
+Nov 05 23:27:01.291816 frame kernel: ocfs2: Registered cluster interface user
+Nov 05 23:27:01.291834 frame kernel: OCFS2 User DLM kernel interface loaded
+Nov 05 23:27:01.291855 frame kernel: gfs2: GFS2 installed
+Nov 05 23:27:01.291873 frame kernel: ceph: loaded (mds proto 32)
+Nov 05 23:27:01.291892 frame kernel: cryptd: max_cpu_qlen set to 1000
+Nov 05 23:27:01.291910 frame kernel: NET: Registered PF_ALG protocol family
+Nov 05 23:27:01.291938 frame kernel: async_tx: api initialized (async)
+Nov 05 23:27:01.291956 frame kernel: Key type asymmetric registered
+Nov 05 23:27:01.291974 frame kernel: Asymmetric key parser 'x509' registered
+Nov 05 23:27:01.291992 frame kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+Nov 05 23:27:01.292013 frame kernel: xor: measuring software checksum speed
+Nov 05 23:27:01.292031 frame kernel:    eor3            : 36837 MB/sec
+Nov 05 23:27:01.292049 frame kernel:    32regs          : 23408 MB/sec
+Nov 05 23:27:01.292067 frame kernel:    8regs           : 23997 MB/sec
+Nov 05 23:27:01.292085 frame kernel: xor: using function: eor3 (36837 MB/sec)
+Nov 05 23:27:01.292104 frame kernel: vreg_s1c_1p2: Setting 1224000-1348000uV
+Nov 05 23:27:01.292123 frame kernel: vreg_s2c_0p8: Setting 500000-1036000uV
+Nov 05 23:27:01.292142 frame kernel: vreg_s3c_0p9: Setting 904000-1064000uV
+Nov 05 23:27:01.292160 frame kernel: vreg_s4c_1p2: Setting 1200000-1280000uV
+Nov 05 23:27:01.292180 frame kernel: vreg_s5c_0p7: Setting 300000-900000uV
+Nov 05 23:27:01.292200 frame kernel: vreg_s6c_1p8: Setting 1856000-2000000uV
+Nov 05 23:27:01.292218 frame kernel: vreg_l1c_1p2: Setting 1200000-1200000uV
+Nov 05 23:27:01.292236 frame kernel: vreg_l3c_1p2: Setting 1200000-1200000uV
+Nov 05 23:27:01.292588 frame kernel: arm-smmu 3da0000.iommu: probing hardware configuration...
+Nov 05 23:27:01.292843 frame kernel: arm-smmu 3da0000.iommu: SMMUv2 with:
+Nov 05 23:27:01.292955 frame kernel: arm-smmu 3da0000.iommu:         stage 1 translation
+Nov 05 23:27:01.293033 frame kernel: arm-smmu 3da0000.iommu:         stage 2 translation
+Nov 05 23:27:01.293108 frame kernel: arm-smmu 3da0000.iommu:         nested translation
+Nov 05 23:27:01.293176 frame kernel: arm-smmu 3da0000.iommu:         coherent table walk
+Nov 05 23:27:01.293243 frame kernel: arm-smmu 3da0000.iommu:         stream matching with 25 register groups
+Nov 05 23:27:01.293310 frame kernel: arm-smmu 3da0000.iommu:         25 context banks (0 stage-2 only)
+Nov 05 23:27:01.293379 frame kernel: arm-smmu 3da0000.iommu:         Supported page sizes: 0x61311000
+Nov 05 23:27:01.293447 frame kernel: arm-smmu 3da0000.iommu:         Stage-1: 48-bit VA -> 36-bit IPA
+Nov 05 23:27:01.293512 frame kernel: arm-smmu 3da0000.iommu:         Stage-2: 36-bit IPA -> 36-bit PA
+Nov 05 23:27:01.293577 frame kernel: arm-smmu 3da0000.iommu:         preserved 0 boot mappings
+Nov 05 23:27:01.293668 frame kernel: platform 3d00000.gpu: Adding to iommu group 0
+Nov 05 23:27:01.293734 frame kernel: platform 3d00000.lpac: Adding to iommu group 1
+Nov 05 23:27:01.293816 frame kernel: platform 3d6a000.gmu: Adding to iommu group 2
+Nov 05 23:27:01.293886 frame kernel: arm-smmu 15000000.iommu: probing hardware configuration...
+Nov 05 23:27:01.293951 frame kernel: arm-smmu 15000000.iommu: SMMUv2 with:
+Nov 05 23:27:01.294015 frame kernel: arm-smmu 15000000.iommu:         stage 1 translation
+Nov 05 23:27:01.294083 frame kernel: arm-smmu 15000000.iommu:         stage 2 translation
+Nov 05 23:27:01.294147 frame kernel: arm-smmu 15000000.iommu:         nested translation
+Nov 05 23:27:01.294210 frame kernel: arm-smmu 15000000.iommu:         coherent table walk
+Nov 05 23:27:01.294275 frame kernel: arm-smmu 15000000.iommu:         stream matching with 154 register groups
+Nov 05 23:27:01.294339 frame kernel: arm-smmu 15000000.iommu:         95 context banks (0 stage-2 only)
+Nov 05 23:27:01.294404 frame kernel: arm-smmu 15000000.iommu:         Supported page sizes: 0x61311000
+Nov 05 23:27:01.294467 frame kernel: arm-smmu 15000000.iommu:         Stage-1: 36-bit VA -> 36-bit IPA
+Nov 05 23:27:01.294530 frame kernel: arm-smmu 15000000.iommu:         Stage-2: 36-bit IPA -> 36-bit PA
+Nov 05 23:27:01.294603 frame kernel: arm-smmu 15000000.iommu:         preserved 0 boot mappings
+Nov 05 23:27:01.294674 frame kernel: platform 800000.dma-controller: Adding to iommu group 3
+Nov 05 23:27:01.294742 frame kernel: platform 8c0000.geniqup: Adding to iommu group 4
+Nov 05 23:27:01.294819 frame kernel: platform a00000.dma-controller: Adding to iommu group 5
+Nov 05 23:27:01.294889 frame kernel: platform ac0000.geniqup: Adding to iommu group 6
+Nov 05 23:27:01.294958 frame kernel: platform 1c08000.pcie: Adding to iommu group 7
+Nov 05 23:27:01.295026 frame kernel: platform 1d84000.ufshc: Adding to iommu group 8
+Nov 05 23:27:01.295096 frame kernel: platform 1dc4000.dma-controller: Adding to iommu group 9
+Nov 05 23:27:01.295162 frame kernel: platform 7d00000.lpaif: Adding to iommu group 10
+Nov 05 23:27:01.295229 frame kernel: platform 8804000.mmc: Adding to iommu group 11
+Nov 05 23:27:01.295296 frame kernel: platform a600000.usb: Adding to iommu group 12
+Nov 05 23:27:01.295361 frame kernel: platform aa00000.video-codec: Adding to iommu group 13
+Nov 05 23:27:01.295426 frame kernel: platform acb8000.isp: Adding to iommu group 14
+Nov 05 23:27:01.295492 frame kernel: platform ac00000.icp: Adding to iommu group 15
+Nov 05 23:27:01.295558 frame kernel: platform ae00000.display-subsystem: Adding to iommu group 16
+Nov 05 23:27:01.295625 frame kernel: platform 32300000.cdsp: Adding to iommu group 17
+Nov 05 23:27:01.295688 frame kernel: platform 6800000.adsp: Adding to iommu group 18
+Nov 05 23:27:01.295763 frame kernel: platform ab00000.cvp: Adding to iommu group 19
+Nov 05 23:27:01.295772 frame kernel: loop: module loaded
+Nov 05 23:27:01.295778 frame kernel: zram: Added device: zram0
+Nov 05 23:27:01.295784 frame kernel: Rounding down aligned max_sectors from 4294967295 to 4294967288
+Nov 05 23:27:01.295789 frame kernel: db_root: cannot open: /etc/target
+Nov 05 23:27:01.295795 frame kernel: SPI driver spidev has no spi_device_id for linux,spidev
+Nov 05 23:27:01.295861 frame kernel: spmi_pmic_arb c400000.spmi: PMIC arbiter version v7 (0x70010000)
+Nov 05 23:27:01.295869 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /sbu-mux
+Nov 05 23:27:01.295874 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.295881 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /sbu-mux
+Nov 05 23:27:01.295886 frame kernel: /soc@0/spmi@c400000/pmic@7/typec@2b00/connector: Fixed dependency cycle(s) with /soc@0/usb@a600000
+Nov 05 23:27:01.295891 frame kernel: /soc@0/spmi@c400000/pmic@0/gpio@b800: Fixed dependency cycle(s) with /soc@0/spmi@c400000/pmic@0/gpio@b800/alt_sleep_clk/alt_sleep_clk_default
+Nov 05 23:27:01.295897 frame kernel: spmi_dfs_add_controller:685: Adding controller spmi-0
+Nov 05 23:27:01.295902 frame kernel: wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+Nov 05 23:27:01.295908 frame kernel: wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+Nov 05 23:27:01.295913 frame kernel: tun: Universal TUN/TAP device driver, 1.6
+Nov 05 23:27:01.295919 frame kernel: usbcore: registered new device driver r8152-cfgselector
+Nov 05 23:27:01.295924 frame kernel: usbcore: registered new interface driver r8152
+Nov 05 23:27:01.295930 frame kernel: usbcore: registered new interface driver lan78xx
+Nov 05 23:27:01.295936 frame kernel: usbcore: registered new interface driver asix
+Nov 05 23:27:01.295941 frame kernel: usbcore: registered new interface driver ax88179_178a
+Nov 05 23:27:01.295947 frame kernel: usbcore: registered new interface driver cdc_ether
+Nov 05 23:27:01.295952 frame kernel: usbcore: registered new interface driver net1080
+Nov 05 23:27:01.295958 frame kernel: usbcore: registered new interface driver cdc_subset
+Nov 05 23:27:01.295969 frame kernel: usbcore: registered new interface driver zaurus
+Nov 05 23:27:01.295974 frame kernel: usbcore: registered new interface driver cdc_ncm
+Nov 05 23:27:01.295979 frame kernel: usbcore: registered new interface driver r8153_ecm
+Nov 05 23:27:01.295985 frame kernel: usbcore: registered new interface driver usb-storage
+Nov 05 23:27:01.295991 frame kernel: usbcore: registered new interface driver xpad
+Nov 05 23:27:01.296070 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: registered as rtc0
+Nov 05 23:27:01.296146 frame kernel: rtc-pm8xxx c400000.spmi:pmic@0:rtc@6100: setting system clock to 2026-11-06T04:26:57 UTC (1793939217)
+Nov 05 23:27:01.296153 frame kernel: i2c_dev: i2c /dev entries driver
+Nov 05 23:27:01.296159 frame kernel: PON: type [0x80]: PON reset seq
+Nov 05 23:27:01.296164 frame kernel: PON: trigger [0x01]: HARD_RESET
+Nov 05 23:27:01.296170 frame kernel: PON: warm_reset_reason [0x02]: RESIN_N
+Nov 05 23:27:01.296176 frame kernel: PON: poff_reason [0x02]: PS_HOLD
+Nov 05 23:27:01.296182 frame kernel: PON: off_reason [0x80]: POFF_SEQ
+Nov 05 23:27:01.296187 frame kernel: PON: fault_reason1 [0x00]: none
+Nov 05 23:27:01.296192 frame kernel: PON: fault_reason2 [0x00]: none
+Nov 05 23:27:01.296198 frame kernel: input: pmic_pwrkey as /devices/platform/soc@0/c400000.spmi/spmi-0/0-00/c400000.spmi:pmic@0:pon@1300/c400000.spmi:pmic@0:pon@1300:pwrkey/input/input0
+Nov 05 23:27:01.296204 frame kernel: input: pmic_resin as /devices/platform/soc@0/c400000.spmi/spmi-0/0-00/c400000.spmi:pmic@0:pon@1300/c400000.spmi:pmic@0:pon@1300:resin/input/input1
+Nov 05 23:27:01.296273 frame kernel: qcom_wdt 17411000.watchdog: QCOM WDT probe OK
+Nov 05 23:27:01.296280 frame kernel: device-mapper: uevent: version 1.0.3
+Nov 05 23:27:01.296287 frame kernel: device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+Nov 05 23:27:01.296292 frame kernel: device-mapper: multipath round-robin: version 1.2.0 loaded
+Nov 05 23:27:01.296298 frame kernel: device-mapper: multipath queue-length: version 0.2.0 loaded
+Nov 05 23:27:01.296303 frame kernel: device-mapper: multipath service-time: version 0.3.0 loaded
+Nov 05 23:27:01.296308 frame kernel: device-mapper: multipath historical-service-time: version 0.1.1 loaded
+Nov 05 23:27:01.296314 frame kernel: device-mapper: dm-log-userspace: version 1.3.0 loaded
+Nov 05 23:27:01.296319 frame kernel: Bluetooth: HCI UART driver ver 2.3
+Nov 05 23:27:01.296324 frame kernel: Bluetooth: HCI UART protocol H4 registered
+Nov 05 23:27:01.296329 frame kernel: Bluetooth: HCI UART protocol QCA registered
+Nov 05 23:27:01.296336 frame kernel: Freeing initrd memory: 16948K
+Nov 05 23:27:01.296341 frame kernel: hid: raw HID events driver (C) Jiri Kosina
+Nov 05 23:27:01.296347 frame kernel: SPI driver goodix-spi-hid has no spi_device_id for goodix,gt7986u-spifw
+Nov 05 23:27:01.296352 frame kernel: usbcore: registered new interface driver usbhid
+Nov 05 23:27:01.296357 frame kernel: usbhid: USB HID core driver
+Nov 05 23:27:01.296362 frame kernel: hw perfevents: enabled with armv9_cortex_a520 PMU driver, 21 (0,800fffff) counters available
+Nov 05 23:27:01.296368 frame kernel: hw perfevents: enabled with armv9_cortex_a720 PMU driver, 21 (0,800fffff) counters available
+Nov 05 23:27:01.296373 frame kernel: hw perfevents: enabled with armv9_cortex_x4 PMU driver, 32 (0,ffffffff) counters available
+Nov 05 23:27:01.296379 frame kernel: usbcore: registered new interface driver snd-usb-audio
+Nov 05 23:27:01.296385 frame kernel: pktgen: Packet Generator for packet performance testing. Version: 2.75
+Nov 05 23:27:01.296390 frame kernel: drop_monitor: Initializing network drop monitor service
+Nov 05 23:27:01.296395 frame kernel: NET: Registered PF_LLC protocol family
+Nov 05 23:27:01.296400 frame kernel: GACT probability on
+Nov 05 23:27:01.296406 frame kernel: Mirror/redirect action on
+Nov 05 23:27:01.296411 frame kernel: Simple TC action Loaded
+Nov 05 23:27:01.296416 frame kernel: u32 classifier
+Nov 05 23:27:01.296421 frame kernel:     Performance counters on
+Nov 05 23:27:01.296427 frame kernel:     input device check on
+Nov 05 23:27:01.296433 frame kernel:     Actions configured
+Nov 05 23:27:01.296438 frame kernel: nf_conntrack_irc: The irc conntrack helper is scheduled for removal.
+                                     Please contact the netfilter-devel mailing list if you still need this.
+Nov 05 23:27:01.296444 frame kernel: The pptp conntrack helper is scheduled for removal.
+                                     Please contact the netfilter-devel mailing list if you still need this.
+Nov 05 23:27:01.296450 frame kernel: The DCCP match is deprecated and scheduled to be removed in 2027.
+                                     Please contact the netfilter-devel mailing list or update your iptables rules
+Nov 05 23:27:01.296455 frame kernel: xt_time: kernel timezone is -0000
+Nov 05 23:27:01.296461 frame kernel: IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+Nov 05 23:27:01.296466 frame kernel: IPVS: Connection hash table configured (size=32768, memory=256Kbytes)
+Nov 05 23:27:01.296472 frame kernel: IPVS: ipvs loaded.
+Nov 05 23:27:01.296478 frame kernel: IPVS: [rr] scheduler registered.
+Nov 05 23:27:01.296483 frame kernel: IPVS: [wrr] scheduler registered.
+Nov 05 23:27:01.296494 frame kernel: IPVS: [lc] scheduler registered.
+Nov 05 23:27:01.296499 frame kernel: IPVS: [wlc] scheduler registered.
+Nov 05 23:27:01.296504 frame kernel: IPVS: [fo] scheduler registered.
+Nov 05 23:27:01.296509 frame kernel: IPVS: [ovf] scheduler registered.
+Nov 05 23:27:01.296514 frame kernel: IPVS: [lblc] scheduler registered.
+Nov 05 23:27:01.296520 frame kernel: IPVS: [lblcr] scheduler registered.
+Nov 05 23:27:01.296525 frame kernel: IPVS: [dh] scheduler registered.
+Nov 05 23:27:01.296531 frame kernel: IPVS: [sh] scheduler registered.
+Nov 05 23:27:01.296536 frame kernel: IPVS: [mh] scheduler registered.
+Nov 05 23:27:01.296541 frame kernel: IPVS: [sed] scheduler registered.
+Nov 05 23:27:01.296546 frame kernel: IPVS: [nq] scheduler registered.
+Nov 05 23:27:01.296551 frame kernel: IPVS: [twos] scheduler registered.
+Nov 05 23:27:01.296557 frame kernel: IPVS: [sip] pe registered.
+Nov 05 23:27:01.296562 frame kernel: ipip: IPv4 and MPLS over IPv4 tunneling driver
+Nov 05 23:27:01.296567 frame kernel: gre: GRE over IPv4 demultiplexer driver
+Nov 05 23:27:01.296573 frame kernel: ip_gre: GRE over IPv4 tunneling driver
+Nov 05 23:27:01.296578 frame kernel: IPv4 over IPsec tunneling driver
+Nov 05 23:27:01.296584 frame kernel: Initializing XFRM netlink socket
+Nov 05 23:27:01.296590 frame kernel: IPsec XFRM device driver
+Nov 05 23:27:01.296595 frame kernel: NET: Registered PF_INET6 protocol family
+Nov 05 23:27:01.296600 frame kernel: Segment Routing with IPv6
+Nov 05 23:27:01.296605 frame kernel: RPL Segment Routing with IPv6
+Nov 05 23:27:01.296611 frame kernel: In-situ OAM (IOAM) with IPv6
+Nov 05 23:27:01.296616 frame kernel: mip6: Mobile IPv6
+Nov 05 23:27:01.296621 frame kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Nov 05 23:27:01.296627 frame kernel: ip6_gre: GRE over IPv6 tunneling driver
+Nov 05 23:27:01.296633 frame kernel: NET: Registered PF_PACKET protocol family
+Nov 05 23:27:01.296638 frame kernel: PFKEY is deprecated and scheduled to be removed in 2027, please contact the netdev mailing list
+Nov 05 23:27:01.296644 frame kernel: NET: Registered PF_KEY protocol family
+Nov 05 23:27:01.296649 frame kernel: Bridge firewalling registered
+Nov 05 23:27:01.296654 frame kernel: Bluetooth: RFCOMM socket layer initialized
+Nov 05 23:27:01.296659 frame kernel: Bluetooth: RFCOMM ver 1.11
+Nov 05 23:27:01.296665 frame kernel: NET: Registered PF_RXRPC protocol family
+Nov 05 23:27:01.296670 frame kernel: Key type rxrpc registered
+Nov 05 23:27:01.296676 frame kernel: Key type rxrpc_s registered
+Nov 05 23:27:01.296681 frame kernel: NET: Registered PF_PHONET protocol family
+Nov 05 23:27:01.296686 frame kernel: 8021q: 802.1Q VLAN Support v1.8
+Nov 05 23:27:01.296691 frame kernel: sctp: Hash tables configured (bind 256/256)
+Nov 05 23:27:01.296697 frame kernel: NET: Registered PF_RDS protocol family
+Nov 05 23:27:01.296702 frame kernel: Registered RDS/tcp transport
+Nov 05 23:27:01.296707 frame kernel: tipc: Activated (version 2.0.0)
+Nov 05 23:27:01.296712 frame kernel: NET: Registered PF_TIPC protocol family
+Nov 05 23:27:01.296718 frame kernel: tipc: Started in single node mode
+Nov 05 23:27:01.296724 frame kernel: 9pnet: Installing 9P2000 support
+Nov 05 23:27:01.296729 frame kernel: NET: Registered PF_IEEE802154 protocol family
+Nov 05 23:27:01.296735 frame kernel: Key type dns_resolver registered
+Nov 05 23:27:01.296740 frame kernel: Key type ceph registered
+Nov 05 23:27:01.296745 frame kernel: libceph: loaded (mon/osd proto 15/24)
+Nov 05 23:27:01.296757 frame kernel: batman_adv: B.A.T.M.A.N. advanced 7.2.0-wake+ (compatibility version 15) loaded
+Nov 05 23:27:01.296763 frame kernel: openvswitch: Open vSwitch switching datapath
+Nov 05 23:27:01.296768 frame kernel: NET: Registered PF_VSOCK protocol family
+Nov 05 23:27:01.296774 frame kernel: mpls_gso: MPLS GSO support
+Nov 05 23:27:01.296780 frame kernel: registered taskstats version 1
+Nov 05 23:27:01.296785 frame kernel: Loading compiled-in X.509 certificates
+Nov 05 23:27:01.296791 frame kernel: zswap: loaded using pool lzo
+Nov 05 23:27:01.296796 frame kernel: Key type .fscrypt registered
+Nov 05 23:27:01.296801 frame kernel: Key type fscrypt-provisioning registered
+Nov 05 23:27:01.296806 frame kernel: kAFS: Red Hat AFS client v0.1 registering.
+Nov 05 23:27:01.296812 frame kernel: kAFS: failed to register: -97
+Nov 05 23:27:01.296817 frame kernel: Btrfs loaded, zoned=no, fsverity=yes
+Nov 05 23:27:01.296825 frame kernel: debugfs: 'qcom_smem' already exists in '/'
+Nov 05 23:27:01.296832 frame kernel: qcom_scm: convention: smc arm 64
+Nov 05 23:27:01.296904 frame kernel: qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+Nov 05 23:27:01.296967 frame kernel: qcom_scm firmware:scm: qseecom: untested machine, skipping
+Nov 05 23:27:01.296974 frame kernel: fpga clock frequency 24000000
+Nov 05 23:27:01.296979 frame kernel: 898000.serial: ttyHS1 at MMIO 0x898000 (irq = 185, base_baud = 0) is a MSM
+Nov 05 23:27:01.297063 frame kernel: serial serial0: tty port ttyHS1 registered
+Nov 05 23:27:01.297071 frame kernel: 89c000.serial: ttyMSM0 at MMIO 0x89c000 (irq = 186, base_baud = 0) is a MSM
+Nov 05 23:27:01.297078 frame kernel: printk: legacy console [ttyMSM0] enabled
+Nov 05 23:27:01.297084 frame kernel: cvp clock rate: 825000000 (called with set_rate: 825000000)
+Nov 05 23:27:01.297089 frame kernel: vreg_bob1: Setting 3320000-3960000uV
+Nov 05 23:27:01.297095 frame kernel: vreg_bob2: Setting 3000000-3000000uV
+Nov 05 23:27:01.297100 frame kernel: vreg_l1d_0p9: Setting 912000-920000uV
+Nov 05 23:27:01.297105 frame kernel: vreg_l1b_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.297110 frame kernel: vreg_l1g_0p9: Setting 912000-920000uV
+Nov 05 23:27:01.297116 frame kernel: vreg_l3e_0p9: Setting 880000-920000uV
+Nov 05 23:27:01.297121 frame kernel: vreg_s4i_0p85: Setting 852000-1004000uV
+Nov 05 23:27:01.297197 frame kernel: qcom-spmi-lpg c400000.spmi:pmic@1:pwm: keeping led status
+Nov 05 23:27:01.297204 frame kernel: vreg_l2g_1p1: Setting 1104000-1104000uV
+Nov 05 23:27:01.297209 frame kernel: vreg_l2b_3p0: Setting 3008000-3008000uV
+Nov 05 23:27:01.297215 frame kernel: vreg_l1i_0p88: Setting 880000-912000uV
+Nov 05 23:27:01.297220 frame kernel: vreg_l2i_0p88: Setting 880000-912000uV
+Nov 05 23:27:01.297225 frame kernel: vreg_l3i_1p2: Setting 1200000-1200000uV
+Nov 05 23:27:01.297230 frame kernel: vreg_l3g_0p91: Setting 880000-912000uV
+Nov 05 23:27:01.297235 frame kernel: vreg_l5b_3p1: Setting 3104000-3104000uV
+Nov 05 23:27:01.297240 frame kernel: vreg_l8b_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.297247 frame kernel: vreg_l9b_2p9: Setting 2960000-2960000uV
+Nov 05 23:27:01.297252 frame kernel: vreg_l10b_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.297258 frame kernel: vreg_l12b_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.297263 frame kernel: vreg_l15b_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.297268 frame kernel: vreg_l17b_2p5: Setting 2504000-2504000uV
+Nov 05 23:27:01.297273 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam3@1a
+Nov 05 23:27:01.297278 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam3@1a: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297283 frame kernel: duplicated lane 2 in clock-lanes, using defaults
+Nov 05 23:27:01.297289 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac15000/i2c-bus@0/cam4@10
+Nov 05 23:27:01.297295 frame kernel: /soc@0/cci@ac15000/i2c-bus@0/cam4@10: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297300 frame kernel: duplicated lane 2 in clock-lanes, using defaults
+Nov 05 23:27:01.297306 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@60
+Nov 05 23:27:01.297311 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297316 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@0/sensor@36
+Nov 05 23:27:01.297321 frame kernel: /soc@0/cci@ac17000/i2c-bus@0/sensor@36: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297326 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@60
+Nov 05 23:27:01.297331 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@60: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297336 frame kernel: /soc@0/isp@acb8000: Fixed dependency cycle(s) with /soc@0/cci@ac17000/i2c-bus@1/sensor@3e
+Nov 05 23:27:01.297341 frame kernel: /soc@0/cci@ac17000/i2c-bus@1/sensor@3e: Fixed dependency cycle(s) with /soc@0/isp@acb8000
+Nov 05 23:27:01.297410 frame kernel: geni_i2c 9a0000.i2c: Bus frequency not specified, default to 100kHz.
+Nov 05 23:27:01.297490 frame kernel: vcnl4000 6-0060: supply vdd not found, using dummy regulator
+Nov 05 23:27:01.297560 frame kernel: vcnl4000 6-0060: supply vio not found, using dummy regulator
+Nov 05 23:27:01.297633 frame kernel: vcnl4000 6-0060: supply vled not found, using dummy regulator
+Nov 05 23:27:01.297639 frame kernel: irq: IRQ198: trimming hierarchy from :soc@0:interrupt-controller@b220000-8
+Nov 05 23:27:01.297709 frame kernel: max98390 6-0038: max98390_i2c_probe: r0_calib: 0x18788,temperature_calib: 0x400
+Nov 05 23:27:01.297783 frame kernel: max98390 6-0038: MAX98390 revisionID: 0x42
+Nov 05 23:27:01.297857 frame kernel: max98390 6-003d: max98390_i2c_probe: r0_calib: 0x18788,temperature_calib: 0x400
+Nov 05 23:27:01.297926 frame kernel: max98390 6-003d: MAX98390 revisionID: 0x42
+Nov 05 23:27:01.297933 frame kernel: duplicated lane 2 in clock-lanes, using defaults
+Nov 05 23:27:01.297938 frame kernel: duplicated lane 2 in clock-lanes, using defaults
+Nov 05 23:27:01.298003 frame kernel: ufshcd-qcom 1d84000.ufshc: freq-table-hz property not specified
+Nov 05 23:27:01.298067 frame kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+Nov 05 23:27:01.298132 frame kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+Nov 05 23:27:01.298197 frame kernel: sdhci_msm 8804000.mmc: Got CD GPIO
+Nov 05 23:27:01.298203 frame kernel: valve,fpga probe done
+Nov 05 23:27:01.298210 frame kernel: tz_log:[tzdbg_get_tz_version][1740]: tz diag version is 37765120
+Nov 05 23:27:01.298275 frame kernel: tz_log 14680720.tz-log: Hyp log service not support
+Nov 05 23:27:01.298282 frame kernel: tz_log:[tzdbg_query_encrypted_log][1774]: encrypted qseelog enabled is 0
+Nov 05 23:27:01.298288 frame kernel: tz_log:[tzdbg_init_tme_log][1403]: Tme Crashdump address offset need to be defined!
+Nov 05 23:27:01.298294 frame kernel: tz_log:[tz_log_probe][1908]: Tme log initialization failed!
+Nov 05 23:27:01.298299 frame kernel: qcom_tzmem: [444][__qcom_tzmem_register]: Shm creation failed, ret: 68, NS PA|Perm: 0x80400006, size|flags: 0x20200, ns_vmids: 0x3
+Nov 05 23:27:01.298304 frame kernel: tz_log:[tzdbg_register_qsee_log_buf][1462]: failed to create bridge for qsee_log buf
+Nov 05 23:27:01.298310 frame kernel: tz_log:[tz_log_probe][1915]: tz_log_probe: Failed to allocate unencrypted log buffer
+Nov 05 23:27:01.298375 frame kernel: snd-lpaif 6b80000.lpaif: assigned reserved memory node lpm@6c80000
+Nov 05 23:27:01.298437 frame kernel: snd-lpaif 6b80000.lpaif: num_rddma=5 num_wrdma=4
+Nov 05 23:27:01.298501 frame kernel: snd-lpaif 6d00000.lpaif: assigned reserved memory node lpm@6d40000
+Nov 05 23:27:01.298563 frame kernel: snd-lpaif 6d00000.lpaif: num_rddma=1 num_wrdma=3
+Nov 05 23:27:01.298625 frame kernel: snd-lpaif 7d00000.lpaif: num_rddma=3 num_wrdma=3
+Nov 05 23:27:01.298631 frame kernel: mmc0: SDHCI controller on 8804000.mmc [8804000.mmc] using ADMA 64-bit
+Nov 05 23:27:01.298637 frame kernel: setting up default file
+Nov 05 23:27:01.298706 frame kernel: max98390 6-003d: Found Firmware dsm_param.bin
+Nov 05 23:27:01.298780 frame kernel: max98390 6-003d: irq 199 armed, en=0x90/0x00/0x55
+Nov 05 23:27:01.298786 frame kernel: setting up default file
+Nov 05 23:27:01.298853 frame kernel: max98390 6-0038: Found Firmware dsm_param.bin
+Nov 05 23:27:01.298919 frame kernel: max98390 6-0038: irq 198 armed, en=0x90/0x00/0x55
+Nov 05 23:27:01.298993 frame kernel: cpu cpu0: EM: created perf domain
+Nov 05 23:27:01.299062 frame kernel: cpu cpu2: EM: created perf domain
+Nov 05 23:27:01.299132 frame kernel: cpu cpu5: EM: created perf domain
+Nov 05 23:27:01.299208 frame kernel: cpu cpu7: EM: created perf domain
+Nov 05 23:27:01.299215 frame kernel: energy_model: updating cpu0 cpu_cap=216 old capacity=292
+Nov 05 23:27:01.299279 frame kernel: cpu cpu0: EM: OPP:364800 is inefficient
+Nov 05 23:27:01.299286 frame kernel: energy_model: updating cpu2 cpu_cap=855 old capacity=829
+Nov 05 23:27:01.299291 frame kernel: energy_model: updating cpu5 cpu_cap=803 old capacity=829
+Nov 05 23:27:01.299364 frame kernel: aux_bridge.aux_bridge aux_bridge.aux_bridge.0: error -ENODEV: failed to acquire drm_bridge
+Nov 05 23:27:01.299430 frame kernel: qcom-pcie 1c08000.pcie: no clkreq-gpios, CLKREQ# wake disabled
+Nov 05 23:27:01.299497 frame kernel: qcom-pcie 1c08000.pcie: host bridge /soc@0/pcie@1c08000 ranges:
+Nov 05 23:27:01.299559 frame kernel: qcom-pcie 1c08000.pcie:       IO 0x0040200000..0x00402fffff -> 0x0000000000
+Nov 05 23:27:01.299622 frame kernel: qcom-pcie 1c08000.pcie:      MEM 0x0040300000..0x005fffffff -> 0x0040300000
+Nov 05 23:27:01.299690 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 23:27:01.299762 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 23:27:01.299826 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.299891 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 23:27:01.299956 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 23:27:01.300019 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 23:27:01.300085 frame kernel: geni_i2c a88000.i2c: Bus frequency not specified, default to 100kHz.
+Nov 05 23:27:01.300157 frame kernel: at24 7-0050: 4096 byte 24c32 EEPROM, writable, 1 bytes/write
+Nov 05 23:27:01.300228 frame kernel: at24 7-0051: 512 byte 24c04 EEPROM, writable, 1 bytes/write
+Nov 05 23:27:01.300298 frame kernel: northgate-hotswap 7-0018: northgate-hotswap pattern id read failed: -6
+Nov 05 23:27:01.300305 frame kernel: a8c000.serial: ttyHS2 at MMIO 0xa8c000 (irq = 231, base_baud = 0) is a MSM
+Nov 05 23:27:01.300373 frame kernel: geni_i2c a90000.i2c: Bus frequency not specified, default to 100kHz.
+Nov 05 23:27:01.300448 frame kernel: slg4ax46073v-fan 8-0008: version: 9
+Nov 05 23:27:01.300512 frame kernel: qcom-pcie 1c08000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+Nov 05 23:27:01.300519 frame kernel: input: als31300 as /devices/platform/soc@0/ac0000.geniqup/a90000.i2c/i2c-8/8-006c/input/input2
+Nov 05 23:27:01.300593 frame kernel: mp3317_led 8-0029: found mp3317 init data backlight_right
+Nov 05 23:27:01.300666 frame kernel: mp3317_led 8-0028: regulator node not found
+Nov 05 23:27:01.300675 frame kernel: lcd_right_vpos: Bringing 4000000uV into 5700000-5700000uV
+Nov 05 23:27:01.300682 frame kernel: lcd_right_vneg: Bringing 4000000uV into 5700000-5700000uV
+Nov 05 23:27:01.300766 frame kernel: mp3317_led 9-0029: found mp3317 init data backlight_left
+Nov 05 23:27:01.300842 frame kernel: at24 9-0050: 8192 byte 24c64 EEPROM, writable, 16 bytes/write
+Nov 05 23:27:01.300850 frame kernel: lcd_left_vpos: Bringing 4000000uV into 5700000-5700000uV
+Nov 05 23:27:01.300856 frame kernel: lcd_left_vneg: Bringing 4000000uV into 5700000-5700000uV
+Nov 05 23:27:01.300930 frame kernel: i2c-sw-broadcaster 9-002c: broadcaster: new device 9-0012
+Nov 05 23:27:01.301001 frame kernel: i2c-sw-broadcaster 9-002c: broadcaster: new device 9-001a
+Nov 05 23:27:01.301069 frame kernel: i2c-sw-broadcaster 9-002c: broadcaster: new device 9-0010
+Nov 05 23:27:01.301076 frame kernel: vreg_l1m_1p1: Setting 1104000-1104000uV
+Nov 05 23:27:01.301082 frame kernel: vreg_l2m_1p2: Setting 1200000-1200000uV
+Nov 05 23:27:01.301087 frame kernel: vreg_l3m_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301093 frame kernel: vreg_l4m_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301098 frame kernel: vreg_l5m_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.301103 frame kernel: vreg_l6m_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301110 frame kernel: vreg_l7m_3p3: Setting 3304000-3304000uV
+Nov 05 23:27:01.301116 frame kernel: vreg_l1n_1p1: Setting 1104000-1104000uV
+Nov 05 23:27:01.301122 frame kernel: vreg_l2n_1p2: Setting 1200000-1200000uV
+Nov 05 23:27:01.301127 frame kernel: vreg_l3n_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301132 frame kernel: vreg_l4n_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301138 frame kernel: vreg_l5n_1p8: Setting 1800000-1800000uV
+Nov 05 23:27:01.301144 frame kernel: vreg_l6n_2p8: Setting 2800000-2800000uV
+Nov 05 23:27:01.301150 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.301155 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.301160 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.301166 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.301173 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.301178 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.301184 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+Nov 05 23:27:01.301191 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.301197 frame kernel: /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae96000
+Nov 05 23:27:01.301203 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0
+Nov 05 23:27:01.301208 frame kernel: /soc@0/display-subsystem@ae00000/dsi@ae96000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+Nov 05 23:27:01.301274 frame kernel: ufshcd-qcom 1d84000.ufshc: freq-table-hz property not specified
+Nov 05 23:27:01.301339 frame kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+Nov 05 23:27:01.301405 frame kernel: ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+Nov 05 23:27:01.301469 frame kernel: ufshcd-qcom 1d84000.ufshc: MCQ resource not found in device tree
+Nov 05 23:27:01.301535 frame kernel: ufshcd-qcom 1d84000.ufshc: MCQ mode is disabled, err=-19
+Nov 05 23:27:01.301607 frame kernel: scsi host0: ufshcd
+Nov 05 23:27:01.301680 frame kernel: scsi 0:0:0:49488: Well-known LUN    SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.301747 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 23:27:01.301816 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 23:27:01.301880 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.301958 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 23:27:01.302021 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 23:27:01.302085 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 23:27:01.302153 frame kernel: scsi 0:0:0:49476: Well-known LUN    SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.302221 frame kernel: scsi 0:0:0:49456: Well-known LUN    SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.302292 frame kernel: msm_dpu ae01000.display-controller: bound ae94000.dsi (ops dsi_ops)
+Nov 05 23:27:01.302358 frame kernel: msm_dpu ae01000.display-controller: bound ae96000.dsi (ops dsi_ops)
+Nov 05 23:27:01.302424 frame kernel: adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+Nov 05 23:27:01.302486 frame kernel: adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+Nov 05 23:27:01.302556 frame kernel: scsi 0:0:0:0: Direct-Access     SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.302621 frame kernel: sd 0:0:0:0: [sda] 249638912 4096-byte logical blocks: (1.02 TB/952 GiB)
+Nov 05 23:27:01.302686 frame kernel: sd 0:0:0:0: [sda] Write Protect is off
+Nov 05 23:27:01.302757 frame kernel: scsi 0:0:0:1: Direct-Access     SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.302824 frame kernel: sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+Nov 05 23:27:01.302888 frame kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Nov 05 23:27:01.302951 frame kernel: sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+Nov 05 23:27:01.303017 frame kernel: sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+Nov 05 23:27:01.303084 frame kernel: scsi 0:0:0:2: Direct-Access     SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.303149 frame kernel: sd 0:0:0:1: [sdb] 65536 4096-byte logical blocks: (268 MB/256 MiB)
+Nov 05 23:27:01.303213 frame kernel: sd 0:0:0:1: [sdb] Write Protect is off
+Nov 05 23:27:01.303276 frame kernel: sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+Nov 05 23:27:01.303339 frame kernel: sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, supports DPO and FUA
+Nov 05 23:27:01.303403 frame kernel: sd 0:0:0:1: [sdb] Preferred minimum I/O size 4096 bytes
+Nov 05 23:27:01.303470 frame kernel: sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+Nov 05 23:27:01.303534 frame kernel: sd 0:0:0:2: [sdc] 65536 4096-byte logical blocks: (268 MB/256 MiB)
+Nov 05 23:27:01.303599 frame kernel: sd 0:0:0:2: [sdc] Write Protect is off
+Nov 05 23:27:01.303662 frame kernel: sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+Nov 05 23:27:01.303726 frame kernel: sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Nov 05 23:27:01.303843 frame kernel: sd 0:0:0:2: [sdc] Preferred minimum I/O size 4096 bytes
+Nov 05 23:27:01.303909 frame kernel: sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+Nov 05 23:27:01.303976 frame kernel: scsi 0:0:0:3: Direct-Access     SKhynix  HN8T371ZJKX154   A202 PQ: 0 ANSI: 6
+Nov 05 23:27:01.304044 frame kernel: sd 0:0:0:3: [sdd] 32768 4096-byte logical blocks: (134 MB/128 MiB)
+Nov 05 23:27:01.304109 frame kernel: sd 0:0:0:3: [sdd] Write Protect is off
+Nov 05 23:27:01.304174 frame kernel: sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+Nov 05 23:27:01.304237 frame kernel: sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Nov 05 23:27:01.304300 frame kernel: sd 0:0:0:3: [sdd] Preferred minimum I/O size 4096 bytes
+Nov 05 23:27:01.304364 frame kernel: sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+Nov 05 23:27:01.304431 frame kernel: msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops a3xx_ops)
+Nov 05 23:27:01.304438 frame kernel: [drm:dpu_kms_hw_init:1238] dpu hardware revision:0xa0000000
+Nov 05 23:27:01.304445 frame kernel: [drm] Initialized msm 1.13.0 for ae01000.display-controller on minor 0
+Nov 05 23:27:01.304450 frame kernel: debugfs: 'perf_now' already exists in 'ae01000.display-controller'
+Nov 05 23:27:01.304515 frame kernel: msm_dpu ae01000.display-controller: [drm] drm_vrconsole: found 4320x2160/17280 format AR24 little-endian (0x34325241) framebuffer
+Nov 05 23:27:01.304580 frame kernel: msm_dpu ae01000.display-controller: Direct firmware load for qcom/gen70900_sqe.fw failed with error -2
+Nov 05 23:27:01.304644 frame kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] *ERROR* failed to load gen70900_sqe.fw
+Nov 05 23:27:01.304707 frame kernel: msm_dpu ae01000.display-controller: [drm] Hotplug drm vrconsole
+Nov 05 23:27:01.304714 frame kernel:  sdb: sdb1 sdb2 sdb3 sdb4 sdb5 sdb6 sdb7 sdb8 sdb9 sdb10 sdb11 sdb12 sdb13 sdb14 sdb15 sdb16 sdb17 sdb18 sdb19 sdb20 sdb21 sdb22 sdb23 sdb24 sdb25 sdb26 sdb27 sdb28
+Nov 05 23:27:01.304720 frame kernel:  sdc: sdc1 sdc2 sdc3 sdc4 sdc5 sdc6 sdc7 sdc8 sdc9 sdc10 sdc11 sdc12 sdc13 sdc14
+Nov 05 23:27:01.304792 frame kernel: sd 0:0:0:1: [sdb] Attached SCSI disk
+Nov 05 23:27:01.304859 frame kernel: sd 0:0:0:2: [sdc] Attached SCSI disk
+Nov 05 23:27:01.304865 frame kernel:  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8
+Nov 05 23:27:01.304928 frame kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Nov 05 23:27:01.304935 frame kernel:  sdd: sdd1
+Nov 05 23:27:01.304998 frame kernel: sd 0:0:0:3: [sdd] Attached SCSI disk
+Nov 05 23:27:01.305073 frame kernel: deckard-panel ae94000.dsi.0: [drm:lpm026m648c_prepare] Displays match ( B == B ), using B
+Nov 05 23:27:01.305139 frame kernel: qcom-pcie 1c08000.pcie: Device not found
+Nov 05 23:27:01.305205 frame kernel: qcom-pcie 1c08000.pcie: PCI host bridge to bus 0001:00
+Nov 05 23:27:01.305276 frame kernel: pci_bus 0001:00: root bus resource [bus 00-ff]
+Nov 05 23:27:01.305340 frame kernel: pci_bus 0001:00: root bus resource [io  0x0000-0xfffff]
+Nov 05 23:27:01.305403 frame kernel: pci_bus 0001:00: root bus resource [mem 0x40300000-0x5fffffff]
+Nov 05 23:27:01.305478 frame kernel: pci 0001:00:00.0: [17cb:0113] type 01 class 0x060400 PCIe Root Port
+Nov 05 23:27:01.305550 frame kernel: pci 0001:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+Nov 05 23:27:01.305620 frame kernel: pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+Nov 05 23:27:01.305688 frame kernel: pci 0001:00:00.0:   bridge window [io  0x0000-0x0fff]
+Nov 05 23:27:01.305762 frame kernel: pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+Nov 05 23:27:01.305833 frame kernel: pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+Nov 05 23:27:01.305901 frame kernel: pci 0001:00:00.0: PME# supported from D0 D3hot D3cold
+Nov 05 23:27:01.305908 frame kernel: OF: /soc@0/pcie@1c08000: iommu-map has 1-cell entries targeting 2-cell #iommu-cells, treating as 1-cell output
+Nov 05 23:27:01.305977 frame kernel: pci 0001:00:00.0: Adding to iommu group 7
+Nov 05 23:27:01.306045 frame kernel: pci 0001:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01-ff] add_size 1000
+Nov 05 23:27:01.306116 frame kernel: pci 0001:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01-ff] add_size 200000 add_align 100000
+Nov 05 23:27:01.306182 frame kernel: pci 0001:00:00.0: bridge window [mem 0x00100000-0x000fffff] to [bus 01-ff] add_size 200000 add_align 100000
+Nov 05 23:27:01.306251 frame kernel: pci 0001:00:00.0: bridge window [mem 0x40300000-0x404fffff]: assigned
+Nov 05 23:27:01.306320 frame kernel: pci 0001:00:00.0: bridge window [mem 0x40500000-0x406fffff 64bit pref]: assigned
+Nov 05 23:27:01.306387 frame kernel: pci 0001:00:00.0: BAR 0 [mem 0x40700000-0x40700fff]: assigned
+Nov 05 23:27:01.306455 frame kernel: pci 0001:00:00.0: bridge window [io  0x1000-0x1fff]: assigned
+Nov 05 23:27:01.306523 frame kernel: pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+Nov 05 23:27:01.306593 frame kernel: pci 0001:00:00.0:   bridge window [io  0x1000-0x1fff]
+Nov 05 23:27:01.306660 frame kernel: pci 0001:00:00.0:   bridge window [mem 0x40300000-0x404fffff]
+Nov 05 23:27:01.306730 frame kernel: pci 0001:00:00.0:   bridge window [mem 0x40500000-0x406fffff 64bit pref]
+Nov 05 23:27:01.307146 frame kernel: pci_bus 0001:00: resource 4 [io  0x0000-0xfffff]
+Nov 05 23:27:01.307224 frame kernel: pci_bus 0001:00: resource 5 [mem 0x40300000-0x5fffffff]
+Nov 05 23:27:01.307298 frame kernel: pci_bus 0001:01: resource 0 [io  0x1000-0x1fff]
+Nov 05 23:27:01.307365 frame kernel: pci_bus 0001:01: resource 1 [mem 0x40300000-0x404fffff]
+Nov 05 23:27:01.307431 frame kernel: pci_bus 0001:01: resource 2 [mem 0x40500000-0x406fffff 64bit pref]
+Nov 05 23:27:01.307512 frame kernel: pcieport 0001:00:00.0: PME: Signaling with IRQ 267
+Nov 05 23:27:01.307580 frame kernel: qcom-pcie 1c08000.pcie: WAKE# GPIO registered as wakeup IRQ 268
+Nov 05 23:27:01.307588 frame kernel: workqueue: work func vblank_ctrl_worker enqueued on deprecated workqueue. Use system_{percpu|dfl}_wq instead.
+Nov 05 23:27:01.307656 frame kernel: msm_dpu ae01000.display-controller: [drm] Hotplug drm vrconsole
+Nov 05 23:27:01.307663 frame kernel: Console: switching to colour vrconsole 80x24
+Nov 05 23:27:01.307728 frame kernel: msm_dpu ae01000.display-controller: [drm] vt switch on suspend ignored
+Nov 05 23:27:01.307803 frame kernel: msm_dpu ae01000.display-controller: [drm] Using Transparent Hugepage
+Nov 05 23:27:01.307881 frame kernel: og01a1b 4-0060: og01a1b_set_power_on: failed to enable power
+Nov 05 23:27:01.307952 frame kernel: og01a1b 4-0060: Failed to get chip ID for slam_left
+Nov 05 23:27:01.307959 frame kernel: also_check_index:0 sensor->sensor_index:0
+Nov 05 23:27:01.308030 frame kernel: og01a1b 4-0036: og01a1b_set_power_on: failed to enable power
+Nov 05 23:27:01.308098 frame kernel: og01a1b 4-0036: Failed to get chip ID for slam_right
+Nov 05 23:27:01.308104 frame kernel: also_check_index:0 sensor->sensor_index:1
+Nov 05 23:27:01.308175 frame kernel: og0ve10 5-0060: og0ve10_set_power_on: failed to enable power
+Nov 05 23:27:01.308243 frame kernel: og0ve10 5-0060: Failed to get chip ID for upper_left
+Nov 05 23:27:01.308250 frame kernel: also_check_index:0 sensor->sensor_index:0
+Nov 05 23:27:01.308321 frame kernel: og0ve10 5-003e: og0ve10_set_power_on: failed to enable power
+Nov 05 23:27:01.308387 frame kernel: og0ve10 5-003e: Failed to get chip ID for upper_right
+Nov 05 23:27:01.308394 frame kernel: also_check_index:0 sensor->sensor_index:1
+Nov 05 23:27:01.308400 frame kernel: camss_subdev_notifier_complete: apply combo mode hack to 'og0ve10 5-0060'
+Nov 05 23:27:01.308405 frame kernel: camss_subdev_notifier_complete: apply combo mode hack to 'og0ve10 5-003e'
+Nov 05 23:27:01.308469 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 23:27:01.308533 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 23:27:01.308596 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.308661 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 23:27:01.308725 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 23:27:01.308800 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 23:27:01.308807 frame kernel: input: gpio-keys as /devices/platform/gpio-keys/input/input3
+Nov 05 23:27:01.308812 frame kernel: clk: Disabling unused clocks
+Nov 05 23:27:01.308818 frame kernel: PM: genpd: Disabling unused power domains
+Nov 05 23:27:01.308823 frame kernel: ALSA device list:
+Nov 05 23:27:01.308829 frame kernel:   #0: SM8250 LPASS
+Nov 05 23:27:01.308892 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 23:27:01.308957 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 23:27:01.309024 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.309086 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 23:27:01.309150 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 23:27:01.309216 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 23:27:01.309222 frame kernel: Freeing unused kernel memory: 3520K
+Nov 05 23:27:01.309229 frame kernel: Run /init as init process
+Nov 05 23:27:01.309234 frame kernel:   with arguments:
+Nov 05 23:27:01.309239 frame kernel:     /init
+Nov 05 23:27:01.309245 frame kernel:     noresume
+Nov 05 23:27:01.309252 frame kernel:   with environment:
+Nov 05 23:27:01.309258 frame kernel:     HOME=/
+Nov 05 23:27:01.309263 frame kernel:     TERM=linux
+Nov 05 23:27:01.309269 frame kernel: random: crng init done
+Nov 05 23:27:01.309275 frame kernel: BTRFS: device fsid 380daa16-b40b-4178-a454-8c6b90b21f34 devid 1 transid 69 /dev/sda4 (8:4) scanned by mount (552)
+Nov 05 23:27:01.309280 frame kernel: BTRFS info (device sda4): first mount of filesystem 380daa16-b40b-4178-a454-8c6b90b21f34
+Nov 05 23:27:01.309286 frame kernel: BTRFS info (device sda4): using crc32c checksum algorithm
+Nov 05 23:27:01.309291 frame kernel: BTRFS info (device sda4): enabling ssd optimizations
+Nov 05 23:27:01.309297 frame kernel: BTRFS info (device sda4): turning on async discard
+Nov 05 23:27:01.309303 frame kernel: BTRFS info (device sda4): enabling free space tree
+Nov 05 23:27:01.309309 frame kernel: EXT4-fs (sda6): mounted filesystem 7b59e869-8f97-40a7-947f-da3de3936493 r/w with ordered data mode. Quota mode: none.
+Nov 05 23:27:01.309315 frame kernel: overlayfs: "xino" feature enabled using 2 upper inode bits.
+Nov 05 23:27:01.309323 frame systemd[1]: systemd 257.7-2.5-arch running in system mode (+PAM +AUDIT -SELINUX -APPARMOR -IMA +IPE +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP -SYSVINIT +LIBARCHIVE)
+Nov 05 23:27:01.309331 frame systemd[1]: Detected architecture arm64.
+Nov 05 23:27:01.309337 frame systemd[1]: Hostname set to <frame>.
+Nov 05 23:27:01.309344 frame systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+Nov 05 23:27:01.309350 frame systemd[1]: Configuration file /usr/lib/systemd/system/iris-driver-rebind.service is marked executable. Please remove executable permission bits. Proceeding anyway.
+Nov 05 23:27:01.309359 frame systemd[1]: Queued start job for default target Graphical Interface.
+Nov 05 23:27:01.309365 frame systemd[1]: Created slice Slice /system/dirmngr.
+Nov 05 23:27:01.309371 frame systemd[1]: Created slice Slice /system/gpg-agent.
+Nov 05 23:27:01.309378 frame systemd[1]: Created slice Slice /system/gpg-agent-browser.
+Nov 05 23:27:01.309384 frame systemd[1]: Created slice Slice /system/gpg-agent-extra.
+Nov 05 23:27:01.309390 frame systemd[1]: Created slice Slice /system/gpg-agent-ssh.
+Nov 05 23:27:01.309396 frame systemd[1]: Created slice Slice /system/keyboxd.
+Nov 05 23:27:01.309401 frame systemd[1]: Created slice Slice /system/modprobe.
+Nov 05 23:27:01.309408 frame systemd[1]: Created slice Slice /system/serial-getty.
+Nov 05 23:27:01.309414 frame systemd[1]: Created slice Slice /system/systemd-fsck.
+Nov 05 23:27:01.309420 frame systemd[1]: Created slice Slice /system/systemd-growfs.
+Nov 05 23:27:01.309426 frame systemd[1]: Created slice Slice /system/systemd-zram-setup.
+Nov 05 23:27:01.309432 frame systemd[1]: Created slice User and Session Slice.
+Nov 05 23:27:01.309437 frame systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Nov 05 23:27:01.309443 frame systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Nov 05 23:27:01.309449 frame systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Nov 05 23:27:01.309455 frame systemd[1]: Expecting device /dev/disk/by-partlabel/syspersist...
+Nov 05 23:27:01.309461 frame systemd[1]: Expecting device /dev/disk/by-partsets/self/efi...
+Nov 05 23:27:01.309467 frame systemd[1]: Expecting device /dev/disk/by-partsets/shared/home...
+Nov 05 23:27:01.309473 frame systemd[1]: Expecting device /dev/ttyMSM0...
+Nov 05 23:27:01.309478 frame systemd[1]: Expecting device /dev/zram0...
+Nov 05 23:27:01.309485 frame systemd[1]: Reached target Local Encrypted Volumes.
+Nov 05 23:27:01.309491 frame systemd[1]: Reached target Local Integrity Protected Volumes.
+Nov 05 23:27:01.309497 frame systemd[1]: Reached target Path Units.
+Nov 05 23:27:01.309502 frame systemd[1]: Reached target Remote File Systems.
+Nov 05 23:27:01.309509 frame systemd[1]: Reached target Slice Units.
+Nov 05 23:27:01.309515 frame systemd[1]: Reached target Local Verity Protected Volumes.
+Nov 05 23:27:01.309521 frame systemd[1]: Listening on Device-mapper event daemon FIFOs.
+Nov 05 23:27:01.309527 frame systemd[1]: Listening on Process Core Dump Socket.
+Nov 05 23:27:01.309533 frame systemd[1]: Listening on Credential Encryption/Decryption.
+Nov 05 23:27:01.309539 frame systemd[1]: Listening on Journal Socket (/dev/log).
+Nov 05 23:27:01.309545 frame systemd[1]: Listening on Journal Sockets.
+Nov 05 23:27:01.309550 frame systemd[1]: TPM PCR Measurements was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 05 23:27:01.309556 frame systemd[1]: Make TPM PCR Policy was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 05 23:27:01.309563 frame systemd[1]: Listening on udev Control Socket.
+Nov 05 23:27:01.309569 frame systemd[1]: Listening on udev Kernel Socket.
+Nov 05 23:27:01.309575 frame systemd[1]: Listening on User Database Manager Socket.
+Nov 05 23:27:01.309581 frame systemd[1]: Mounting Huge Pages File System...
+Nov 05 23:27:01.309587 frame systemd[1]: Mounting POSIX Message Queue File System...
+Nov 05 23:27:01.309593 frame systemd[1]: Mounting Arbitrary Executable File Formats File System...
+Nov 05 23:27:01.309599 frame systemd[1]: Mounting Kernel Debug File System...
+Nov 05 23:27:01.309605 frame systemd[1]: Mounting Kernel Trace File System...
+Nov 05 23:27:01.309611 frame systemd[1]: Create List of Static Device Nodes was skipped because of an unmet condition check (ConditionFileNotEmpty=/lib/modules/7.2.0-wake+/modules.devname).
+Nov 05 23:27:01.309617 frame systemd[1]: Starting Load Kernel Module configfs...
+Nov 05 23:27:01.309623 frame systemd[1]: Starting Load Kernel Module dm_mod...
+Nov 05 23:27:01.309629 frame systemd[1]: Starting Load Kernel Module drm...
+Nov 05 23:27:01.309634 frame systemd[1]: Starting Load Kernel Module fuse...
+Nov 05 23:27:01.309640 frame systemd[1]: Starting Load Kernel Module loop...
+Nov 05 23:27:01.309646 frame systemd[1]: Clear Stale Hibernate Storage Info was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67).
+Nov 05 23:27:01.309653 frame systemd[1]: Starting Load Kernel Modules...
+Nov 05 23:27:01.309658 frame systemd[1]: TPM PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 05 23:27:01.309664 frame systemd[1]: Starting Remount Root and Kernel File Systems...
+Nov 05 23:27:01.309670 frame systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+Nov 05 23:27:01.309676 frame systemd[1]: Early TPM SRK Setup was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 05 23:27:01.309682 frame systemd[1]: Starting Load udev Rules from Credentials...
+Nov 05 23:27:01.309687 frame systemd[1]: Starting Coldplug All udev Devices...
+Nov 05 23:27:01.309693 frame systemd[1]: Mounted Huge Pages File System.
+Nov 05 23:27:01.309699 frame systemd[1]: Mounted POSIX Message Queue File System.
+Nov 05 23:27:01.309706 frame systemd[1]: Mounted Arbitrary Executable File Formats File System.
+Nov 05 23:27:01.309711 frame systemd[1]: Mounted Kernel Debug File System.
+Nov 05 23:27:01.309717 frame systemd[1]: Mounted Kernel Trace File System.
+Nov 05 23:27:01.309723 frame systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Nov 05 23:27:01.309729 frame systemd[1]: Finished Load Kernel Module configfs.
+Nov 05 23:27:01.309734 frame systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+Nov 05 23:27:01.309740 frame systemd[1]: Finished Load Kernel Module dm_mod.
+Nov 05 23:27:01.309746 frame systemd[1]: modprobe@drm.service: Deactivated successfully.
+Nov 05 23:27:01.310075 frame systemd[1]: Finished Load Kernel Module drm.
+Nov 05 23:27:01.310089 frame systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Nov 05 23:27:01.310095 frame systemd[1]: Finished Load Kernel Module fuse.
+Nov 05 23:27:01.310102 frame systemd[1]: modprobe@loop.service: Deactivated successfully.
+Nov 05 23:27:01.310108 frame systemd[1]: Finished Load Kernel Module loop.
+Nov 05 23:27:01.310114 frame systemd[1]: Finished Load Kernel Modules.
+Nov 05 23:27:01.310119 frame systemd[1]: Finished Remount Root and Kernel File Systems.
+Nov 05 23:27:01.310125 frame systemd[1]: Finished Load udev Rules from Credentials.
+Nov 05 23:27:01.310131 frame systemd[1]: Mounting FUSE Control File System...
+Nov 05 23:27:01.310138 frame systemd[1]: Mounting Kernel Configuration File System...
+Nov 05 23:27:01.310144 frame systemd[1]: Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+Nov 05 23:27:01.310150 frame systemd[1]: Starting Load/Save OS Random Seed...
+Nov 05 23:27:01.310156 frame systemd[1]: Starting Repartition Root Disk...
+Nov 05 23:27:01.310167 frame systemd[1]: Starting Apply Kernel Variables...
+Nov 05 23:27:01.310174 frame systemd[1]: TPM SRK Setup was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 05 23:27:01.310181 frame systemd[1]: Starting User Database Manager...
+Nov 05 23:27:01.310187 frame systemd[1]: Finished Coldplug All udev Devices.
+Nov 05 23:27:01.310193 frame systemd[1]: Mounted FUSE Control File System.
+Nov 05 23:27:01.310199 frame systemd[1]: Started User Database Manager.
+Nov 05 23:27:01.310205 frame systemd[1]: Mounted Kernel Configuration File System.
+Nov 05 23:27:01.310211 frame systemd[1]: Finished Load/Save OS Random Seed.
+Nov 05 23:27:01.310217 frame systemd[1]: Finished Repartition Root Disk.
+Nov 05 23:27:01.310223 frame systemd[1]: Finished Apply Kernel Variables.
+Nov 05 23:27:01.310228 frame systemd[1]: Finished Create Static Device Nodes in /dev gracefully.
+Nov 05 23:27:01.310235 frame systemd[1]: Create System Users was skipped because no trigger condition checks were met.
+Nov 05 23:27:01.310241 frame systemd[1]: Starting Network Name Resolution...
+Nov 05 23:27:01.310246 frame systemd[1]: Starting Network Time Synchronization...
+Nov 05 23:27:01.310252 frame systemd[1]: Starting Create Static Device Nodes in /dev...
+Nov 05 23:27:01.310259 frame systemd[1]: Finished Create Static Device Nodes in /dev.
+Nov 05 23:27:01.310264 frame systemd[1]: Reached target Preparation for Local File Systems.
+Nov 05 23:27:01.310275 frame systemd[1]: Set up automount efi.automount.
+Nov 05 23:27:01.310286 frame systemd[1]: Set up automount esp.automount.
+Nov 05 23:27:01.310292 frame systemd[1]: Entropy Daemon based on the HAVEGE algorithm was skipped because of an unmet condition check (ConditionKernelVersion=<5.6).
+Nov 05 23:27:01.310298 frame systemd[1]: Starting Journal Service...
+Nov 05 23:27:01.310304 frame systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Nov 05 23:27:01.310310 frame systemd[1]: Started Network Time Synchronization.
+Nov 05 23:27:01.310315 frame systemd[1]: Started Network Name Resolution.
+Nov 05 23:27:01.310321 frame systemd[1]: Reached target Host and Network Name Lookups.
+Nov 05 23:27:01.310343 frame systemd-journald[686]: Collecting audit messages is disabled.
+Nov 05 23:27:01.310360 frame systemd[1]: Reached target System Time Set.
+Nov 05 23:27:01.310366 frame systemd[1]: Started Rule-based Manager for Device Events and Files.
+Nov 05 23:27:01.315771 frame systemd[1]: Started Journal Service.
+Nov 05 23:27:01.370768 frame kernel: zram0: detected capacity change from 0 to 16032768
+Nov 05 23:27:01.537774 frame kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+Nov 05 23:27:01.548765 frame kernel: qcom-pcie 1c00000.pcie: supply vddpe-3v3 not found, using dummy regulator
+Nov 05 23:27:01.556763 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# (tlmm 95) mapped as wake IRQ 227, pad restored
+Nov 05 23:27:01.557624 frame kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+Nov 05 23:27:01.559451 frame kernel: qcom-pcie 1c00000.pcie:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+Nov 05 23:27:01.560214 frame kernel: qcom-pcie 1c00000.pcie:      MEM 0x0060300000..0x0063ffffff -> 0x0060300000
+Nov 05 23:27:01.571766 frame kernel: Bluetooth: hci0: setting up wcn7850
+Nov 05 23:27:01.578066 frame kernel: max1720x 7-0036: IC Version: 0x420b
+Nov 05 23:27:01.626805 frame kernel: Bluetooth: hci0: QCA Product ID   :0x00000019
+Nov 05 23:27:01.626858 frame kernel: Bluetooth: hci0: QCA SOC Version  :0x40170200
+Nov 05 23:27:01.626868 frame kernel: Bluetooth: hci0: QCA ROM Version  :0x00000200
+Nov 05 23:27:01.626876 frame kernel: Bluetooth: hci0: QCA Patch Version:0x000043fb
+Nov 05 23:27:01.639771 frame kernel: Bluetooth: hci0: QCA controller version 0x02000200
+Nov 05 23:27:01.639816 frame kernel: Bluetooth: hci0: QCA Downloading qca/hmtbtfw20.tlv
+Nov 05 23:27:01.721881 frame kernel: qcom-pcie 1c00000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+Nov 05 23:27:01.920797 frame kernel: qcom-pcie 1c00000.pcie: PCIe Gen.2 x2 link up
+Nov 05 23:27:01.921247 frame kernel: qcom-pcie 1c00000.pcie: PCI host bridge to bus 0000:00
+Nov 05 23:27:01.921531 frame kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Nov 05 23:27:01.921620 frame kernel: pci_bus 0000:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+Nov 05 23:27:01.921696 frame kernel: pci_bus 0000:00: root bus resource [mem 0x60300000-0x63ffffff]
+Nov 05 23:27:01.921782 frame kernel: pci 0000:00:00.0: [17cb:0113] type 01 class 0x060400 PCIe Root Port
+Nov 05 23:27:01.921888 frame kernel: pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+Nov 05 23:27:01.921976 frame kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+Nov 05 23:27:01.922059 frame kernel: pci 0000:00:00.0:   bridge window [io  0x100000-0x100fff]
+Nov 05 23:27:01.922142 frame kernel: pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+Nov 05 23:27:01.922221 frame kernel: pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+Nov 05 23:27:01.922304 frame kernel: pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+Nov 05 23:27:01.922385 frame kernel: pci 0000:00:00.0: Adding to iommu group 20
+Nov 05 23:27:01.922464 frame kernel: pci 0000:01:00.0: [17cb:1107] type 00 class 0x028000 PCIe Endpoint
+Nov 05 23:27:01.922506 frame kernel: pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+Nov 05 23:27:01.922542 frame kernel: pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+Nov 05 23:27:01.923765 frame kernel: pci 0000:01:00.0: Adding to iommu group 20
+Nov 05 23:27:01.926759 frame kernel: pci 0000:01:00.0: ASPM: default states L0s L1
+Nov 05 23:27:01.927002 frame kernel: pci 0000:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01-ff] add_size 1000
+Nov 05 23:27:01.927140 frame kernel: pci 0000:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01-ff] add_size 200000 add_align 100000
+Nov 05 23:27:01.927229 frame kernel: pci 0000:00:00.0: bridge window [mem 0x60400000-0x605fffff]: assigned
+Nov 05 23:27:01.927317 frame kernel: pci 0000:00:00.0: bridge window [mem 0x60600000-0x607fffff 64bit pref]: assigned
+Nov 05 23:27:01.927406 frame kernel: pci 0000:00:00.0: BAR 0 [mem 0x60300000-0x60300fff]: assigned
+Nov 05 23:27:01.927490 frame kernel: pci 0000:00:00.0: bridge window [io  0x100000-0x100fff]: assigned
+Nov 05 23:27:01.927572 frame kernel: pci 0000:01:00.0: BAR 0 [mem 0x60400000-0x605fffff 64bit]: assigned
+Nov 05 23:27:01.930068 frame kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+Nov 05 23:27:01.930180 frame kernel: pci 0000:00:00.0:   bridge window [io  0x100000-0x100fff]
+Nov 05 23:27:01.931109 frame kernel: pci 0000:00:00.0:   bridge window [mem 0x60400000-0x605fffff]
+Nov 05 23:27:01.933924 frame kernel: pci 0000:00:00.0:   bridge window [mem 0x60600000-0x607fffff 64bit pref]
+Nov 05 23:27:01.934597 frame kernel: pci_bus 0000:00: resource 4 [io  0x100000-0x1fffff]
+Nov 05 23:27:01.934700 frame kernel: pci_bus 0000:00: resource 5 [mem 0x60300000-0x63ffffff]
+Nov 05 23:27:01.934788 frame kernel: pci_bus 0000:01: resource 0 [io  0x100000-0x100fff]
+Nov 05 23:27:01.934874 frame kernel: pci_bus 0000:01: resource 1 [mem 0x60400000-0x605fffff]
+Nov 05 23:27:01.934949 frame kernel: pci_bus 0000:01: resource 2 [mem 0x60600000-0x607fffff 64bit pref]
+Nov 05 23:27:01.935020 frame kernel: pcieport 0000:00:00.0: PME: Signaling with IRQ 273
+Nov 05 23:27:01.935108 frame kernel: qcom-pcie 1c00000.pcie: WAKE# GPIO registered as wakeup IRQ 274
+Nov 05 23:27:01.940098 frame kernel: ath12k_wifi7_pci 0000:01:00.0: BAR 0 [mem 0x60400000-0x605fffff 64bit]: assigned
+Nov 05 23:27:01.940645 frame kernel: platform video-firmware.0: Adding to iommu group 21
+Nov 05 23:27:01.940921 frame kernel: ath12k_wifi7_pci 0000:01:00.0: enabling device (0000 -> 0002)
+Nov 05 23:27:01.941304 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Wi-Fi 7 Hardware name: wcn7850 hw2.0
+Nov 05 23:27:01.941601 frame kernel: ath12k_wifi7_pci 0000:01:00.0: MSI vectors: 16
+Nov 05 23:27:01.947759 frame kernel: qcom-iris aa00000.video-codec: load_fw: vpu33_4v.mbn, size: 8388608
+Nov 05 23:27:01.947938 frame kernel: qcom-iris aa00000.video-codec: iris_hfi_core_init(): firmware: ok
+Nov 05 23:27:01.957765 frame kernel: EXT4-fs (sda8): Using encoding defined by superblock: utf8-12.1.0 with flags 0x0
+Nov 05 23:27:01.964763 frame kernel: Adding 8016380k swap on /dev/zram0.  Priority:100 extents:1 across:8016380k SSDsc
+Nov 05 23:27:01.974760 frame kernel: EXT4-fs (sdd1): write access unavailable, skipping orphan cleanup
+Nov 05 23:27:01.974783 frame kernel: EXT4-fs (sdd1): mounted filesystem f812ce62-68d9-4350-955a-639437034f60 ro with ordered data mode. Quota mode: none.
+Nov 05 23:27:02.002756 frame kernel: mhi mhi0: Requested to power ON
+Nov 05 23:27:02.002920 frame kernel: mhi mhi0: Power on setup success
+Nov 05 23:27:02.012760 frame kernel: EXT4-fs (sda8): mounted filesystem b336810c-d8d5-11f1-a449-315e6e088284 r/w with ordered data mode. Quota mode: none.
+Nov 05 23:27:02.098762 frame kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
+Nov 05 23:27:02.115783 frame kernel: EXT4-fs (sda8): resizing filesystem from 244166139 to 244166139 blocks
+Nov 05 23:27:02.222764 frame kernel: Adding 1048572k swap on /home/swapfile.  Priority:-1 extents:5 across:1082756k SS
+Nov 05 23:27:02.287563 frame systemd-journald[686]: Received client request to flush runtime journal.
+Nov 05 23:27:02.433768 frame kernel: qcom-bcl-hwmon c400000.spmi:pmic@1:sensor@4700: bcl enabled
+Nov 05 23:27:02.481759 frame kernel: qcom-pcie 1c00000.pcie: WAKE# toggled (level now 1)
+Nov 05 23:27:02.502771 frame kernel: ath12k_wifi7_pci 0000:01:00.0: chip_id 0x2 chip_family 0x4 board_id 0xff soc_id 0x40170200
+Nov 05 23:27:02.502960 frame kernel: ath12k_wifi7_pci 0000:01:00.0: fw_version 0x110a0012 fw_build_timestamp 2025-08-20 07:43 fw_build_id QC_IMAGE_VERSION_STRING=WLAN.IOE_HMT.1.1-00018-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1
+Nov 05 23:27:02.508755 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+Nov 05 23:27:02.508897 frame kernel: ath12k_wifi7_pci 0000:01:00.0: api2 fallback boardname bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255
+Nov 05 23:27:02.509004 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Default bdf name from DTS: board_77.bin
+Nov 05 23:27:02.509107 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Chose default board file of: board_77.bin
+Nov 05 23:27:02.580763 frame kernel: ath12k: rx reorder timeout BE=2 BK=2 VI=2 VO=2
+Nov 05 23:27:02.676998 frame kernel: ath12k_wifi7_pci 0000:01:00.0: using mac address 90:82:c3:73:37:64
+Nov 05 23:27:02.749757 frame kernel: Bluetooth: hci0: QCA Downloading qca/hmtnv20.bin
+Nov 05 23:27:02.766757 frame kernel: file system registered
+Nov 05 23:27:02.846763 frame kernel: NOTICE: Automounting of tracing to debugfs is deprecated and will be removed in 2030
+Nov 05 23:27:02.968811 frame kernel: max98390 6-0038: MAX98390 firmware set to dsm_param_OW_2018b.bin
+Nov 05 23:27:02.969229 frame kernel: max98390 6-0038: Found Firmware dsm_param_OW_2018b.bin
+Nov 05 23:27:02.984764 frame unknown: SteamOS System Info: SteamOS 20261103.6153824
+Nov 05 23:27:02.995762 frame unknown: SteamOS System Info: Partition:
+Nov 05 23:27:02.995792 frame unknown: A
+Nov 05 23:27:02.995803 frame unknown: SteamOS System Info: Serial Numbers:
+Nov 05 23:27:03.005763 frame unknown: SteamOS System Info:        mpcba_sn: MPDBE61701182
+Nov 05 23:27:03.013761 frame unknown: SteamOS System Info:        unit_sn: FPRAH62400FD8
+Nov 05 23:27:03.022769 frame unknown: SteamOS System Info:        core_cm_sn: FPRAH62400FD8
+Nov 05 23:27:03.031778 frame unknown: SteamOS System Info:        core_assembly_cm_sn: FPRAH62400FD8
+Nov 05 23:27:03.040846 frame unknown: SteamOS System Info:        heat_pipe_sn: PNDFBQ38039010618505112DRC3
+Nov 05 23:27:03.052767 frame unknown: SteamOS System Info:        fan_sn: HYMDQ5D544K017624427232A
+Nov 05 23:27:03.061028 frame kernel: max98390 6-003d: MAX98390 firmware set to dsm_param_OW_2018b.bin
+Nov 05 23:27:03.061238 frame kernel: max98390 6-003d: Found Firmware dsm_param_OW_2018b.bin
+Nov 05 23:27:03.064766 frame unknown: SteamOS System Info:        midwall_heat_pipe_sn: DTAFBQ38027010609300B22BRC0
+Nov 05 23:27:03.088103 frame unknown: SteamOS System Info:        strap_sn: FPHAK624015AC
+Nov 05 23:27:03.107939 frame unknown: SteamOS System Info:        left_audio_sn: Q38OWEA623405DE
+Nov 05 23:27:03.128765 frame unknown: SteamOS System Info:        right_audio_sn: Q38OWEA623405DE
+Nov 05 23:27:03.128807 frame unknown: SteamOS System Info: Battery:
+Nov 05 23:27:03.134503 frame unknown: SteamOS System Info:        AC status: Disconnected
+Nov 05 23:27:03.134546 frame unknown: SteamOS System Info:        Battery status: Discharging
+Nov 05 23:27:03.139764 frame unknown: SteamOS System Info:        Capacity: 90.0
+Nov 05 23:27:03.139801 frame unknown: SteamOS System Info: Boot Config:
+Nov 05 23:27:03.386763 frame kernel: read descriptors
+Nov 05 23:27:03.386791 frame kernel: read strings
+Nov 05 23:27:03.392950 frame unknown: SteamOS System Info:        A       boot-attempts        0
+Nov 05 23:27:03.397765 frame unknown: SteamOS System Info:        A          boot-count        19
+Nov 05 23:27:03.405850 frame unknown: SteamOS System Info:        A   boot-requested-at        20261105234852
+Nov 05 23:27:03.411761 frame unknown: SteamOS System Info:        A           boot-time        20261106035430
+Nov 05 23:27:03.421763 frame unknown: SteamOS System Info:        A             comment        [2026-11-05 22:54:30 -0500] bootconf mode: boot-ok
+Nov 05 23:27:03.435953 frame unknown: SteamOS System Info:        A       image-invalid        0
+Nov 05 23:27:03.440766 frame unknown: SteamOS System Info:        B       boot-attempts        0
+Nov 05 23:27:03.445769 frame unknown: SteamOS System Info:        B          boot-count        17
+Nov 05 23:27:03.450789 frame unknown: SteamOS System Info:        B   boot-requested-at        20261101180443
+Nov 05 23:27:03.454767 frame kernel: Bluetooth: hci0: QCA FW build version: BTFW.HAMILTON.2.0.1-00257-PATCHZ-1
+Nov 05 23:27:03.455770 frame unknown: SteamOS System Info:        B           boot-time        20261105192552
+Nov 05 23:27:03.456763 frame kernel: Bluetooth: hci0: QCA setup on UART is completed
+Nov 05 23:27:03.456780 frame kernel: Bluetooth: hci0: HFP non-HCI data transport is supported
+Nov 05 23:27:03.459763 frame unknown: SteamOS System Info:        B             comment        [2026-11-05 14:25:52 -0500] bootconf mode: boot-ok
+Nov 05 23:27:03.467761 frame unknown: SteamOS System Info:        B       image-invalid        0
+Nov 05 23:27:03.467790 frame unknown: --------------------------
+Nov 05 23:27:03.467821 frame unknown: splctl info:
+Nov 05 23:27:03.486452 frame kernel: configfs-gadget.g1 gadget.0: HOST MAC 02:00:88:cd:e7:10
+Nov 05 23:27:03.486595 frame kernel: configfs-gadget.g1 gadget.0: MAC 02:01:88:cd:e7:10
+Nov 05 23:27:03.498767 frame unknown: A boot-count 7
+Nov 05 23:27:03.504762 frame unknown: A state good
+Nov 05 23:27:03.509799 frame unknown: A valid good
+Nov 05 23:27:03.511817 frame unknown: B boot-count 8
+Nov 05 23:27:03.520766 frame unknown: B state good
+Nov 05 23:27:03.523762 frame unknown: B valid good
+Nov 05 23:27:03.527765 frame unknown: active primary A
+Nov 05 23:27:03.529762 frame unknown: active bootfw-slot A
+Nov 05 23:27:04.369761 frame kernel: Bluetooth: MGMT ver 1.23
+Nov 05 23:27:04.372086 frame kernel: Bluetooth: hci0: setting up wcn7850
+Nov 05 23:27:04.427850 frame kernel: Bluetooth: hci0: QCA Product ID   :0x00000019
+Nov 05 23:27:04.427890 frame kernel: Bluetooth: hci0: QCA SOC Version  :0x40170200
+Nov 05 23:27:04.427902 frame kernel: Bluetooth: hci0: QCA ROM Version  :0x00000200
+Nov 05 23:27:04.427912 frame kernel: Bluetooth: hci0: QCA Patch Version:0x000043fb
+Nov 05 23:27:04.439771 frame kernel: Bluetooth: hci0: QCA controller version 0x02000200
+Nov 05 23:27:04.439843 frame kernel: Bluetooth: hci0: QCA Downloading qca/hmtbtfw20.tlv
+Nov 05 23:27:05.105918 frame kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded gen70900_sqe.fw from legacy location
+Nov 05 23:27:05.106987 frame kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded gmu_gen70900.bin from legacy location
+Nov 05 23:27:05.107898 frame kernel: [drm] Loaded GMU firmware v4.2.20
+Nov 05 23:27:05.241799 frame kernel: msm_dpu ae01000.display-controller: Zap shader not enabled - using SECVID_TRUST_CNTL instead
+Nov 05 23:27:05.242893 frame kernel: debugfs: 'bcl_throttle' already exists in 'ae01000.display-controller'
+Nov 05 23:27:05.242966 frame kernel: debugfs: 'bcl_throttle_time' already exists in 'ae01000.display-controller'
+Nov 05 23:27:05.243084 frame kernel: debugfs: 'bcl_throttle_cnt' already exists in 'ae01000.display-controller'
+Nov 05 23:27:05.243207 frame kernel: debugfs: 'bcl_throttle_accum' already exists in 'ae01000.display-controller'
+Nov 05 23:27:05.542773 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.542820 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.542830 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.542840 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.543765 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.548759 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.549760 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:05.554763 frame kernel: Bluetooth: hci0: QCA Downloading qca/hmtnv20.bin
+Nov 05 23:27:06.233774 frame kernel: Bluetooth: hci0: QCA FW build version: BTFW.HAMILTON.2.0.1-00257-PATCHZ-1
+Nov 05 23:27:06.233868 frame kernel: Bluetooth: hci0: QCA setup on UART is completed
+Nov 05 23:27:06.233882 frame kernel: Bluetooth: hci0: HFP non-HCI data transport is supported
+Nov 05 23:27:06.652880 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:06.652984 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:06.655875 frame kernel: sched_ext: Writing directly to p->scx.slice/dsq_vtime is deprecated, use scx_bpf_task_set_slice/dsq_vtime()
+Nov 05 23:27:06.932785 frame kernel: sched_ext: BPF scheduler "lavd_1.1.2_aarch64_unknown_linux_gnu" enabled
+Nov 05 23:27:12.987756 frame kernel: cvp ab00000.cvp: cvp_power_on_core: EVA core powered on
+Nov 05 23:27:12.988004 frame kernel: cvp ab00000.cvp: cvp_power_on: cvp (eva) powered on
+Nov 05 23:27:13.000809 frame kernel: cvp ab00000.cvp: cvp_power_on_init: status 7c01
+Nov 05 23:27:13.576781 frame kernel: gcc-sm8650 100000.clock-controller: Timed out. Forcing sync_state()
+Nov 05 23:27:13.577007 frame kernel: sm8650-gpucc 3d90000.clock-controller: Timed out. Forcing sync_state()
+Nov 05 23:27:14.575186 frame kernel: wlan0: authenticate with c8:9e:43:bb:c5:39 (local address=90:82:c3:73:37:64)
+Nov 05 23:27:14.575281 frame kernel: wlan0: send auth to c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:27:14.580823 frame kernel: wlan0: authenticated
+Nov 05 23:27:14.580875 frame kernel: wlan0: associate with c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:27:14.583761 frame kernel: wlan0: RX AssocResp from c8:9e:43:bb:c5:39 (capab=0x1011 status=0 aid=21)
+Nov 05 23:27:14.601176 frame kernel: wlan0: associated
+Nov 05 23:27:14.621779 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by c8:9e:43:bb:c5:39
+Nov 05 23:27:19.650307 frame kernel: perf: interrupt took too long (2535 > 2500), lowering kernel.perf_event_max_sample_rate to 78000
+Nov 05 23:27:19.977813 frame kernel: perf: interrupt took too long (3169 > 3168), lowering kernel.perf_event_max_sample_rate to 63000
+Nov 05 23:27:21.607802 frame kernel: perf: interrupt took too long (3962 > 3961), lowering kernel.perf_event_max_sample_rate to 50000
+Nov 05 23:27:50.225796 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:27:50.226363 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:27:50.226556 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -57
+Nov 05 23:27:50.226738 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:50.226992 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:50.227200 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:27:50.227371 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:27:50.227520 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:27:50.227668 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:54.603784 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
+Nov 05 23:27:54.604527 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
+Nov 05 23:27:54.604907 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:54.605188 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:54.605377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:54.605532 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:56.230770 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:27:56.231408 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:27:56.231637 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -57
+Nov 05 23:27:56.231906 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:56.232275 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:27:56.232475 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:27:56.232651 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:27:56.232889 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:27:56.233118 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:28:02.225779 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:28:02.226173 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:28:02.226374 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -57
+Nov 05 23:28:02.226549 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:28:02.226704 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:28:02.227019 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:28:02.227252 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:28:02.227411 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:28:02.227565 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:28:02.602769 frame kernel: PM: suspend entry (s2idle)
+Nov 05 23:28:02.619820 frame kernel: Filesystems sync: 0.017 seconds
+Nov 05 23:32:02.523656 frame kernel: Freezing user space processes
+Nov 05 23:32:02.523848 frame kernel: Freezing user space processes completed (elapsed 0.003 seconds)
+Nov 05 23:32:02.523911 frame kernel: OOM killer disabled.
+Nov 05 23:32:02.523925 frame kernel: Freezing remaining freezable tasks
+Nov 05 23:32:02.523935 frame kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+Nov 05 23:32:02.523947 frame kernel: printk: Suspending console(s) (use no_console_suspend to debug)
+Nov 05 23:32:02.523961 frame kernel: arcimx616: Forcing power off on all sensors
+Nov 05 23:32:02.523974 frame kernel: perf: interrupt took too long (4954 > 4952), lowering kernel.perf_event_max_sample_rate to 40000
+Nov 05 23:32:02.531423 frame kernel: perf: interrupt took too long (6199 > 6192), lowering kernel.perf_event_max_sample_rate to 32000
+Nov 05 23:32:02.531489 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_BMISS_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.531716 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_BETTER_AP_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.531899 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_DEAUTH_RECVD_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.531999 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_MAGIC_PKT_RECVD_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.533121 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_GTK_ERR_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.533277 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_FOURWAY_HSHAKE_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.533385 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_EAPOL_RECVD_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.533489 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_NLO_DETECTED_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.533587 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_DISASSOC_RECVD_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.537219 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_PATTERN_MATCH_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.537348 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_CSA_IE_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.539722 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_PROBE_REQ_WPS_IE_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.539847 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_AUTH_REQ_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.539951 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_ASSOC_REQ_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540103 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_HTT_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540228 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_RA_MATCH_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540327 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_HOST_AUTO_SHUTDOWN_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540423 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_IOAC_MAGIC_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540514 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_IOAC_SHORT_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540609 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_IOAC_EXTEND_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540701 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_IOAC_TIMER_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540791 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_DFS_PHYERR_RADAR_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540883 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_BEACON_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.540975 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_CLIENT_KICKOUT_EVENT enable 0 vdev_id 0
+Nov 05 23:32:02.541245 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 0
+Nov 05 23:32:02.541366 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 1
+Nov 05 23:32:02.541468 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 2
+Nov 05 23:32:02.541566 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 3
+Nov 05 23:32:02.541658 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 4
+Nov 05 23:32:02.541751 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 5
+Nov 05 23:32:02.541842 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 6
+Nov 05 23:32:02.541931 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 7
+Nov 05 23:32:02.542068 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 8
+Nov 05 23:32:02.542243 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 9
+Nov 05 23:32:02.542355 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 10
+Nov 05 23:32:02.542454 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 11
+Nov 05 23:32:02.542548 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 12
+Nov 05 23:32:02.542640 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 13
+Nov 05 23:32:02.542729 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 14
+Nov 05 23:32:02.542818 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 15
+Nov 05 23:32:02.542963 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 16
+Nov 05 23:32:02.543412 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 17
+Nov 05 23:32:02.543522 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 18
+Nov 05 23:32:02.543619 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 19
+Nov 05 23:32:02.543712 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 20
+Nov 05 23:32:02.543803 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow del pattern vdev_id 0 pattern_id 21
+Nov 05 23:32:02.543892 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow add wakeup event WOW_MAGIC_PKT_RECVD_EVENT enable 1 vdev_id 0
+Nov 05 23:32:02.543980 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare ns offload
+Nov 05 23:32:02.546469 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare arp offload
+Nov 05 23:32:02.546612 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr 90:82:c3:73:37:64, offload_addr 192.168.40.35
+Nov 05 23:32:02.546716 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi index 0 ns_solicited 0000:0000:0000:0000:0000:0000:0000:0000 target 0000:0000:0000:0000:0000:0000:0000:0000
+Nov 05 23:32:02.546906 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi index 1 ns_solicited 0000:0000:0000:0000:0000:0000:0000:0000 target 0000:0000:0000:0000:0000:0000:0000:0000
+Nov 05 23:32:02.547080 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi arp offload address 192.168.40.35
+Nov 05 23:32:02.547231 frame kernel: ath12k_wifi7_pci 0000:01:00.0: offload gtk rekey vdev: 0 1
+Nov 05 23:32:02.547332 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 1 filter_bitmap 0x2
+Nov 05 23:32:02.547424 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi sta keepalive vdev 0 enabled 1 method 1 interval 30
+Nov 05 23:32:02.547704 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow enable flags 0x2
+Nov 05 23:32:02.547814 frame kernel: dwc3-qcom a600000.usb: port-1 HS-PHY not in L2
+Nov 05 23:32:02.547924 frame kernel: perf: interrupt took too long (7815 > 7748), lowering kernel.perf_event_max_sample_rate to 25000
+Nov 05 23:32:02.547936 frame kernel: qcom-pcie 1c00000.pcie: wakeup-enabled endpoint: WAKE# armed (level 1)
+Nov 05 23:32:02.548062 frame kernel: qcom-pcie 1c00000.pcie: suspend with WAKE# armed, link kept in L1ss
+Nov 05 23:32:02.548183 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# armed as wake IRQ 227 (pad level 1)
+Nov 05 23:32:02.548268 frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_suspend: going to suspend
+Nov 05 23:32:02.548359 frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_suspend: going to suspend
+Nov 05 23:32:02.548446 frame kernel: perf: interrupt took too long (9784 > 9768), lowering kernel.perf_event_max_sample_rate to 20000
+Nov 05 23:32:02.548459 frame kernel: perf: interrupt took too long (12254 > 12230), lowering kernel.perf_event_max_sample_rate to 16000
+Nov 05 23:32:02.548471 frame kernel: dsp-sm8650 32300000.cdsp: dsp_noirq_resume: going to resume
+Nov 05 23:32:02.548551 frame kernel: dsp-sm8650 6800000.adsp: dsp_noirq_resume: going to resume
+Nov 05 23:32:02.548632 frame kernel: qcom-pcie 1c00000.pcie: resume, CLKREQ# pad level 1
+Nov 05 23:32:02.548710 frame kernel: qcom-pcie 1c00000.pcie: CLKREQ# disarmed
+Nov 05 23:32:02.548787 frame kernel: qcom-pcie 1c00000.pcie: resume, WAKE# level 1
+Nov 05 23:32:02.548860 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: RTSTA 0x00030100 (PME SET, requester 0100)
+Nov 05 23:32:02.548936 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: PMCSR 0x010b (D3, PME_En 1, PME_Status clear)
+Nov 05 23:32:02.549013 frame kernel: qcom-pcie 1c00000.pcie: 0000:00:00.0: LNKSTA 0xb012
+Nov 05 23:32:02.549259 frame kernel: qcom-pcie 1c00000.pcie: 0000:01:00.0: PMCSR 0x810b (D3, PME_En 1, PME_Status SET)
+Nov 05 23:32:02.549359 frame kernel: qcom-pcie 1c00000.pcie: 0000:01:00.0: LNKSTA 0x1012
+Nov 05 23:32:02.549445 frame kernel: qcom-pcie 1c00000.pcie: WAKE# disarmed (level 1)
+Nov 05 23:32:02.549528 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi tlv wow host wakeup ind
+Nov 05 23:32:02.549631 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow wakeup host reason 58 WOW_REASON_PAGE_FAULT
+Nov 05 23:32:02.549727 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow_reason_page_fault len 8
+Nov 05 23:32:02.549820 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow_reason_page_fault packet present
+Nov 05 23:32:02.549911 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi hw data filter enable 0 filter_bitmap 0x0
+Nov 05 23:32:02.550002 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare ns offload
+Nov 05 23:32:02.550139 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow prepare arp offload
+Nov 05 23:32:02.550241 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wow arp_addr_cnt 1 vif->addr 90:82:c3:73:37:64, offload_addr 192.168.40.35
+Nov 05 23:32:02.550333 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get gtk rekey vdev_id: 0
+Nov 05 23:32:02.550423 frame kernel: ath12k_wifi7_pci 0000:01:00.0: offload gtk rekey vdev: 0 0
+Nov 05 23:32:02.550512 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi sta keepalive vdev 0 enabled 1 method 1 interval 0
+Nov 05 23:32:02.550600 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi gtk offload event refresh_cnt 0 replay_ctr 2
+Nov 05 23:32:02.550695 frame kernel: deckard-panel ae94000.dsi.0: [drm:lpm026m648c_prepare] Displays match ( B == B ), using B
+Nov 05 23:32:02.550794 frame kernel: OOM killer enabled.
+Nov 05 23:32:02.550805 frame kernel: Restarting tasks: Starting
+Nov 05 23:32:02.550815 frame kernel: Restarting tasks: Done
+Nov 05 23:32:02.550825 frame kernel: random: crng reseeded on system resumption
+Nov 05 23:32:02.550838 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
+Nov 05 23:32:02.550936 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
+Nov 05 23:32:02.551144 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.551302 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.551406 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.551503 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.551598 frame kernel: PM: suspend exit
+Nov 05 23:32:02.551611 frame kernel: wlan0: deauthenticated from c8:9e:43:bb:c5:39 (Reason: 7=CLASS3_FRAME_FROM_NONASSOC_STA)
+Nov 05 23:32:02.558049 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 0 len 0
+Nov 05 23:32:02.558365 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.558474 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 1 cipher 0 len 0
+Nov 05 23:32:02.559052 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.565566 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 0 len 0
+Nov 05 23:32:02.565711 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.565818 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:32:02.565914 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:32:02.566008 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -57
+Nov 05 23:32:02.566164 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.566262 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.566354 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:32:02.566441 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:32:02.566528 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.566618 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.566703 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev down id 0x0
+Nov 05 23:32:02.566794 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev stop id 0x0
+Nov 05 23:32:02.572013 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev stopped for vdev id 0
+Nov 05 23:32:02.578043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer delete vdev_id 0 peer_addr c8:9e:43:bb:c5:39
+Nov 05 23:32:02.587377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer delete resp for vdev id 0 addr c8:9e:43:bb:c5:39
+Nov 05 23:32:02.594037 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev down id 0x0
+Nov 05 23:32:02.594220 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 26 value 0
+Nov 05 23:32:02.594333 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 7 value 1
+Nov 05 23:32:02.599454 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 8 value 1
+Nov 05 23:32:02.601038 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 set FILS discovery interval to 0 TU
+Nov 05 23:32:02.601258 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 3 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.601378 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 7 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.601479 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 7 cwmax 15 txop 94 acm 0 no_ack 0
+Nov 05 23:32:02.601577 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.601673 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.601767 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.601860 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 3 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.601951 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 7 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602070 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602199 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602295 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.602385 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.602502 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602594 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 7 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602682 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.602903 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.603060 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.603197 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.603295 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.603388 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.603480 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.603569 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.603659 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.603746 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.620042 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
+Nov 05 23:32:02.620596 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
+Nov 05 23:32:02.622067 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.622432 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.622752 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.623143 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.623494 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 3 value 100
+Nov 05 23:32:02.623803 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 25 value 268435459
+Nov 05 23:32:02.624403 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 94 value 268435459
+Nov 05 23:32:02.624722 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 set FILS discovery interval to 0 TU
+Nov 05 23:32:02.625044 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI peer create vdev_id 0 peer_addr c8:9e:43:bb:c5:39 ml_flags 0x0
+Nov 05 23:32:02.631059 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 19 value 3
+Nov 05 23:32:02.631258 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
+Nov 05 23:32:02.631369 frame kernel: ath12k_wifi7_pci 0000:01:00.0: Unknown eventid: 0x601a
+Nov 05 23:32:02.631487 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1
+Nov 05 23:32:02.631837 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 2
+Nov 05 23:32:02.632779 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
+Nov 05 23:32:02.632917 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 4
+Nov 05 23:32:02.633016 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 5
+Nov 05 23:32:02.633157 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 6
+Nov 05 23:32:02.634036 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
+Nov 05 23:32:02.634216 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 8
+Nov 05 23:32:02.634321 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 9
+Nov 05 23:32:02.634416 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 10
+Nov 05 23:32:02.634502 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 11
+Nov 05 23:32:02.634595 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 12
+Nov 05 23:32:02.635054 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 13
+Nov 05 23:32:02.635235 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 14
+Nov 05 23:32:02.635347 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 15
+Nov 05 23:32:02.635445 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 16
+Nov 05 23:32:02.636041 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev start id 0x0 freq 0x1671 mode 0x1a
+Nov 05 23:32:02.660527 frame kernel: ath12k_wifi7_pci 0000:01:00.0: max allowed tx power 18 reported for vdev 0
+Nov 05 23:32:02.660958 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev start resp for vdev id 0
+Nov 05 23:32:02.661378 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 56 value 18
+Nov 05 23:32:02.661695 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 45 value 115
+Nov 05 23:32:02.661999 frame kernel: wlan0: authenticate with c8:9e:43:bb:c5:39 (local address=90:82:c3:73:37:64)
+Nov 05 23:32:02.662079 frame kernel: wlan0: send auth to c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:32:02.679056 frame kernel: wlan0: authenticated
+Nov 05 23:32:02.679088 frame kernel: wlan0: associate with c8:9e:43:bb:c5:39 (try 1/3)
+Nov 05 23:32:02.682037 frame kernel: wlan0: RX AssocResp from c8:9e:43:bb:c5:39 (capab=0x1011 status=0 aid=22)
+Nov 05 23:32:02.682091 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.682275 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.682388 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.682491 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 3 cwmax 7 txop 47 acm 0 no_ack 0
+Nov 05 23:32:02.682594 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.682693 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.682790 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.682890 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.682987 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 7 cwmax 15 txop 94 acm 0 no_ack 0
+Nov 05 23:32:02.683139 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 3 cwmax 7 txop 47 acm 0 no_ack 0
+Nov 05 23:32:02.683254 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.683352 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.683447 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 3 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.683541 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 2 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.683636 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 7 cwmax 15 txop 94 acm 0 no_ack 0
+Nov 05 23:32:02.683732 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 3 cwmax 7 txop 47 acm 0 no_ack 0
+Nov 05 23:32:02.683829 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.683921 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.684017 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 0 aifs 3 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.684164 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 1 aifs 7 cwmin 15 cwmax 1023 txop 0 acm 0 no_ack 0
+Nov 05 23:32:02.684265 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 2 aifs 2 cwmin 7 cwmax 15 txop 94 acm 0 no_ack 0
+Nov 05 23:32:02.684356 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi wmm set ac 3 aifs 2 cwmin 3 cwmax 7 txop 47 acm 0 no_ack 0
+Nov 05 23:32:02.684447 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 4 value 0
+Nov 05 23:32:02.684541 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI set sta ps vdev_id 0 param 0 value 0
+Nov 05 23:32:02.684635 frame kernel: ath12k_wifi7_pci 0000:01:00.0: ath12k_peer_assoc_h_crypto: rsn ie found
+Nov 05 23:32:02.684729 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 32770 value 49
+Nov 05 23:32:02.684822 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi peer assoc vdev id 0 assoc id 22 peer mac c8:9e:43:bb:c5:39 peer_flags 6a1b406 rate_caps 6f peer_caps 1011 listen_intval 5 ht_caps 1ef max_mpdu 4194303 nss 2 phymode 18 peer_mpdu_density 4 vht_caps f8a09b1 he cap_info 12180005 he ops 10004 he cap_info_ext 1000 he phy c0022044 1881420d c000 peer_bw_rxnss_override 0 peer_flags_ext 0 eht mac_cap 0 0 eht phy_cap 0 0 0 peer_eht_ops 0
+Nov 05 23:32:02.689042 frame kernel: ath12k_wifi7_pci 0000:01:00.0: peer assoc conf ev vdev id 0 macaddr c8:9e:43:bb:c5:39
+Nov 05 23:32:02.689248 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 1 value 0
+Nov 05 23:32:02.689363 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI mgmt vdev up id 0x0 assoc id 22 bssid c8:9e:43:bb:c5:39
+Nov 05 23:32:02.690037 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 71 value 3
+Nov 05 23:32:02.698038 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 13 value 1
+Nov 05 23:32:02.700041 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev id 0x0 set param 7 value 2
+Nov 05 23:32:02.700246 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi_send_bss_color_change_enable id 0 enable 1
+Nov 05 23:32:02.700374 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi_send_obss_color_collision_cfg id 0 type 1 bss_color 0 detect_period 10000 scan_period 200
+Nov 05 23:32:02.700944 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 set FILS discovery interval to 0 TU
+Nov 05 23:32:02.701164 frame kernel: wlan0: associated
+Nov 05 23:32:02.709612 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 0 cipher 4 len 16
+Nov 05 23:32:02.711570 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 0 flags 00000000 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.711825 frame kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by c8:9e:43:bb:c5:39
+Nov 05 23:32:02.711844 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev install key idx 1 cipher 4 len 16
+Nov 05 23:32:02.713519 frame kernel: ath12k_wifi7_pci 0000:01:00.0: vdev install key ev idx 1 flags 00000001 macaddr c8:9e:43:bb:c5:39 status 0
+Nov 05 23:32:02.713766 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:32:02.713898 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:32:02.714468 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -55
+Nov 05 23:32:02.714648 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.714781 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.715046 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:32:02.715218 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:32:02.715342 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.715464 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.715578 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x4 vdev id 0 pdev id 0
+Nov 05 23:32:02.715690 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 0 vdev id 0 stats id 0x4
+Nov 05 23:32:02.715802 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.715912 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.716050 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.716207 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.716326 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI vdev 0 peer 0xc8:9e:43:bb:c5:39 set param 3 value 1
+Nov 05 23:32:02.716463 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [0/94] freq 2412 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.716582 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [1/94] freq 2417 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.716699 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [2/94] freq 2422 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.716812 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [3/94] freq 2427 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.716923 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [4/94] freq 2432 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717060 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [5/94] freq 2437 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717220 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [6/94] freq 2442 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717341 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [7/94] freq 2447 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717466 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [8/94] freq 2452 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717581 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [9/94] freq 2457 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717694 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [10/94] freq 2462 maxpower 60 regpower 60 antenna 12 mode 1
+Nov 05 23:32:02.717805 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [0/94] freq 5180 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718070 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [1/94] freq 5200 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718270 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [2/94] freq 5220 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718409 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [3/94] freq 5240 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718543 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [4/94] freq 5260 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718665 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [5/94] freq 5280 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718783 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [6/94] freq 5300 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.718904 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [7/94] freq 5320 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719031 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [8/94] freq 5500 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719211 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [9/94] freq 5520 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719334 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [10/94] freq 5540 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719454 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [11/94] freq 5560 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719573 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [12/94] freq 5580 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719687 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [13/94] freq 5600 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719802 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [14/94] freq 5620 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.719916 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [15/94] freq 5640 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.720048 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [16/94] freq 5660 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.720202 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [17/94] freq 5680 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.720316 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [18/94] freq 5700 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.720429 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [19/94] freq 5720 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.720544 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [20/94] freq 5745 maxpower 60 regpower 60 antenna 0 mode 0
+Nov 05 23:32:02.720686 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [21/94] freq 5765 maxpower 60 regpower 60 antenna 0 mode 0
+Nov 05 23:32:02.721269 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [22/94] freq 5785 maxpower 60 regpower 60 antenna 0 mode 0
+Nov 05 23:32:02.721584 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [23/94] freq 5805 maxpower 60 regpower 60 antenna 0 mode 0
+Nov 05 23:32:02.721908 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [1/94] freq 5955 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.722303 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [2/94] freq 5975 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.722659 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [3/94] freq 5995 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.723235 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [4/94] freq 6015 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.723551 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [5/94] freq 6035 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.723850 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [6/94] freq 6055 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.724240 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [7/94] freq 6075 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.724543 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [8/94] freq 6095 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.724925 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [9/94] freq 6115 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725153 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [10/94] freq 6135 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725298 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [11/94] freq 6155 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725425 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [12/94] freq 6175 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725549 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [13/94] freq 6195 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725667 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [14/94] freq 6215 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725778 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [15/94] freq 6235 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.725961 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [16/94] freq 6255 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726122 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [17/94] freq 6275 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726240 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [18/94] freq 6295 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726341 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [19/94] freq 6315 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726441 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [20/94] freq 6335 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726538 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [21/94] freq 6355 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726769 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [22/94] freq 6375 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726897 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [23/94] freq 6395 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.726998 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [24/94] freq 6415 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727174 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [25/94] freq 6435 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727292 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [26/94] freq 6455 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727396 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [27/94] freq 6475 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727500 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [28/94] freq 6495 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727601 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [29/94] freq 6515 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727698 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [30/94] freq 6535 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727814 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [31/94] freq 6555 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.727915 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [32/94] freq 6575 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728012 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [33/94] freq 6595 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728170 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [34/94] freq 6615 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728271 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [35/94] freq 6635 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728371 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [36/94] freq 6655 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728469 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [37/94] freq 6675 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728587 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [38/94] freq 6695 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728689 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [39/94] freq 6715 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728784 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [40/94] freq 6735 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728880 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [41/94] freq 6755 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.728972 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [42/94] freq 6775 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729106 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [43/94] freq 6795 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729228 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [44/94] freq 6815 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729321 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [45/94] freq 6835 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729415 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [46/94] freq 6855 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729510 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [47/94] freq 6875 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729602 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [48/94] freq 6895 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729696 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [49/94] freq 6915 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729787 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [50/94] freq 6935 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.729884 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [51/94] freq 6955 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730001 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [52/94] freq 6975 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730160 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [53/94] freq 6995 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730283 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [54/94] freq 7015 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730394 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [55/94] freq 7035 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730494 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [56/94] freq 7055 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730587 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [57/94] freq 7075 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730688 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [58/94] freq 7095 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730788 frame kernel: ath12k_wifi7_pci 0000:01:00.0: mac channel [59/94] freq 7115 maxpower 48 regpower 48 antenna 0 mode 0
+Nov 05 23:32:02.730884 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI no.of chan = 58 len = 1644 pdev_id = 0 num_sends = 0
+Nov 05 23:32:02.730985 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[0] = 2412, chan_info->info    20001
+Nov 05 23:32:02.731136 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[1] = 2417, chan_info->info    20001
+Nov 05 23:32:02.731254 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[2] = 2422, chan_info->info    20001
+Nov 05 23:32:02.731354 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[3] = 2427, chan_info->info    20001
+Nov 05 23:32:02.731450 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[4] = 2432, chan_info->info    20001
+Nov 05 23:32:02.731567 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[5] = 2437, chan_info->info    20001
+Nov 05 23:32:02.731685 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[6] = 2442, chan_info->info    20001
+Nov 05 23:32:02.731793 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[7] = 2447, chan_info->info    20001
+Nov 05 23:32:02.732051 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[8] = 2452, chan_info->info    20001
+Nov 05 23:32:02.732200 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[9] = 2457, chan_info->info    20001
+Nov 05 23:32:02.732303 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[10] = 2462, chan_info->info    20001
+Nov 05 23:32:02.732396 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[11] = 5180, chan_info->info    20000
+Nov 05 23:32:02.732493 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[12] = 5200, chan_info->info    20000
+Nov 05 23:32:02.732585 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[13] = 5220, chan_info->info    20000
+Nov 05 23:32:02.732701 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[14] = 5240, chan_info->info    20000
+Nov 05 23:32:02.732800 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[15] = 5260, chan_info->info    20480
+Nov 05 23:32:02.732898 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[16] = 5280, chan_info->info    20480
+Nov 05 23:32:02.732992 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[17] = 5300, chan_info->info    20480
+Nov 05 23:32:02.733125 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[18] = 5320, chan_info->info    20480
+Nov 05 23:32:02.733237 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[19] = 5500, chan_info->info    20480
+Nov 05 23:32:02.733336 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[20] = 5520, chan_info->info    20480
+Nov 05 23:32:02.733433 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[21] = 5540, chan_info->info    20480
+Nov 05 23:32:02.733528 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[22] = 5560, chan_info->info    20480
+Nov 05 23:32:02.733624 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[23] = 5580, chan_info->info    20480
+Nov 05 23:32:02.733719 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[24] = 5600, chan_info->info    20480
+Nov 05 23:32:02.733811 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[25] = 5620, chan_info->info    20480
+Nov 05 23:32:02.733901 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[26] = 5640, chan_info->info    20480
+Nov 05 23:32:02.733994 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[27] = 5660, chan_info->info    20480
+Nov 05 23:32:02.734142 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[28] = 5680, chan_info->info    20480
+Nov 05 23:32:02.734381 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[29] = 5700, chan_info->info    20480
+Nov 05 23:32:02.734505 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[30] = 5720, chan_info->info    20480
+Nov 05 23:32:02.734605 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[31] = 5745, chan_info->info    20000
+Nov 05 23:32:02.734700 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[32] = 5765, chan_info->info    20000
+Nov 05 23:32:02.734860 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[33] = 5785, chan_info->info    20000
+Nov 05 23:32:02.734956 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[34] = 5805, chan_info->info    20000
+Nov 05 23:32:02.735105 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[35] = 5955, chan_info->info    20000
+Nov 05 23:32:02.735258 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[36] = 5975, chan_info->info    60000
+Nov 05 23:32:02.735385 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[37] = 5995, chan_info->info    20000
+Nov 05 23:32:02.735597 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[38] = 6015, chan_info->info    20000
+Nov 05 23:32:02.735731 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[39] = 6035, chan_info->info    20000
+Nov 05 23:32:02.735831 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[40] = 6055, chan_info->info    60000
+Nov 05 23:32:02.735920 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[41] = 6075, chan_info->info    20000
+Nov 05 23:32:02.736007 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[42] = 6095, chan_info->info    20000
+Nov 05 23:32:02.736174 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[43] = 6115, chan_info->info    20000
+Nov 05 23:32:02.736271 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[44] = 6135, chan_info->info    60000
+Nov 05 23:32:02.736374 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[45] = 6155, chan_info->info    20000
+Nov 05 23:32:02.736465 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[46] = 6175, chan_info->info    20000
+Nov 05 23:32:02.736555 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[47] = 6195, chan_info->info    20000
+Nov 05 23:32:02.736640 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[48] = 6215, chan_info->info    60000
+Nov 05 23:32:02.736728 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[49] = 6235, chan_info->info    20000
+Nov 05 23:32:02.736816 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[50] = 6255, chan_info->info    20000
+Nov 05 23:32:02.736901 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[51] = 6275, chan_info->info    20000
+Nov 05 23:32:02.736987 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[52] = 6295, chan_info->info    60000
+Nov 05 23:32:02.737215 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[53] = 6315, chan_info->info    20000
+Nov 05 23:32:02.737341 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[54] = 6335, chan_info->info    20000
+Nov 05 23:32:02.737442 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[55] = 6355, chan_info->info    20000
+Nov 05 23:32:02.737537 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[56] = 6375, chan_info->info    60000
+Nov 05 23:32:02.737631 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[57] = 6395, chan_info->info    20000
+Nov 05 23:32:02.737722 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI no.of chan = 36 len = 1028 pdev_id = 0 num_sends = 1
+Nov 05 23:32:02.737816 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[0] = 6415, chan_info->info    20000
+Nov 05 23:32:02.737911 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[1] = 6435, chan_info->info    20000
+Nov 05 23:32:02.738001 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[2] = 6455, chan_info->info    60000
+Nov 05 23:32:02.738143 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[3] = 6475, chan_info->info    20000
+Nov 05 23:32:02.738254 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[4] = 6495, chan_info->info    20000
+Nov 05 23:32:02.738350 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[5] = 6515, chan_info->info    20000
+Nov 05 23:32:02.738440 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[6] = 6535, chan_info->info    60000
+Nov 05 23:32:02.738530 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[7] = 6555, chan_info->info    20000
+Nov 05 23:32:02.738617 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[8] = 6575, chan_info->info    20000
+Nov 05 23:32:02.738701 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[9] = 6595, chan_info->info    20000
+Nov 05 23:32:02.738791 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[10] = 6615, chan_info->info    60000
+Nov 05 23:32:02.738878 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[11] = 6635, chan_info->info    20000
+Nov 05 23:32:02.738962 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[12] = 6655, chan_info->info    20000
+Nov 05 23:32:02.739083 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[13] = 6675, chan_info->info    20000
+Nov 05 23:32:02.739202 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[14] = 6695, chan_info->info    60000
+Nov 05 23:32:02.739290 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[15] = 6715, chan_info->info    20000
+Nov 05 23:32:02.739378 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[16] = 6735, chan_info->info    20000
+Nov 05 23:32:02.739468 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[17] = 6755, chan_info->info    20000
+Nov 05 23:32:02.739555 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[18] = 6775, chan_info->info    60000
+Nov 05 23:32:02.739645 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[19] = 6795, chan_info->info    20000
+Nov 05 23:32:02.739731 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[20] = 6815, chan_info->info    20000
+Nov 05 23:32:02.739817 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[21] = 6835, chan_info->info    20000
+Nov 05 23:32:02.739904 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[22] = 6855, chan_info->info    60000
+Nov 05 23:32:02.739991 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[23] = 6875, chan_info->info    20000
+Nov 05 23:32:02.740113 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[24] = 6895, chan_info->info    20000
+Nov 05 23:32:02.740225 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[25] = 6915, chan_info->info    20000
+Nov 05 23:32:02.740319 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[26] = 6935, chan_info->info    60000
+Nov 05 23:32:02.740406 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[27] = 6955, chan_info->info    20000
+Nov 05 23:32:02.740489 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[28] = 6975, chan_info->info    20000
+Nov 05 23:32:02.740575 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[29] = 6995, chan_info->info    20000
+Nov 05 23:32:02.740661 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[30] = 7015, chan_info->info    60000
+Nov 05 23:32:02.740748 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[31] = 7035, chan_info->info    20000
+Nov 05 23:32:02.740836 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[32] = 7055, chan_info->info    20000
+Nov 05 23:32:02.740924 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[33] = 7075, chan_info->info    20000
+Nov 05 23:32:02.741011 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[34] = 7095, chan_info->info    60000
+Nov 05 23:32:02.741152 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI chan scan list chan[35] = 7115, chan_info->info    20000
+Nov 05 23:32:02.741251 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:32:02.741345 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:32:02.741435 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -55
+Nov 05 23:32:02.741521 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.741605 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.741687 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:32:02.741795 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:32:02.741887 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:02.741980 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:02.828189 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 7
+Nov 05 23:32:02.912045 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 0
+Nov 05 23:32:02.918049 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 3
+Nov 05 23:32:03.015066 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x8 vdev id 0 pdev id 1
+Nov 05 23:32:03.015377 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x8
+Nov 05 23:32:03.015554 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi stats vdev id 0 snr -56
+Nov 05 23:32:03.015726 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:03.015881 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:03.016360 frame kernel: ath12k_wifi7_pci 0000:01:00.0: WMI request stats 0x100 vdev id 0 pdev id 1
+Nov 05 23:32:03.016601 frame kernel: ath12k_wifi7_pci 0000:01:00.0: get fw stat pdev id 1 vdev id 0 stats id 0x100
+Nov 05 23:32:03.016808 frame kernel: ath12k_wifi7_pci 0000:01:00.0: stats bssid c8:9e:43:bb:c5:39 vif 00000000d7431de9
+Nov 05 23:32:03.017004 frame kernel: ath12k_wifi7_pci 0000:01:00.0: event update stats
+Nov 05 23:32:03.844043 frame kernel: ath12k_wifi7_pci 0000:01:00.0: wmi rx reorder queue setup addr c8:9e:43:bb:c5:39 vdev_id 0 tid 1

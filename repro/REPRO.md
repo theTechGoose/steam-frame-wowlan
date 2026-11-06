@@ -36,11 +36,13 @@ the 0.5.7 beta (7.2) kernel; the two behave differently (see step 5).
      work here regardless of the wake path.
    - **7.2 (beta 0.5.7):** the radio survives suspend (clean MHI M3, no crash — see
      `../logs/wake-baseline-stock72-*.log`). On a patched build with `ath12k.wow_flags=2`,
-     after an RTC-timed resume the firmware reports
-     `wow wakeup host reason 10 WOW_REASON_RECV_MAGIC_PATTERN` and the endpoint/root-port
-     PME bits are set (`PMCSR … PME_Status SET`, `RTSTA … PME SET`) — the packet was caught
-     and signalled in-band, but nothing on the SoC turned that into a wake. See
-     `../logs/wake-patched-v10-pme-deep-20261105-222502.log` and `../TECHNICAL.md`.
+     after an RTC-timed resume the firmware reports a WoW wakeup (`WOW_REASON_RECV_MAGIC_PATTERN`
+     in the deep run; `WOW_REASON_PAGE_FAULT` in the clean s2idle run) and the endpoint/root-port
+     PME bits are set (`PMCSR 0x810b … PME_Status SET`, `RTSTA 0x00030100 … PME SET`), while
+     `WAKE# disarmed (level 1)` shows WAKE# was never pulled — the packet was caught and
+     signalled in-band, but nothing on the SoC turned that into a wake. See the decisive run
+     `../logs/wake-handoff-v12-pme-s2idle-20261105-232758.log`, `../TECHNICAL.md`, and the
+     firmware root cause in `../firmware/README.md`.
    - In the **s2idle** case on some patched builds Wi-Fi can come back dead until reboot (a
      known `ath12k`-crash-on-suspend hazard); `tests/wake-test.sh` arms a recovery unit for
      exactly this.

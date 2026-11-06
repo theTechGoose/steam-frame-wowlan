@@ -1,0 +1,21 @@
+0x014fb256  pcie_i_assert_wake___RAM
+0x014fb21c  PERST GPIO line is HIGH. Not asserting WAKE#
+0x014fb2eb  D3 Hot State, PERST HIGH. Issue PME#
+0x014fb316  Endpoint assert WAKE# since PERST is LOW
+0x014fb345  PME not enabled in D3 Hot, so cannot send PME!
+0x014fb316  Endpoint assert WAKE#
+0x014fb928  pcie_core_generate_pme___RAM
+0x014fb90a  Device State D0: Skipping PME
+0x014fbacf  pcie_control_pme_in_d3cold
+0x014fbab5  PME in D3cold feature
+0x014fb468  g_pcie_pme_in_d3cold
+0x014fbb43  pcie_i_perst_isr___RAM
+0x014fbbdc  GPIO PERST# is asserted
+0x014fbc98  GPIO PERST# is deasserted
+0x014f5141  pci_e0_wake
+0x014f55b4  pci_e1_wake
+0x014f4f12  GPIOINT_PHYSICAL_ADDRESS
+0x014f9205  Fake PERST WAR, wakeup received from host
+0x014f9b85  Fake PERST WAR, Process wakeup from host
+0x014fe52a  wal_css_wow_en
+0x014fe1e1  WHAL_SR_INT_FORCE_WAKE_ASSERT

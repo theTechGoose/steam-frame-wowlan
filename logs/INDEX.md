@@ -29,14 +29,18 @@ first patched build; `7.2.0-wake+` = v2 onward.
 | `wake-patched-v9-deep-20261105-220810.log` | v9, L1ss, CLKREQ# IRQ armed in suspend_noirq | no wake, CLKREQ# count 0 | §6 CLKREQ# on the PCIe function produces no TLMM edges |
 | `wake-patched-v9-s2idle-20261105-221332.log` | v9, L1ss, s2idle | no wake | §6 same, s2idle |
 | `wake-patched-v10-pme-deep-20261105-222422.log` | v10, deep (first try) | `frame never suspended` | aborted setup run |
-| `wake-patched-v10-pme-deep-20261105-222502.log` | v10, `wow_flags=2`, L1ss, deep | no wake; **PME raised** | §3/§4/§5/§7 firmware detects + sends in-band PME; WAKE# high; PME does not wake (PRIMARY) |
-| `wake-patched-v10-pme-s2idle-20261105-222945.log` | v10, `wow_flags=2`, L1ss, s2idle | no wake | §7 same config, s2idle (PME lines not captured — see note) |
-| `wake-patched-v11-l2-pme-deep-20261105-223913.log` | v11, L2 + PERST# deasserted, `wow_flags=2` | no wake | §5 (amend. 5: firmware `WOW_REASON_PAGE_FAULT`; not captured in this log — see note) |
-| `wake-patched-v12-pme-s2idle-20261105-224750.log` | v12, `IRQCHIP_SKIP_SET_WAKE`, `wow_flags=2`, L1ss, s2idle | no wake; RTC ended it | §7 s2idle MSI-wake attempt (PME-IRQ detail per amend. 6; not captured — see note) |
+| `wake-patched-v10-pme-deep-20261105-222502.log` | v10, `wow_flags=2`, L1ss, deep | no wake; **PME raised** | §3 firmware detects magic packet (`WOW_REASON_RECV_MAGIC_PATTERN`, reason 10); PME raised; WAKE# high |
+| `wake-patched-v10-pme-s2idle-20261105-222945.log` | v10, `wow_flags=2`, L1ss, s2idle | no wake | §7 same config, s2idle (PME lines not captured — superseded by the handoff run) |
+| `wake-patched-v11-l2-pme-deep-20261105-223913.log` | v11, L2 + PERST# deasserted, `wow_flags=2` | no wake | §5 L2 variant (PME lines not captured — superseded by the handoff run) |
+| `wake-patched-v12-pme-s2idle-20261105-224750.log` | v12, `IRQCHIP_SKIP_SET_WAKE`, `wow_flags=2`, L1ss, s2idle | no wake; RTC ended it | §7 first s2idle MSI-wake attempt (PME lines not captured — superseded by the handoff run) |
+| `wake-handoff-v12-pme-s2idle-20261105-232758.log` | v12, `wow_flags=2`, L1ss, s2idle | no wake; RTC ended it | **§3/§4/§5/§7 PRIMARY** — clean capture: `wow enable flags 0x2`, endpoint `PMCSR 0x810b (PME_Status SET)`, root-port `RTSTA 0x00030100 (PME SET)`, `WAKE# disarmed (level 1)` (never low), `WOW_REASON_PAGE_FAULT` (reason 58), woke on RTC |
+| `wake-handoff-v12-pme-s2idle-20261105-232758.full.log` | — | — | Full unfiltered journal for the run above (nothing elided) |
+| `clkreq-probe-handoff-233235.log` | v12, CLKREQ# edge probe + wake-IRQ counts | — | §6/§7 `CLKREQ# probe: 0 edges in 2000 ms` idle and under ping-flood; `pm_wakeup_irq_after_last_suspend=143` (RTC, not the PME MSI); `_clkreq_wake` IRQ count 0 |
 
-Captured-journal caveat: `wake-test.sh` greps the last ~60 journal lines matching
-`suspend|resume|wake|pcie|mhi|ath12k|wow|rtc|PM:`. On the v11-l2 and v12 runs the WCN7850's
-post-resume channel-scan output (`WMI chan scan list …`, which matches `pci`) filled that
-window, so the PME / `pm_wakeup_irq` / `PAGE_FAULT` lines quoted in REQ-019 amendments 5–6
-were pushed out of those two files. The v10 **deep** log is the clean capture of the PME +
-WAKE# state and is the primary citation for §3–§5/§7.
+The decisive run is `wake-handoff-v12-pme-s2idle-20261105-232758.log` (full journal in the
+`.full.log` twin): one clean capture of `wow enable flags 0x2` → endpoint/root-port PME set →
+`WAKE# disarmed (level 1)` (WAKE# never toggled low) → wake on the RTC. It is the primary
+citation for §3–§5/§7, with `clkreq-probe-handoff-233235.log` for the CLKREQ# edge count and
+the RTC-not-PME wake source. The earlier v10/v11/v12 runs reached the same states but their
+`wake-test.sh` journal window was overrun by post-resume channel-scan output (`WMI chan scan
+list …`, which matches `pci`); the handoff runs captured the full journal and supersede them.

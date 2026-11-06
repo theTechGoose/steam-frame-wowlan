@@ -1,0 +1,9 @@
+pm_wakeup_irq_after_last_suspend=143
+--- CLKREQ probe idle 2000ms
+--- CLKREQ probe under wifi ping-flood 2000ms
+[  103.161959] qcom-pcie 1c00000.pcie: CLKREQ# probe: 0 edges in 2000 ms with the IRQ enabled (pad level now 1)
+[  105.722679] qcom-pcie 1c00000.pcie: CLKREQ# probe: 0 edges in 2000 ms with the IRQ enabled (pad level now 0)
+--- WAKE irq counts
+ 227:          0          0          0  _clkreq_wake
+ 268:          0          0          0  _wake
+ 274:          1          0          0  _wake
